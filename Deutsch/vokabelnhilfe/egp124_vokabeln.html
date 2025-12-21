@@ -1,0 +1,262 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>124: Fußball in Deutschland</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #008D1C; }
+    a:visited { color: #008D1C; }
+    a:hover { color: #008D1C; }
+    a:active { color: #008D1C; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #008D1C; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+</head><body>
+<h1 id="title">124: Fußball in Deutschland</h1>
+
+<p id="info">
+The Easy German Podcast<br>
+<a href="http://www.easygerman.fm" target="_blank">www.easygerman.fm</a>
+</p>
+
+
+
+<h4>Vokabelnhilfe</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

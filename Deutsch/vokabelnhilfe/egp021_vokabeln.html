@@ -1,0 +1,2910 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>21: Katerstimmung</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #008D1C; }
+    a:visited { color: #008D1C; }
+    a:hover { color: #008D1C; }
+    a:active { color: #008D1C; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #008D1C; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+</head><body>
+<h1 id="title">21: Katerstimmung</h1>
+
+<p id="info">
+The Easy German Podcast<br>
+<a href="http://www.easygerman.fm" target="_blank">www.easygerman.fm</a>
+</p>
+
+
+
+<h4>Vokabelnhilfe</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">MAZ ab!</b></div>
+	<div><small class="hilfe">Start recording!</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">albern</b></div>
+	<div><small class="hilfe">goofy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gleichzeitig</b></div>
+	<div><small class="hilfe">at the same time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verschlafen sein</b></div>
+	<div><small class="hilfe">to be sleepy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bekannt von</b></div>
+	<div><small class="hilfe">known from</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. beehren</b></div>
+	<div><small class="hilfe">to honor sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Lieblingsepisode</b></div>
+	<div><small class="hilfe">favorite episode</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">deswegen</b></div>
+	<div><small class="hilfe">this is why</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zum zweiten Mal</b></div>
+	<div><small class="hilfe">for the second time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Gast</b></div>
+	<div><small class="hilfe">guest</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nichts dagegen haben</b></div>
+	<div><small class="hilfe">to be okay with it</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. austauschen</b></div>
+	<div><small class="hilfe">to replace sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Gefühl</b></div>
+	<div><small class="hilfe">feeling</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf gar keinen Fall</b></div>
+	<div><small class="hilfe">absolutely not</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Umfrage</b></div>
+	<div><small class="hilfe">survey</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">erstaunlicherweise</b></div>
+	<div><small class="hilfe">surprisingly enough</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Meisten</b></div>
+	<div><small class="hilfe">most</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. falsch beantworten</b></div>
+	<div><small class="hilfe">to answer sth. wrong</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Trickfrage</b></div>
+	<div><small class="hilfe">trick question</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mit Absicht</b></div>
+	<div><small class="hilfe">purposely</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auftauchen</b></div>
+	<div><small class="hilfe">to show up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">einen trinken (ugs.)</b></div>
+	<div><small class="hilfe">to have a drink (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">plätschern (ugs.)</b></div>
+	<div><small class="hilfe">to go on (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">feuchtfröhlich (ugs.)</b></div>
+	<div><small class="hilfe">merrily (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf einmal</b></div>
+	<div><small class="hilfe">all of a sudden</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Fußboden</b></div>
+	<div><small class="hilfe">floor</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Kopfschmerzen</b></div>
+	<div><small class="hilfe">headache</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Stimmung</b></div>
+	<div><small class="hilfe">mood</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">überkochen (ugs.)</b></div>
+	<div><small class="hilfe">to boil over (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">anschließend</b></div>
+	<div><small class="hilfe">then</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Saufgelage (ugs.)</b></div>
+	<div><small class="hilfe">booze-up (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich für etw. entschieden</b></div>
+	<div><small class="hilfe">to choose sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Zeit</b></div>
+	<div><small class="hilfe">time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">froh sein</b></div>
+	<div><small class="hilfe">to be glad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">weder noch</b></div>
+	<div><small class="hilfe">neither nor</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. abfangen</b></div>
+	<div><small class="hilfe">to catch sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ursprünglich</b></div>
+	<div><small class="hilfe">originally</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unterrichten</b></div>
+	<div><small class="hilfe">to teach</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">seit Längerem</b></div>
+	<div><small class="hilfe">for some time now</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">danken</b></div>
+	<div><small class="hilfe">to thank</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sondern auch</b></div>
+	<div><small class="hilfe">but also</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">leben</b></div>
+	<div><small class="hilfe">to live</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">spitze</b></div>
+	<div><small class="hilfe">great</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Kompliment</b></div>
+	<div><small class="hilfe">compliment</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">spannend</b></div>
+	<div><small class="hilfe">exciting</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. zuhören</b></div>
+	<div><small class="hilfe">to listen to sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Ausland</b></div>
+	<div><small class="hilfe">abroad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Überleitung</b></div>
+	<div><small class="hilfe">transition</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. einführen</b></div>
+	<div><small class="hilfe">to introduce sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bereit sein</b></div>
+	<div><small class="hilfe">to be prepared</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Anschlag</b></div>
+	<div><small class="hilfe">attack</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. besprechen</b></div>
+	<div><small class="hilfe">to discuss sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aktuell</b></div>
+	<div><small class="hilfe">current</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rechtsradikal</b></div>
+	<div><small class="hilfe">right-wing extremist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">motiviert sein</b></div>
+	<div><small class="hilfe">to be motivated</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. umbringen</b></div>
+	<div><small class="hilfe">to kill sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Migrationshintergrund</b></div>
+	<div><small class="hilfe">migration background</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich aufhalten</b></div>
+	<div><small class="hilfe">to stay</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">heute Morgen</b></div>
+	<div><small class="hilfe">this morning</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schauen</b></div>
+	<div><small class="hilfe">to look</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. darüber lesen</b></div>
+	<div><small class="hilfe">to read about it</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">offensichtlich</b></div>
+	<div><small class="hilfe">obviously</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">geistig gestört </b></div>
+	<div><small class="hilfe">mentally disturbed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Wahnvorstellung</b></div>
+	<div><small class="hilfe">delusion</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">beziehungsweise</b></div>
+	<div><small class="hilfe">respectively</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eine Rolle spielen</b></div>
+	<div><small class="hilfe">to matter</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mehrfach</b></div>
+	<div><small class="hilfe">multiple</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Mitverantwortung</b></div>
+	<div><small class="hilfe">co-responsibility</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Bevölkerung</b></div>
+	<div><small class="hilfe">populatio</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Waffe</b></div>
+	<div><small class="hilfe">weapon</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Verwirrte </b></div>
+	<div><small class="hilfe">deranged</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Krasse (ugs.)</b></div>
+	<div><small class="hilfe">extreme (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">leicht</b></div>
+	<div><small class="hilfe">easy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Gedanken</b></div>
+	<div><small class="hilfe">thoughts</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">anfangen</b></div>
+	<div><small class="hilfe">to start</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">anders aussehen</b></div>
+	<div><small class="hilfe">to look differently</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nicht zu uns gehören</b></div>
+	<div><small class="hilfe">to not belong to us</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Denkmuster</b></div>
+	<div><small class="hilfe">thinking pattern</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich mit jmd. auseinandersetzen</b></div>
+	<div><small class="hilfe">to deal with sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich miteinander unterhalten</b></div>
+	<div><small class="hilfe">to talk to each other</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich gegenseitig zuhören</b></div>
+	<div><small class="hilfe">to listen to each other</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">miteinander</b></div>
+	<div><small class="hilfe">together</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Plattform</b></div>
+	<div><small class="hilfe">platform</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Themenvorschlag</b></div>
+	<div><small class="hilfe">proposed topic</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. überlegen</b></div>
+	<div><small class="hilfe">to consider sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Vorschlag</b></div>
+	<div><small class="hilfe">suggestion</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ablehnen</b></div>
+	<div><small class="hilfe">to reject sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">spontan</b></div>
+	<div><small class="hilfe">spontaneously</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf die Idee kommen</b></div>
+	<div><small class="hilfe">to come up with the idea</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumgehen</b></div>
+	<div><small class="hilfe">to walk around</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">worüber</b></div>
+	<div><small class="hilfe">about what</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ich würde sagen</b></div>
+	<div><small class="hilfe">I would say</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sprechen</b></div>
+	<div><small class="hilfe">to speak</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein Thema aussuchen</b></div>
+	<div><small class="hilfe">to pick a topic</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Zeitlimit</b></div>
+	<div><small class="hilfe">time limit</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">na gut</b></div>
+	<div><small class="hilfe">alright, then</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verwenden</b></div>
+	<div><small class="hilfe">to use sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">es geht los</b></div>
+	<div><small class="hilfe">here we go</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. vorstellen</b></div>
+	<div><small class="hilfe">to present sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ablaufen</b></div>
+	<div><small class="hilfe">to expire</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">witzig</b></div>
+	<div><small class="hilfe">funny</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. vorlesen</b></div>
+	<div><small class="hilfe">to read sth. out</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. aufschreiben</b></div>
+	<div><small class="hilfe">to write sth. down</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf etw. hinweisen</b></div>
+	<div><small class="hilfe">to point sth. out</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. gerecht werden</b></div>
+	<div><small class="hilfe">to do justice to sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. treffen</b></div>
+	<div><small class="hilfe">to meet sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. vermischen</b></div>
+	<div><small class="hilfe">to mix sth. up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eben</b></div>
+	<div><small class="hilfe">just</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">beantworten</b></div>
+	<div><small class="hilfe">to answer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Frage</b></div>
+	<div><small class="hilfe">question</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">freischaffend</b></div>
+	<div><small class="hilfe">freelance</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Schauspielerin</b></div>
+	<div><small class="hilfe">actress</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Schriftstellerin</b></div>
+	<div><small class="hilfe">writer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Künstlerin</b></div>
+	<div><small class="hilfe">artist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Theaterstück</b></div>
+	<div><small class="hilfe">play</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Hörbuch</b></div>
+	<div><small class="hilfe">audio book</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Themensegment</b></div>
+	<div><small class="hilfe">topic segment</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">einschenken</b></div>
+	<div><small class="hilfe">to pour</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Angst haben</b></div>
+	<div><small class="hilfe">to be scared</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Krach machen</b></div>
+	<div><small class="hilfe">to make noise</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich benehmen</b></div>
+	<div><small class="hilfe">to behave oneself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sondern</b></div>
+	<div><small class="hilfe">but</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">allgemein</b></div>
+	<div><small class="hilfe">general</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">detailliert</b></div>
+	<div><small class="hilfe">detailed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Politik</b></div>
+	<div><small class="hilfe">politics</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Reisen</b></div>
+	<div><small class="hilfe">traveling</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. formulieren</b></div>
+	<div><small class="hilfe">to phrase sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Pfeffer</b></div>
+	<div><small class="hilfe">pepper</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kacke (ugs.)</b></div>
+	<div><small class="hilfe">crap (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. rechtfertigen</b></div>
+	<div><small class="hilfe">to justify sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">erzählen</b></div>
+	<div><small class="hilfe">to tell</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kaputt</b></div>
+	<div><small class="hilfe">damaged</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">vorher</b></div>
+	<div><small class="hilfe">previously</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Bescheid wissen</b></div>
+	<div><small class="hilfe">to know</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">im Endeffekt</b></div>
+	<div><small class="hilfe">in the end</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unbedingt</b></div>
+	<div><small class="hilfe">necessarily</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Überraschung</b></div>
+	<div><small class="hilfe">surprise</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eine ganze Menge</b></div>
+	<div><small class="hilfe">a good deal</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">weltweit</b></div>
+	<div><small class="hilfe">worldwide</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Weltkrieg</b></div>
+	<div><small class="hilfe">World War</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Messlatte</b></div>
+	<div><small class="hilfe">bar</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. ausdenken</b></div>
+	<div><small class="hilfe">to make sth. up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Wahl</b></div>
+	<div><small class="hilfe">election</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">merkwürdig</b></div>
+	<div><small class="hilfe">strange</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">stören</b></div>
+	<div><small class="hilfe">to bother</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. mögen</b></div>
+	<div><small class="hilfe">to like sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">keiner</b></div>
+	<div><small class="hilfe">nobody</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">meiner Meinung nach</b></div>
+	<div><small class="hilfe">from my point of view</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gehören</b></div>
+	<div><small class="hilfe">to belong to</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Rassist</b></div>
+	<div><small class="hilfe">racist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Misogynist</b></div>
+	<div><small class="hilfe">misogynist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Mafiosi</b></div>
+	<div><small class="hilfe">mafioso</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Bereicherung</b></div>
+	<div><small class="hilfe">enrichment</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Narzisst</b></div>
+	<div><small class="hilfe">narcissist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">in keinster Weise</b></div>
+	<div><small class="hilfe">in no way</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zu etw. Gutem beitragen</b></div>
+	<div><small class="hilfe">to contribute to sth. good</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich über etw. unterhalten</b></div>
+	<div><small class="hilfe">to discuss sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">überhaupt nicht</b></div>
+	<div><small class="hilfe">not at all</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zufällig</b></div>
+	<div><small class="hilfe">randomly</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mit etw. umgehen</b></div>
+	<div><small class="hilfe">to deal with sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zumindest</b></div>
+	<div><small class="hilfe">at least</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">draußen</b></div>
+	<div><small class="hilfe">outside</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. Besonderes</b></div>
+	<div><small class="hilfe">sth. special</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">philosophieren</b></div>
+	<div><small class="hilfe">to philosophize</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich selbst betrachten</b></div>
+	<div><small class="hilfe">to look at oneself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Spiegel</b></div>
+	<div><small class="hilfe">mirror</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich erkennen</b></div>
+	<div><small class="hilfe">to recognize oneself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. wissen</b></div>
+	<div><small class="hilfe">to know sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich entwickeln</b></div>
+	<div><small class="hilfe">to evolve</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gemeinsam</b></div>
+	<div><small class="hilfe">together</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. anschauen</b></div>
+	<div><small class="hilfe">to take a look at sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">entstehen</b></div>
+	<div><small class="hilfe">to come into being</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Herkunft</b></div>
+	<div><small class="hilfe">origin</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Lebewesen</b></div>
+	<div><small class="hilfe">living being</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Unterschied</b></div>
+	<div><small class="hilfe">difference</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich weiterentwickeln</b></div>
+	<div><small class="hilfe">to develop</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Gehirn</b></div>
+	<div><small class="hilfe">brain</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">grundsätzlich</b></div>
+	<div><small class="hilfe">basically</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Pflanze</b></div>
+	<div><small class="hilfe">plant</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Nervensystem</b></div>
+	<div><small class="hilfe">nervous system</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Schmerz verspüren </b></div>
+	<div><small class="hilfe">to feel pain </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unwahr</b></div>
+	<div><small class="hilfe">not true</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bluten</b></div>
+	<div><small class="hilfe">to bleed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">was es ausmacht</b></div>
+	<div><small class="hilfe">what it takes</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumlaufen</b></div>
+	<div><small class="hilfe">to run around</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Wissenschaft</b></div>
+	<div><small class="hilfe">science</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">knallhart</b></div>
+	<div><small class="hilfe">very tough</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">probieren</b></div>
+	<div><small class="hilfe">to try</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Autobahn</b></div>
+	<div><small class="hilfe">highway</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich unterhalten</b></div>
+	<div><small class="hilfe">to talk</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">manchmal</b></div>
+	<div><small class="hilfe">sometimes</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">im Großen und Ganzen</b></div>
+	<div><small class="hilfe">generally speaking</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verstopfen</b></div>
+	<div><small class="hilfe">to block sth. up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">überfahren</b></div>
+	<div><small class="hilfe">to run over</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Verkehrstote</b></div>
+	<div><small class="hilfe">road fatality</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Maßnahme</b></div>
+	<div><small class="hilfe">measure</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Fußgänger</b></div>
+	<div><small class="hilfe">pedestrian</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Fahrradfahrer</b></div>
+	<div><small class="hilfe">cyclist</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">lachen</b></div>
+	<div><small class="hilfe">to laugh</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schreien</b></div>
+	<div><small class="hilfe">to shout</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. vorstellen</b></div>
+	<div><small class="hilfe">to imagine sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">komfortabel </b></div>
+	<div><small class="hilfe">convenient </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Nahverkehr</b></div>
+	<div><small class="hilfe">local public transport</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Transportnetz</b></div>
+	<div><small class="hilfe">transport network</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mittlerweile</b></div>
+	<div><small class="hilfe">meanwhile</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich bewegen</b></div>
+	<div><small class="hilfe">to move around</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf dem Land</b></div>
+	<div><small class="hilfe">in the countryside</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">völlig</b></div>
+	<div><small class="hilfe">completely</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Transportmittel</b></div>
+	<div><small class="hilfe">means of transport</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">persönlich</b></div>
+	<div><small class="hilfe">personally</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. nachvollziehen können</b></div>
+	<div><small class="hilfe">to be able to understand sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Statussymbol</b></div>
+	<div><small class="hilfe">status symbol</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Faszination</b></div>
+	<div><small class="hilfe">fascination</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">andererseits</b></div>
+	<div><small class="hilfe">on the other hand</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. bewerten</b></div>
+	<div><small class="hilfe">to rate sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Gegenbewegung</b></div>
+	<div><small class="hilfe">countermovement</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Mädel (ugs.)</b></div>
+	<div><small class="hilfe">the girl (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Klimaschutz</b></div>
+	<div><small class="hilfe">climate protection</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die lokale Küche</b></div>
+	<div><small class="hilfe">local cuisine</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sozusagen</b></div>
+	<div><small class="hilfe">so to speak</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kochen</b></div>
+	<div><small class="hilfe">to cook</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Buchweizen</b></div>
+	<div><small class="hilfe">buckwheat</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Kollege</b></div>
+	<div><small class="hilfe">colleague</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwierig zu kriegen</b></div>
+	<div><small class="hilfe">difficult to get</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. beitragen</b></div>
+	<div><small class="hilfe">to contribute sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ehrlich gesagt</b></div>
+	<div><small class="hilfe">to be honest</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aufschreiben</b></div>
+	<div><small class="hilfe">to write down</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">tatsächlich</b></div>
+	<div><small class="hilfe">actually</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Frühstück</b></div>
+	<div><small class="hilfe">breakfast</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Bohnen</b></div>
+	<div><small class="hilfe">beans</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Soße</b></div>
+	<div><small class="hilfe">sauce</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. kriegen</b></div>
+	<div><small class="hilfe">to get sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">besagte </b></div>
+	<div><small class="hilfe">said </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">importiert</b></div>
+	<div><small class="hilfe">imported</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schade</b></div>
+	<div><small class="hilfe">too bad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">herstellen</b></div>
+	<div><small class="hilfe">to produce</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wahrscheinlich</b></div>
+	<div><small class="hilfe">probably</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">teuer</b></div>
+	<div><small class="hilfe">expensive</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bezahlen</b></div>
+	<div><small class="hilfe">to pay</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">irgendwelche</b></div>
+	<div><small class="hilfe">any</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Vierfache</b></div>
+	<div><small class="hilfe">four times as much</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die gleichen Sachen</b></div>
+	<div><small class="hilfe">the same things</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">spekulieren</b></div>
+	<div><small class="hilfe">to speculate</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Containerschiff</b></div>
+	<div><small class="hilfe">container ship</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wegnehmen</b></div>
+	<div><small class="hilfe">to take away</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Zutaten</b></div>
+	<div><small class="hilfe">ingredients</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Geschäft</b></div>
+	<div><small class="hilfe">shop</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">afrikanisch</b></div>
+	<div><small class="hilfe">african</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich überlegen</b></div>
+	<div><small class="hilfe">to consider</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nach Bedarf</b></div>
+	<div><small class="hilfe">as needed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. abfrühstücken (ugs.)</b></div>
+	<div><small class="hilfe">to get sth. done (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Arbeitssuche</b></div>
+	<div><small class="hilfe">job search</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf etw. achten</b></div>
+	<div><small class="hilfe">to pay attention to sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Ausbildung</b></div>
+	<div><small class="hilfe">education</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Arbeitgeber</b></div>
+	<div><small class="hilfe">employer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nämlich</b></div>
+	<div><small class="hilfe">actually</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">im Gegensatz zu</b></div>
+	<div><small class="hilfe">in contrast to</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Lebenslauf</b></div>
+	<div><small class="hilfe">curriculum vitae</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Abschluss</b></div>
+	<div><small class="hilfe">degree</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wie ist jmd. drauf</b></div>
+	<div><small class="hilfe">what's someone like</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Unternehmen</b></div>
+	<div><small class="hilfe">company</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Arbeitskraft</b></div>
+	<div><small class="hilfe">worker</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. empfehlen</b></div>
+	<div><small class="hilfe">to recommend sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf gar keinen Fall</b></div>
+	<div><small class="hilfe">definitely</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gleichzeitig</b></div>
+	<div><small class="hilfe">simultaneously</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein guter Weg</b></div>
+	<div><small class="hilfe">a good way</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Auslaufmodell</b></div>
+	<div><small class="hilfe">discontinued model</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. anstellen</b></div>
+	<div><small class="hilfe">to hire sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Beruf</b></div>
+	<div><small class="hilfe">profession</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Werdegang</b></div>
+	<div><small class="hilfe">career path</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zukunftsorientiert</b></div>
+	<div><small class="hilfe">future-oriented</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Arbeitserfahrung</b></div>
+	<div><small class="hilfe">work experience</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein Programm schreiben</b></div>
+	<div><small class="hilfe">to write a program</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Tierrecht</b></div>
+	<div><small class="hilfe">animal rights</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">leiden</b></div>
+	<div><small class="hilfe">to suffer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">denken</b></div>
+	<div><small class="hilfe">to think</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">typisch</b></div>
+	<div><small class="hilfe">typical</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. erzählen</b></div>
+	<div><small class="hilfe">to tell sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">was denkst du über</b></div>
+	<div><small class="hilfe">what do you think about</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Billigfleisch</b></div>
+	<div><small class="hilfe">cheap meat</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wo es herkommt</b></div>
+	<div><small class="hilfe">where it comes from</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jedes Mal</b></div>
+	<div><small class="hilfe">each time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">im Kopf vorgehen</b></div>
+	<div><small class="hilfe">thoughts are going on</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Fleisch zerlegen</b></div>
+	<div><small class="hilfe">to cut up meat</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Regal</b></div>
+	<div><small class="hilfe">shelf</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">körperliches Bedürfnis</b></div>
+	<div><small class="hilfe">physical need</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Vegetarier</b></div>
+	<div><small class="hilfe">vegetarian</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Weltreise</b></div>
+	<div><small class="hilfe">world trip</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">einerseits</b></div>
+	<div><small class="hilfe">on the one hand</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der CO2-Ausstoß</b></div>
+	<div><small class="hilfe">CO2 emission</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verringern</b></div>
+	<div><small class="hilfe">to decrease</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">worum es geht</b></div>
+	<div><small class="hilfe">what it is about</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Meinung sein</b></div>
+	<div><small class="hilfe">to think that</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unterscheiden</b></div>
+	<div><small class="hilfe">to differ</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">komplex</b></div>
+	<div><small class="hilfe">complex</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ethisch schwierig</b></div>
+	<div><small class="hilfe">ethically difficult</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">solches Leid antun</b></div>
+	<div><small class="hilfe">to do such harm</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Massentierhaltung</b></div>
+	<div><small class="hilfe">factory farming</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Wild</b></div>
+	<div><small class="hilfe">game</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Überbevölkerung</b></div>
+	<div><small class="hilfe">overpopulation</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die gewisse Verantwortung</b></div>
+	<div><small class="hilfe">certain responsibility</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">stattfinden</b></div>
+	<div><small class="hilfe">to take place</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">milliardenfach</b></div>
+	<div><small class="hilfe">billions of times</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">quälen</b></div>
+	<div><small class="hilfe">to torture</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Wildschwein</b></div>
+	<div><small class="hilfe">wild boar</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Hirsch</b></div>
+	<div><small class="hilfe">deer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Populationskontrolle</b></div>
+	<div><small class="hilfe">population control</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Jagdschein</b></div>
+	<div><small class="hilfe">hunting license</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. zubereiten</b></div>
+	<div><small class="hilfe">to prepare sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Gefrierfach</b></div>
+	<div><small class="hilfe">freezer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">vertretbar</b></div>
+	<div><small class="hilfe">justifiable</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nachgucken (ugs.)</b></div>
+	<div><small class="hilfe">to check (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">im Vergleich</b></div>
+	<div><small class="hilfe">in comparison</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ungefähr</b></div>
+	<div><small class="hilfe">approximately</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der höchste Anteil</b></div>
+	<div><small class="hilfe">highest share</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">was ist dein Tipp</b></div>
+	<div><small class="hilfe">what's your tip</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">überrascht sein</b></div>
+	<div><small class="hilfe">to be surprised</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Zahl</b></div>
+	<div><small class="hilfe">number</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">niedrig</b></div>
+	<div><small class="hilfe">low</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jeder zehnte</b></div>
+	<div><small class="hilfe">one in ten</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gerade jetzt</b></div>
+	<div><small class="hilfe">especially now</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Klimawandel</b></div>
+	<div><small class="hilfe">climate change</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gesellschaftlich</b></div>
+	<div><small class="hilfe">socially</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich für etw. entscheiden</b></div>
+	<div><small class="hilfe">to go for sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein gewisser Wandel</b></div>
+	<div><small class="hilfe">some change</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Keller</b></div>
+	<div><small class="hilfe">basement</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Wortschatz</b></div>
+	<div><small class="hilfe">vocabulary</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Beziehung</b></div>
+	<div><small class="hilfe">relationship</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Kosename</b></div>
+	<div><small class="hilfe">pet name</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Schatz</b></div>
+	<div><small class="hilfe">sweetheart</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Liebling</b></div>
+	<div><small class="hilfe">darling</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Schatzipupsi</b></div>
+	<div><small class="hilfe">sweety little fart</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Hase</b></div>
+	<div><small class="hilfe">bunny</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Bärchen</b></div>
+	<div><small class="hilfe">little bear</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mein Herz </b></div>
+	<div><small class="hilfe">my heart </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Prinzessin</b></div>
+	<div><small class="hilfe">princess</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Mäuschen</b></div>
+	<div><small class="hilfe">little mouse</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Kröte</b></div>
+	<div><small class="hilfe">toad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">du bist mir wichtig</b></div>
+	<div><small class="hilfe">you are important to me</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ich liebe dich</b></div>
+	<div><small class="hilfe">I love you</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">in einer Beziehung sein</b></div>
+	<div><small class="hilfe">to be in a relationship</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wenn du es fühlst</b></div>
+	<div><small class="hilfe">if you feel it</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ansonsten</b></div>
+	<div><small class="hilfe">otherwise</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">stärker</b></div>
+	<div><small class="hilfe">more powerful</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. abschwachen</b></div>
+	<div><small class="hilfe">to tone sth. down</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ich hab dich lieb</b></div>
+	<div><small class="hilfe">love you</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Eltern</b></div>
+	<div><small class="hilfe">parents</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Geschwister</b></div>
+	<div><small class="hilfe">siblings</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">heiraten</b></div>
+	<div><small class="hilfe">to get married</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Bedeutung</b></div>
+	<div><small class="hilfe">meaning</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">fast genauso</b></div>
+	<div><small class="hilfe">almost the same</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auffallen </b></div>
+	<div><small class="hilfe">to notice</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">seine Schuhe ausziehen</b></div>
+	<div><small class="hilfe">to take one's shoes off</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gekommen um zu bleiben</b></div>
+	<div><small class="hilfe">come to stay</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">grob gesagt</b></div>
+	<div><small class="hilfe">broadly put</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bequem</b></div>
+	<div><small class="hilfe">comfortable</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gähnen</b></div>
+	<div><small class="hilfe">to yawn</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">angepisst sein (ugs.)</b></div>
+	<div><small class="hilfe">to be pissed (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Beispiel</b></div>
+	<div><small class="hilfe">example</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Lebensabend</b></div>
+	<div><small class="hilfe">twilight years</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. zusammenbauen</b></div>
+	<div><small class="hilfe">to put sth. together</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. empfinden</b></div>
+	<div><small class="hilfe">to feel sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Weltschmerz</b></div>
+	<div><small class="hilfe">world-weariness</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">traurig</b></div>
+	<div><small class="hilfe">sad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">als etw. erscheinen</b></div>
+	<div><small class="hilfe">to appear as sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Leid</b></div>
+	<div><small class="hilfe">suffering</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Katerstimmung (ugs.)</b></div>
+	<div><small class="hilfe">hangover mood (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">dementsprechend</b></div>
+	<div><small class="hilfe">correspondingly</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Augenblick</b></div>
+	<div><small class="hilfe">moment</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Blick</b></div>
+	<div><small class="hilfe">look</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">blicken</b></div>
+	<div><small class="hilfe">to have a look</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">doppelt</b></div>
+	<div><small class="hilfe">double</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Klang</b></div>
+	<div><small class="hilfe">sound</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Hochzeit</b></div>
+	<div><small class="hilfe">wedding</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gefallen</b></div>
+	<div><small class="hilfe">to like</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. reinstopfen (ugs.)</b></div>
+	<div><small class="hilfe">to stuff sth. in one's mouth (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Abendessen</b></div>
+	<div><small class="hilfe">dinner</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. trinken</b></div>
+	<div><small class="hilfe">to have a drink</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">fünftägig</b></div>
+	<div><small class="hilfe">five-day</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">entspannt sein</b></div>
+	<div><small class="hilfe">to be relaxed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Kater</b></div>
+	<div><small class="hilfe">hangover</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">saufen (ugs.)</b></div>
+	<div><small class="hilfe">to get drunk (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zusammensitzen</b></div>
+	<div><small class="hilfe">to sit together</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">grillen</b></div>
+	<div><small class="hilfe">to have a barbecue</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Neudeutsch</b></div>
+	<div><small class="hilfe">as we now call it</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Brautleute</b></div>
+	<div><small class="hilfe">bride and groom</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumrödeln (ugs.)</b></div>
+	<div><small class="hilfe">to toil away (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gestresst sein</b></div>
+	<div><small class="hilfe">to be stressed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. übernehmen</b></div>
+	<div><small class="hilfe">to cover sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">tiefenentspannt</b></div>
+	<div><small class="hilfe">deeply relaxed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Erfahrung</b></div>
+	<div><small class="hilfe">experience</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">fressen (ugs.)</b></div>
+	<div><small class="hilfe">eat (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Eindruck</b></div>
+	<div><small class="hilfe">impression</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mit sich anfangen wissen</b></div>
+	<div><small class="hilfe">to know what to do with oneself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">untereinander</b></div>
+	<div><small class="hilfe">among each other</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kosten</b></div>
+	<div><small class="hilfe">to cost</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kurzfristig</b></div>
+	<div><small class="hilfe">at short notice</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Bier</b></div>
+	<div><small class="hilfe">beer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. bestellen</b></div>
+	<div><small class="hilfe">to order sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">als erstes</b></div>
+	<div><small class="hilfe">first</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. wissen müssen</b></div>
+	<div><small class="hilfe">to need to know sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">höflich</b></div>
+	<div><small class="hilfe">politely</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Anfang</b></div>
+	<div><small class="hilfe">in the beginning</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. korrigieren</b></div>
+	<div><small class="hilfe">to correct sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">über etw. sprechen</b></div>
+	<div><small class="hilfe">to speak about sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">häufig</b></div>
+	<div><small class="hilfe">frequently</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ausdrücken</b></div>
+	<div><small class="hilfe">to be express sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. nehmen</b></div>
+	<div><small class="hilfe">to take sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">furchtbar</b></div>
+	<div><small class="hilfe">horrible</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ordentlich</b></div>
+	<div><small class="hilfe">properly</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Empfinden</b></div>
+	<div><small class="hilfe">perception</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">von etw. getriggert sein</b></div>
+	<div><small class="hilfe">to be triggered by sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">von wem</b></div>
+	<div><small class="hilfe">by whom</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ich hätte gern</b></div>
+	<div><small class="hilfe">I would like to have</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. bekommen</b></div>
+	<div><small class="hilfe">to get sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nochmal</b></div>
+	<div><small class="hilfe">again</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">am Anfang</b></div>
+	<div><small class="hilfe">at the beginning</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ernst</b></div>
+	<div><small class="hilfe">serious</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Politikwissenschaften</b></div>
+	<div><small class="hilfe">political science</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich mit etw. beschäftigen</b></div>
+	<div><small class="hilfe">to deal with sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">deswegen</b></div>
+	<div><small class="hilfe">therefore</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Feststellung</b></div>
+	<div><small class="hilfe">statement</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">erstaunlich</b></div>
+	<div><small class="hilfe">astonishing</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Vorurteil</b></div>
+	<div><small class="hilfe">prejudice</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">überhaupt</b></div>
+	<div><small class="hilfe">anyway</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Atomprogramm </b></div>
+	<div><small class="hilfe">nuclear programme </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Bankkonto</b></div>
+	<div><small class="hilfe">bank account</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. eröffnen</b></div>
+	<div><small class="hilfe">to open sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. auffallen</b></div>
+	<div><small class="hilfe">to notice sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Feindschaft</b></div>
+	<div><small class="hilfe">animosity</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">reisen</b></div>
+	<div><small class="hilfe">to travel</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das große Ziel</b></div>
+	<div><small class="hilfe">big goal</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Wunsch</b></div>
+	<div><small class="hilfe">wish</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">von etw. berichten</b></div>
+	<div><small class="hilfe">to report on sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Gastfreundschaft</b></div>
+	<div><small class="hilfe">hospitality</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Machthaber</b></div>
+	<div><small class="hilfe">those in power</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwerfallen</b></div>
+	<div><small class="hilfe">to be difficult</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein ähnliches Bild</b></div>
+	<div><small class="hilfe">a similar picture</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">dadurch</b></div>
+	<div><small class="hilfe">thereby</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwierig</b></div>
+	<div><small class="hilfe">difficult</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die politische Lage</b></div>
+	<div><small class="hilfe">political situation</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. dagegen tun</b></div>
+	<div><small class="hilfe">to do something about it</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eine Sache verfolgen</b></div>
+	<div><small class="hilfe">to pursue a matter</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verändern</b></div>
+	<div><small class="hilfe">to change sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Intellektuelle</b></div>
+	<div><small class="hilfe">intellectual</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Bevölkerung</b></div>
+	<div><small class="hilfe">population</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. sehen</b></div>
+	<div><small class="hilfe">to see sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Leben</b></div>
+	<div><small class="hilfe">life</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Institution</b></div>
+	<div><small class="hilfe">institution</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ernst nehmen</b></div>
+	<div><small class="hilfe">to take sth. seriously</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf etw. stolz sein</b></div>
+	<div><small class="hilfe">to be proud of sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Familienbund</b></div>
+	<div><small class="hilfe">family circle</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Zusammenhalt</b></div>
+	<div><small class="hilfe">solidarity</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Entscheidung</b></div>
+	<div><small class="hilfe">decision</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Zustimmung</b></div>
+	<div><small class="hilfe">approval</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zuhause wohnen</b></div>
+	<div><small class="hilfe">to live at home</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wesentlich</b></div>
+	<div><small class="hilfe">main</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf etw. eingestellt sein</b></div>
+	<div><small class="hilfe">to be attuned to sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aufwachsen</b></div>
+	<div><small class="hilfe">to grow up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unabhängig sein</b></div>
+	<div><small class="hilfe">to be independent</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. etw. vorschreiben</b></div>
+	<div><small class="hilfe">to tell sb. how to behave</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mit jmd. zusammen sein</b></div>
+	<div><small class="hilfe">to be with sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">beide Seiten</b></div>
+	<div><small class="hilfe">both sides</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf etw. zurückfallen</b></div>
+	<div><small class="hilfe">to fall back on sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eine Frage stellen</b></div>
+	<div><small class="hilfe">to ask a question</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">auf Empfehlung</b></div>
+	<div><small class="hilfe">on recommendation</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">den Kontakt abbrechen</b></div>
+	<div><small class="hilfe">to break off contact</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verpflichtet sein</b></div>
+	<div><small class="hilfe">to be obliged</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Anforderung</b></div>
+	<div><small class="hilfe">demand</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Erwartung</b></div>
+	<div><small class="hilfe">expectation</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein Recht auf etw. haben</b></div>
+	<div><small class="hilfe">to have the right to sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Freiheit</b></div>
+	<div><small class="hilfe">liberty</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Auswirkungen</b></div>
+	<div><small class="hilfe">effects</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verwirklichen</b></div>
+	<div><small class="hilfe">to put sth. into effect</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Austausch</b></div>
+	<div><small class="hilfe">exchange</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. dabei belassen</b></div>
+	<div><small class="hilfe">to leave sth. at that</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verschieben</b></div>
+	<div><small class="hilfe">to reschedule sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verstehen</b></div>
+	<div><small class="hilfe">to understand</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Wasserpause</b></div>
+	<div><small class="hilfe">water break</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">quatschen (ugs.)</b></div>
+	<div><small class="hilfe">to chat (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aufstehen</b></div>
+	<div><small class="hilfe">to stand up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Heizung</b></div>
+	<div><small class="hilfe">heating</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">grenzwertig</b></div>
+	<div><small class="hilfe">borderline</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumkommen (ugs.)</b></div>
+	<div><small class="hilfe">to get around (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die gute Laune</b></div>
+	<div><small class="hilfe">good mood </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">streng sein</b></div>
+	<div><small class="hilfe">to be strict</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. einspielen</b></div>
+	<div><small class="hilfe">to play sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. hinzufügen</b></div>
+	<div><small class="hilfe">to add sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. folgen</b></div>
+	<div><small class="hilfe">to follow sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">improvisieren</b></div>
+	<div><small class="hilfe">to improvise</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">beeindruckend</b></div>
+	<div><small class="hilfe">impressive</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">einem Skript folgen</b></div>
+	<div><small class="hilfe">to follow a script</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">vor allem</b></div>
+	<div><small class="hilfe">primarily</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Nachrichtenshow</b></div>
+	<div><small class="hilfe">news show</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">klingen</b></div>
+	<div><small class="hilfe">to sound</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ist vor geschrieben</b></div>
+	<div><small class="hilfe">sth. is pre-written</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">munter</b></div>
+	<div><small class="hilfe">lively</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">durch die Gegend (ugs.)</b></div>
+	<div><small class="hilfe">around (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Kopfschmerzen</b></div>
+	<div><small class="hilfe">headaches</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die dumme Idee</b></div>
+	<div><small class="hilfe">bad idea</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kurzzeitig</b></div>
+	<div><small class="hilfe">briefly</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">in Versuchung</b></div>
+	<div><small class="hilfe">tempted</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verhangen</b></div>
+	<div><small class="hilfe">confusing</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Stimmung kocht über (ugs.)</b></div>
+	<div><small class="hilfe">the mood is exploding (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumrödeln (ugs.)</b></div>
+	<div><small class="hilfe">to to toil away (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">reinschreiben</b></div>
+	<div><small class="hilfe">to write in sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. benutzen</b></div>
+	<div><small class="hilfe">to use sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Braut</b></div>
+	<div><small class="hilfe">bride</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Bräutigam</b></div>
+	<div><small class="hilfe">groom</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwer</b></div>
+	<div><small class="hilfe">heavy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">hin und her laufen</b></div>
+	<div><small class="hilfe">to walk around</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">arbeiten</b></div>
+	<div><small class="hilfe">to work</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. erledigen</b></div>
+	<div><small class="hilfe">to take care of sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Lampe</b></div>
+	<div><small class="hilfe">lamp</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die andere Ecke</b></div>
+	<div><small class="hilfe">the other corner</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Drucker</b></div>
+	<div><small class="hilfe">printer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. reparieren</b></div>
+	<div><small class="hilfe">to fix sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Glühbirne</b></div>
+	<div><small class="hilfe">light bulb</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">gehetzt sein</b></div>
+	<div><small class="hilfe">to be rushed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Richtung</b></div>
+	<div><small class="hilfe">direction</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">rumschreien (ugs.)</b></div>
+	<div><small class="hilfe">to shout (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">laufen</b></div>
+	<div><small class="hilfe">run</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">herumlaufen</b></div>
+	<div><small class="hilfe">to run around</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Zeitdruck</b></div>
+	<div><small class="hilfe">time pressure</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Gastbeitrag</b></div>
+	<div><small class="hilfe">guest contribution</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. an jmd. richten</b></div>
+	<div><small class="hilfe">to address sth. to sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ständig</b></div>
+	<div><small class="hilfe">permanently</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. kurz halten</b></div>
+	<div><small class="hilfe">to cut sth. short</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">keine Zeit haben</b></div>
+	<div><small class="hilfe">to have no time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich aufdrängen</b></div>
+	<div><small class="hilfe">to impose oneself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">abschließen</b></div>
+	<div><small class="hilfe">to complete</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">tief in Gedanken</b></div>
+	<div><small class="hilfe">deep in thoughts</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aus heiterem Himmel</b></div>
+	<div><small class="hilfe">out of the blue</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">von etw. abweichen</b></div>
+	<div><small class="hilfe">to deviate from sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unglaublich</b></div>
+	<div><small class="hilfe">incredible</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mittlerweile</b></div>
+	<div><small class="hilfe">by now</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. aufnehmen</b></div>
+	<div><small class="hilfe">to record sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">übernehmen</b></div>
+	<div><small class="hilfe">to take over</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">los müssen</b></div>
+	<div><small class="hilfe">to have to leave</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. erfüllen</b></div>
+	<div><small class="hilfe">to comply with sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich in Rage reden</b></div>
+	<div><small class="hilfe">to talk oneself into a fury</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich echauffieren</b></div>
+	<div><small class="hilfe">to get worked up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sauer sein</b></div>
+	<div><small class="hilfe">to be annoyed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wütend</b></div>
+	<div><small class="hilfe">angry</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. bedienen</b></div>
+	<div><small class="hilfe">to operate sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Knopf</b></div>
+	<div><small class="hilfe">button</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Abwechslung</b></div>
+	<div><small class="hilfe">variety</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schlecht</b></div>
+	<div><small class="hilfe">bad</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">seit längerer Zeit</b></div>
+	<div><small class="hilfe">for some time now</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">genießen</b></div>
+	<div><small class="hilfe">to enjoy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Stimmung</b></div>
+	<div><small class="hilfe">atmosphere</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">besonders</b></div>
+	<div><small class="hilfe">special</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">unterschiedlich</b></div>
+	<div><small class="hilfe">different</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">eine andere Welt</b></div>
+	<div><small class="hilfe">another world</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. vom Hocker reißen (ugs.)</b></div>
+	<div><small class="hilfe">to rock sb's boat (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die ganze Zeit</b></div>
+	<div><small class="hilfe">all the time</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">hier sein</b></div>
+	<div><small class="hilfe">to be here</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich freuen</b></div>
+	<div><small class="hilfe">to be happy</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Empfehlung</b></div>
+	<div><small class="hilfe">recommendation</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich weigern</b></div>
+	<div><small class="hilfe">to refuse</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. einfallen</b></div>
+	<div><small class="hilfe">to think of sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Lieblingschannel</b></div>
+	<div><small class="hilfe">favorite channel</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Leidenschaft</b></div>
+	<div><small class="hilfe">passion</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Wissen</b></div>
+	<div><small class="hilfe">knowledge</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. verkaufen</b></div>
+	<div><small class="hilfe">to sell sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">traumhaft</b></div>
+	<div><small class="hilfe">fantastic</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. finden</b></div>
+	<div><small class="hilfe">to find sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Liegestütze</b></div>
+	<div><small class="hilfe">push-ups</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich etw. sparen</b></div>
+	<div><small class="hilfe">to spare oneself sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">weggehen von etw.</b></div>
+	<div><small class="hilfe">to move away from sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">recht haben</b></div>
+	<div><small class="hilfe">to be right</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">und zwar</b></div>
+	<div><small class="hilfe">in fact</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. kennen</b></div>
+	<div><small class="hilfe">to know sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Autorin </b></div>
+	<div><small class="hilfe">writer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">junges Publikum</b></div>
+	<div><small class="hilfe">young audience</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">grob gesagt</b></div>
+	<div><small class="hilfe">roughly speaking</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ansprechend</b></div>
+	<div><small class="hilfe">appealing</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">Deutschland kennenlernen</b></div>
+	<div><small class="hilfe">to get to know Germany</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">aufpassen</b></div>
+	<div><small class="hilfe">to pay attention</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein großer Fan</b></div>
+	<div><small class="hilfe">a huge fan</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">seit neuestem</b></div>
+	<div><small class="hilfe">most recently</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. bestimmtes</b></div>
+	<div><small class="hilfe">sth. specific</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ich habe früher</b></div>
+	<div><small class="hilfe">I used to</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">insbesondere</b></div>
+	<div><small class="hilfe">in particular</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Startseite</b></div>
+	<div><small class="hilfe">homepage</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">meistgelesen</b></div>
+	<div><small class="hilfe">most read</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jeweilige</b></div>
+	<div><small class="hilfe">respective</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">viele Menschen</b></div>
+	<div><small class="hilfe">a lot of people</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ablesen</b></div>
+	<div><small class="hilfe">to gauge sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">was jmd. beschäftigt</b></div>
+	<div><small class="hilfe">what occupies sb.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Präsidentschaftskandidat</b></div>
+	<div><small class="hilfe">candidate for the presidency</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">jmd. erschießen </b></div>
+	<div><small class="hilfe">to shoot sb. </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">am heutigen Tage</b></div>
+	<div><small class="hilfe">on this day</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">angesagt sein</b></div>
+	<div><small class="hilfe">to be popular</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Land</b></div>
+	<div><small class="hilfe">country</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">wunderschön</b></div>
+	<div><small class="hilfe">wonderful</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zum Abschluss</b></div>
+	<div><small class="hilfe">in the end</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. vorziehen</b></div>
+	<div><small class="hilfe">to bring sth. forward</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. abspielen</b></div>
+	<div><small class="hilfe">to play sth. back</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mir ist aufgefallen</b></div>
+	<div><small class="hilfe">I noticed</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verwenden</b></div>
+	<div><small class="hilfe">to use</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Ursprung</b></div>
+	<div><small class="hilfe">origin</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verwandeln</b></div>
+	<div><small class="hilfe">to transform</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">außerdem</b></div>
+	<div><small class="hilfe">also</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Rechner</b></div>
+	<div><small class="hilfe">computer</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Verliebtheit</b></div>
+	<div><small class="hilfe">being in love</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Stimme</b></div>
+	<div><small class="hilfe">voice</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Radiosprecher</b></div>
+	<div><small class="hilfe">radio host</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">bestimmen</b></div>
+	<div><small class="hilfe">to determine</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Volksmund</b></div>
+	<div><small class="hilfe">vernacular</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">am natürlichsten</b></div>
+	<div><small class="hilfe">most natural</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Mehrheit</b></div>
+	<div><small class="hilfe">majority</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich ergeben</b></div>
+	<div><small class="hilfe">to arise</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die These</b></div>
+	<div><small class="hilfe">theory</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Busfahrer</b></div>
+	<div><small class="hilfe">bus driver</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">am naheliegendsten</b></div>
+	<div><small class="hilfe">most obvious</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">irgendwo</b></div>
+	<div><small class="hilfe">somewhere</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Kommission</b></div>
+	<div><small class="hilfe">commission</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich entscheiden</b></div>
+	<div><small class="hilfe">to be decided</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">mehrere Artikel</b></div>
+	<div><small class="hilfe">multiple articles</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Schlimmste</b></div>
+	<div><small class="hilfe">the worst</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">kein Mensch</b></div>
+	<div><small class="hilfe">no person</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwankend</b></div>
+	<div><small class="hilfe">fluctuating</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">das Gefälle</b></div>
+	<div><small class="hilfe">gradient</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zu beobachten sein</b></div>
+	<div><small class="hilfe">to be observable</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">je weiter desto</b></div>
+	<div><small class="hilfe">the further the more</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">südlich</b></div>
+	<div><small class="hilfe">south</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">verbreitet</b></div>
+	<div><small class="hilfe">spread</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">scheinen</b></div>
+	<div><small class="hilfe">to seem</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">passen</b></div>
+	<div><small class="hilfe">to fit</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">klingt richtig</b></div>
+	<div><small class="hilfe">sounds about right</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">laut etw. </b></div>
+	<div><small class="hilfe">according to sth. </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Deutschlerner</b></div>
+	<div><small class="hilfe">German learner</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">nehmen</b></div>
+	<div><small class="hilfe">to take</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Maßstab</b></div>
+	<div><small class="hilfe">measure</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ziehen nach</b></div>
+	<div><small class="hilfe">to move to</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">zweitgrößte</b></div>
+	<div><small class="hilfe">second largest</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ausblenden</b></div>
+	<div><small class="hilfe">to blend sth. out</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">der Einwohner</b></div>
+	<div><small class="hilfe">inhabitant</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">reinbringen</b></div>
+	<div><small class="hilfe">to bring in sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">müde</b></div>
+	<div><small class="hilfe">tired</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ausgeschlafen sein</b></div>
+	<div><small class="hilfe">to be rested</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">antreten</b></div>
+	<div><small class="hilfe">to line up</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ein Foto machen</b></div>
+	<div><small class="hilfe">to take a picture</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich verabschieden</b></div>
+	<div><small class="hilfe">to say goodbye</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Zuhörer</b></div>
+	<div><small class="hilfe">audience</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">vorab</b></div>
+	<div><small class="hilfe">in advance</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">sich entschuldigen</b></div>
+	<div><small class="hilfe">to apologize</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die schlechte Stimmung </b></div>
+	<div><small class="hilfe">bad mood </small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">besonders</b></div>
+	<div><small class="hilfe">especially</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">abgesehen von</b></div>
+	<div><small class="hilfe">aside from</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">von etw. angekotzt sein (ugs.)</b></div>
+	<div><small class="hilfe">to be pissed off at sth. (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">ungehalten</b></div>
+	<div><small class="hilfe">indignant</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">schwächeln (ugs.)</b></div>
+	<div><small class="hilfe">to slack (colloq.)</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Professionalität</b></div>
+	<div><small class="hilfe">professionalism</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. ausgleichen</b></div>
+	<div><small class="hilfe">to compensate for sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">einfach</b></div>
+	<div><small class="hilfe">simply</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">die Ruhe selbst</b></div>
+	<div><small class="hilfe">calmness itself</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">in der Mitte</b></div>
+	<div><small class="hilfe">in the middle</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. bezeichnen</b></div>
+	<div><small class="hilfe">to describe sth.</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">perfekt</b></div>
+	<div><small class="hilfe">perfect</small></div>
+</div>
+<div class="row hidden">
+	<div class="vokabeln"><b data-spk="3">etw. zusammenfassen</b></div>
+	<div><small class="hilfe">to summarize sth.</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>
