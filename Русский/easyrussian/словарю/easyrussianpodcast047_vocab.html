@@ -1,0 +1,721 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>    47: What am I paying for!? (talking about bills)</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #DD0101; }
+    a:visited { color: #DD0101; }
+    a:hover { color: #DD0101; }
+    a:active { color: #DD0101; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #DD0101; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">    47: What am I paying for!? (talking about bills)</h1>
+
+<p id="info">
+The Easy Russian Podcast<br>
+<a href="http://www.easyrussian.fm" target="_blank">www.easyrussian.fm</a>
+</p>
+
+	<h4>Помощь по словарю</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">помедленнее </b></div>
+		<div><small class="hilfe">slower</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">заготовленный</b></div>
+		<div><small class="hilfe">pre-made</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">важный</b></div>
+		<div><small class="hilfe">important</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">деньги</b></div>
+		<div><small class="hilfe">money</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">наболевшая тема</b></div>
+		<div><small class="hilfe">burning issue</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оплата квартиры</b></div>
+		<div><small class="hilfe">apartment payment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">коммунальные услуги</b></div>
+		<div><small class="hilfe">utilities</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">получить доступ</b></div>
+		<div><small class="hilfe">to gain access</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разбирать (imp)</b></div>
+		<div><small class="hilfe">to analyse</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">очередной</b></div>
+		<div><small class="hilfe">another </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стихотворение</b></div>
+		<div><small class="hilfe">poem</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стартовать (imp)</b></div>
+		<div><small class="hilfe">to start</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">30-дневный</b></div>
+		<div><small class="hilfe">30-day</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">давать задание</b></div>
+		<div><small class="hilfe">to give a tasks</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фидбэк </b></div>
+		<div><small class="hilfe">feedback</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">возможность (f)</b></div>
+		<div><small class="hilfe">opportunity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пообщаться (perf)</b></div>
+		<div><small class="hilfe">to talk</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">участвовать (imp)</b></div>
+		<div><small class="hilfe">to participate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">общаться (imp)</b></div>
+		<div><small class="hilfe">to communicate </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">настроение </b></div>
+		<div><small class="hilfe">mood</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">не очень</b></div>
+		<div><small class="hilfe">so-so</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пришло время</b></div>
+		<div><small class="hilfe">it's time</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">коммунальный </b></div>
+		<div><small class="hilfe">utility </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">счёт - счета</b></div>
+		<div><small class="hilfe">bill - bills </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">приличная сумма</b></div>
+		<div><small class="hilfe">decent amount</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3"> электричество</b></div>
+		<div><small class="hilfe"> electricity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отдельно</b></div>
+		<div><small class="hilfe">separately</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">управляющая компания</b></div>
+		<div><small class="hilfe">management company</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вода</b></div>
+		<div><small class="hilfe">water</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">свет</b></div>
+		<div><small class="hilfe">light</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">коммуналка </b></div>
+		<div><small class="hilfe">utilities  (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">центральное отопление</b></div>
+		<div><small class="hilfe">central heating</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">делить пополам </b></div>
+		<div><small class="hilfe">to share for two</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">неприятно</b></div>
+		<div><small class="hilfe">unpleasantly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скинуться (perf)</b></div>
+		<div><small class="hilfe">to chip in</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">коммуналка</b></div>
+		<div><small class="hilfe">utilities (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оплачивать счета</b></div>
+		<div><small class="hilfe">to pay bills</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">почтовый ящик</b></div>
+		<div><small class="hilfe">mailbox</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грустить (imp)</b></div>
+		<div><small class="hilfe">to feel very sad</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">квиток</b></div>
+		<div><small class="hilfe">receipt (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">владелец квартиры</b></div>
+		<div><small class="hilfe">apartment owner</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хозяин</b></div>
+		<div><small class="hilfe">owner</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">просрочить (perf)</b></div>
+		<div><small class="hilfe">to overdue</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отключить (perf)</b></div>
+		<div><small class="hilfe">to turn off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Представляешь?</b></div>
+		<div><small class="hilfe">Can you believe it?</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оплата услуг</b></div>
+		<div><small class="hilfe">payment for services</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вывоз мусора</b></div>
+		<div><small class="hilfe">garbage removal</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ремонт</b></div>
+		<div><small class="hilfe">renovation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обслуживание дома</b></div>
+		<div><small class="hilfe">house maintenance</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ломаться (imp)</b></div>
+		<div><small class="hilfe">to break down</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">исправно </b></div>
+		<div><small class="hilfe">properly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">добросовестный</b></div>
+		<div><small class="hilfe">conscientious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разминка </b></div>
+		<div><small class="hilfe">warm-up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Приятно было поболтать!</b></div>
+		<div><small class="hilfe">Nice talking to you!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Удачи с ...!</b></div>
+		<div><small class="hilfe">Good luck with ...!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ЖКХ</b></div>
+		<div><small class="hilfe">housing and utilities</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">аббревиатура </b></div>
+		<div><small class="hilfe">abbreviation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жилищно-коммунальный </b></div>
+		<div><small class="hilfe">housing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">расшифровываться</b></div>
+		<div><small class="hilfe">to be deciphered</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ЖКУ</b></div>
+		<div><small class="hilfe">housing and utilities</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хозяйство</b></div>
+		<div><small class="hilfe">household</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жилищно-коммунальное хозяйство</b></div>
+		<div><small class="hilfe">housing and utilities</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">платить за ЖКХ</b></div>
+		<div><small class="hilfe">pay utility bills</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разделить оплату</b></div>
+		<div><small class="hilfe">to split the fee</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сброситься (perf)</b></div>
+		<div><small class="hilfe">to jump off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выкинуться (perf)</b></div>
+		<div><small class="hilfe">to be thrown out </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сумма</b></div>
+		<div><small class="hilfe">amount</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">счета за квартиру</b></div>
+		<div><small class="hilfe">rent bills</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разбирать (imp)</b></div>
+		<div><small class="hilfe">to disassemble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разобрать (perf)</b></div>
+		<div><small class="hilfe">to dismantle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вывинтить (perf)</b></div>
+		<div><small class="hilfe">to unscrew</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ножки </b></div>
+		<div><small class="hilfe">table legs</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">столешница</b></div>
+		<div><small class="hilfe">tabletop</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">куча </b></div>
+		<div><small class="hilfe">heap</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">квитанция</b></div>
+		<div><small class="hilfe">receipt</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">платёжный документ</b></div>
+		<div><small class="hilfe">payment document</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ворох</b></div>
+		<div><small class="hilfe">pile</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">исправно</b></div>
+		<div><small class="hilfe">properly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ответственно</b></div>
+		<div><small class="hilfe">responsibly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">аккуратно</b></div>
+		<div><small class="hilfe">neatly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">просрочить оплату (perf)</b></div>
+		<div><small class="hilfe">to be late with the payment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пропустить срок</b></div>
+		<div><small class="hilfe">to miss the deadline</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">не вовремя</b></div>
+		<div><small class="hilfe">a t the wrong time</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">срок</b></div>
+		<div><small class="hilfe">term</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">просрочка (colloq)</b></div>
+		<div><small class="hilfe">expired products </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">достойный</b></div>
+		<div><small class="hilfe">worthy</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">соответствующий </b></div>
+		<div><small class="hilfe">corresponding</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">внушительный </b></div>
+		<div><small class="hilfe">impressive </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">высокая цена</b></div>
+		<div><small class="hilfe">high price</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">настроение не очень</b></div>
+		<div><small class="hilfe">moody (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">электричество</b></div>
+		<div><small class="hilfe">electricity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выключить (perf) </b></div>
+		<div><small class="hilfe">to turn off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">делить пополам</b></div>
+		<div><small class="hilfe">to share for two</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лендлорд</b></div>
+		<div><small class="hilfe">landlord</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">владелец</b></div>
+		<div><small class="hilfe">owner</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сколько вышло</b></div>
+		<div><small class="hilfe">how much to pay</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бывало</b></div>
+		<div><small class="hilfe">used to be</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">свет </b></div>
+		<div><small class="hilfe">light</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">непонятный </b></div>
+		<div><small class="hilfe">unclear </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">владеть</b></div>
+		<div><small class="hilfe">to own</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3"> обслуживание дома</b></div>
+		<div><small class="hilfe"> house maintenance</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ломаться</b></div>
+		<div><small class="hilfe">to break down</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разминка</b></div>
+		<div><small class="hilfe">warm-up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">присоединиться (perf)</b></div>
+		<div><small class="hilfe">to join</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">упомянуть (perf)</b></div>
+		<div><small class="hilfe">to mention</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">масса полезного</b></div>
+		<div><small class="hilfe">wide range of utility</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нескучный</b></div>
+		<div><small class="hilfe">enjoyable</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">расшифровка</b></div>
+		<div><small class="hilfe">transcript</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подсвечиваться (imp)</b></div>
+		<div><small class="hilfe">to illuminate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">произносить (imp)</b></div>
+		<div><small class="hilfe">to pronounce</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разобрать (perf)</b></div>
+		<div><small class="hilfe">to analyse</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перевод</b></div>
+		<div><small class="hilfe">translation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подписываться (imp)</b></div>
+		<div><small class="hilfe">to sign up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">удобный</b></div>
+		<div><small class="hilfe">convenient</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">функция</b></div>
+		<div><small class="hilfe">function</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

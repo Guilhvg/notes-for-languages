@@ -1,0 +1,729 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Super Easy Podcast: "Just clean it!" (talking about chores)</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #DD0101; }
+    a:visited { color: #DD0101; }
+    a:hover { color: #DD0101; }
+    a:active { color: #DD0101; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #DD0101; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">Super Easy Podcast: "Just clean it!" (talking about chores)</h1>
+
+<p id="info">
+The Easy Russian Podcast<br>
+<a href="http://www.easyrussian.fm" target="_blank">www.easyrussian.fm</a>
+</p>
+
+	<h4>Помощь по словарю</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">начинающий</b></div>
+		<div><small class="hilfe">beginner</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">уборка</b></div>
+		<div><small class="hilfe">cleaning</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">простой</b></div>
+		<div><small class="hilfe">simple</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">полезный</b></div>
+		<div><small class="hilfe">useful</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лексика</b></div>
+		<div><small class="hilfe">vocabulary</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">начинать (imp)</b></div>
+		<div><small class="hilfe">to start</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пригодиться (perf)</b></div>
+		<div><small class="hilfe">to come in handy</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">расшифровка </b></div>
+		<div><small class="hilfe">transcript</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перевод</b></div>
+		<div><small class="hilfe">translation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чистюля</b></div>
+		<div><small class="hilfe">neat freak</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">порядок</b></div>
+		<div><small class="hilfe">order</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">провести (perf)</b></div>
+		<div><small class="hilfe">to carry out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тщательный</b></div>
+		<div><small class="hilfe">thorough</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пропылесосить </b></div>
+		<div><small class="hilfe">to vacuum</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вымыть  (perf)</b></div>
+		<div><small class="hilfe">to wash</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">протереть  (perf)</b></div>
+		<div><small class="hilfe">to wipe</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">помыть посуду (perf)</b></div>
+		<div><small class="hilfe">to wash up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отдраить (perf)</b></div>
+		<div><small class="hilfe">to scrub</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разморозить  (perf)</b></div>
+		<div><small class="hilfe">to defrost</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разобрать  (perf)</b></div>
+		<div><small class="hilfe">to disassemble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вытряхнуть  (perf)</b></div>
+		<div><small class="hilfe">to shake out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">полить (perf)</b></div>
+		<div><small class="hilfe">to water</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">постирать  (perf)</b></div>
+		<div><small class="hilfe">to wash</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">погладить (perf)</b></div>
+		<div><small class="hilfe">to iron</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вызывать (imp)</b></div>
+		<div><small class="hilfe">to call</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">уборщица</b></div>
+		<div><small class="hilfe">cleaner</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чистый</b></div>
+		<div><small class="hilfe">clean</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">убирать (imp)</b></div>
+		<div><small class="hilfe">to clean up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ванную</b></div>
+		<div><small class="hilfe">bathroom</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">душ</b></div>
+		<div><small class="hilfe">shower</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">раковина</b></div>
+		<div><small class="hilfe">sink</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чистить (imp)</b></div>
+		<div><small class="hilfe">to clean</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грязь (f)</b></div>
+		<div><small class="hilfe">mud</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">въедаться (imp)</b></div>
+		<div><small class="hilfe">to eat in</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плесень  (f)</b></div>
+		<div><small class="hilfe">mold</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стиральная машина</b></div>
+		<div><small class="hilfe">washing machine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">комок пыли</b></div>
+		<div><small class="hilfe">lump of dust</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стирка белья</b></div>
+		<div><small class="hilfe">laundry washing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">порошок </b></div>
+		<div><small class="hilfe">powder</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стиралка (colloq)</b></div>
+		<div><small class="hilfe">washing machine </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вручную</b></div>
+		<div><small class="hilfe">manually</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шёлк</b></div>
+		<div><small class="hilfe">silk</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">развесить (perf)</b></div>
+		<div><small class="hilfe">to hang</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сушилка </b></div>
+		<div><small class="hilfe">dryer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">высохнуть (perf)</b></div>
+		<div><small class="hilfe">to dry out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">гладить (imp)</b></div>
+		<div><small class="hilfe">to iron</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отпариватель (m)</b></div>
+		<div><small class="hilfe">steamer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">утюг</b></div>
+		<div><small class="hilfe">iron</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">убираться (imp)</b></div>
+		<div><small class="hilfe">to tidy up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">успокаивать (imp)</b></div>
+		<div><small class="hilfe">to calm</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тряпка</b></div>
+		<div><small class="hilfe">rag</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оттирать (imp)</b></div>
+		<div><small class="hilfe">to scrub</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жир </b></div>
+		<div><small class="hilfe">fat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скатерть (f)</b></div>
+		<div><small class="hilfe">tablecloth</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">брызгать (imp)</b></div>
+		<div><small class="hilfe">to sprinkle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пульверизатор</b></div>
+		<div><small class="hilfe">sprayer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">протирать (imp)</b></div>
+		<div><small class="hilfe">to wipe</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">застилать (imp)</b></div>
+		<div><small class="hilfe">to cover</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мыть посуду</b></div>
+		<div><small class="hilfe">to wash up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">почистить (perf)</b></div>
+		<div><small class="hilfe">to clean</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стульчак</b></div>
+		<div><small class="hilfe">toilet seat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чистота</b></div>
+		<div><small class="hilfe">purity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">устаревший</b></div>
+		<div><small class="hilfe">obsolete</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">просторечие</b></div>
+		<div><small class="hilfe">colloquialism</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обидно</b></div>
+		<div><small class="hilfe">offended</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">драить (imp)</b></div>
+		<div><small class="hilfe">to scrub</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тщательно </b></div>
+		<div><small class="hilfe">thoroughly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">натирать (imp)</b></div>
+		<div><small class="hilfe">to rub</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3"> до блеска</b></div>
+		<div><small class="hilfe">to a shine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">руками</b></div>
+		<div><small class="hilfe">by hand</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">неочевидный</b></div>
+		<div><small class="hilfe">unobvious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">странный</b></div>
+		<div><small class="hilfe">strange</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ободок </b></div>
+		<div><small class="hilfe">rim </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">унитаз</b></div>
+		<div><small class="hilfe">toilet</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поднимать (imp)</b></div>
+		<div><small class="hilfe">to lift</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">писать (imp)</b></div>
+		<div><small class="hilfe">to pee</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">опускать (imp)</b></div>
+		<div><small class="hilfe">to lower</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стульчак </b></div>
+		<div><small class="hilfe">toilet seat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стульчик (dim)</b></div>
+		<div><small class="hilfe">stool</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шарик</b></div>
+		<div><small class="hilfe">marble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пыль (f)</b></div>
+		<div><small class="hilfe">dust</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грунтовая дорога</b></div>
+		<div><small class="hilfe">dirt road</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">песок</b></div>
+		<div><small class="hilfe">sand</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">столб пыли</b></div>
+		<div><small class="hilfe">dust column</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">клубы пыли</b></div>
+		<div><small class="hilfe">dust clouds</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">полы</b></div>
+		<div><small class="hilfe">floors</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">посуда</b></div>
+		<div><small class="hilfe">dishes</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плита</b></div>
+		<div><small class="hilfe">stove</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">духовка</b></div>
+		<div><small class="hilfe">oven</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мусор</b></div>
+		<div><small class="hilfe">garbage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ковёр</b></div>
+		<div><small class="hilfe">carpet</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разделить обязанности (perf)</b></div>
+		<div><small class="hilfe">to share duties</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">постирать (perf)</b></div>
+		<div><small class="hilfe">to wash</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бельё</b></div>
+		<div><small class="hilfe">linen</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">по углам</b></div>
+		<div><small class="hilfe">at the corners</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стирка</b></div>
+		<div><small class="hilfe">washing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">деликатный </b></div>
+		<div><small class="hilfe">delicate </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">материал</b></div>
+		<div><small class="hilfe">material</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">портить вид (imp)</b></div>
+		<div><small class="hilfe">to spoil the view</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отпариватель  (m)</b></div>
+		<div><small class="hilfe">steamer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">одежда</b></div>
+		<div><small class="hilfe">clothing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">кухонный гарнитур</b></div>
+		<div><small class="hilfe">kitchen set</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поверхность (f)</b></div>
+		<div><small class="hilfe">surface</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ванная</b></div>
+		<div><small class="hilfe">bathroom</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пассив-агрессив</b></div>
+		<div><small class="hilfe">passive-aggressive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подтереть (perf)</b></div>
+		<div><small class="hilfe">to wipe</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">интерактивный</b></div>
+		<div><small class="hilfe">interactive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">расшифровка</b></div>
+		<div><small class="hilfe">transcript</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в режиме реального времени</b></div>
+		<div><small class="hilfe">in real time</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подсвечиваться </b></div>
+		<div><small class="hilfe">to be illuminated</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">произносить (imp)</b></div>
+		<div><small class="hilfe">to pronounce</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нажатие</b></div>
+		<div><small class="hilfe">pressing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перевод </b></div>
+		<div><small class="hilfe">translation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">становиться (imp)</b></div>
+		<div><small class="hilfe">to become</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поддерживать (imp)</b></div>
+		<div><small class="hilfe">to support</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">замечательный</b></div>
+		<div><small class="hilfe">great</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дополнительный</b></div>
+		<div><small class="hilfe">additional</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>    45: Where is platform 9¾? (buying ticket for a train)</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #DD0101; }
+    a:visited { color: #DD0101; }
+    a:hover { color: #DD0101; }
+    a:active { color: #DD0101; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #DD0101; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">    45: Where is platform 9¾? (buying ticket for a train)</h1>
+
+<p id="info">
+The Easy Russian Podcast<br>
+<a href="http://www.easyrussian.fm" target="_blank">www.easyrussian.fm</a>
+</p>
+
+	<h4>Помощь по словарю</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отправляться (imp)</b></div>
+		<div><small class="hilfe">to depart</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поезд</b></div>
+		<div><small class="hilfe">train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">покупать (imp)</b></div>
+		<div><small class="hilfe">to buy</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">билет</b></div>
+		<div><small class="hilfe">ticket</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вокзал</b></div>
+		<div><small class="hilfe">(railway) station</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">продавать (imp)</b></div>
+		<div><small class="hilfe">to sell</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сценка</b></div>
+		<div><small class="hilfe">sketch</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">кондуктор</b></div>
+		<div><small class="hilfe">conductor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пассажир</b></div>
+		<div><small class="hilfe">passenger</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">рассеянный</b></div>
+		<div><small class="hilfe">scattered</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">речь пойдёт о</b></div>
+		<div><small class="hilfe">we're talking about</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">касса</b></div>
+		<div><small class="hilfe">ticket office</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">билет </b></div>
+		<div><small class="hilfe">ticket</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обычный </b></div>
+		<div><small class="hilfe">standard</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скорый</b></div>
+		<div><small class="hilfe">express (train)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разница</b></div>
+		<div><small class="hilfe">difference</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отправление</b></div>
+		<div><small class="hilfe">departure</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">московское время</b></div>
+		<div><small class="hilfe">moscow time</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">прибытие</b></div>
+		<div><small class="hilfe">arrival</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вокзал </b></div>
+		<div><small class="hilfe">(railway) station</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стоить </b></div>
+		<div><small class="hilfe">to cost</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выбрать место (perf)</b></div>
+		<div><small class="hilfe">to select a seat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сидячий</b></div>
+		<div><small class="hilfe">sitting</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">столик</b></div>
+		<div><small class="hilfe">little table</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">второй класс</b></div>
+		<div><small class="hilfe">second class</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оплата картой</b></div>
+		<div><small class="hilfe">card payment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оплата наличными</b></div>
+		<div><small class="hilfe">cash payment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вагон </b></div>
+		<div><small class="hilfe">wagon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">номер места</b></div>
+		<div><small class="hilfe">seat number</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">путь (m)</b></div>
+		<div><small class="hilfe">lane</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нумерация</b></div>
+		<div><small class="hilfe">numbering</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">конец состава</b></div>
+		<div><small class="hilfe">end of the train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чек</b></div>
+		<div><small class="hilfe">check</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">платформа </b></div>
+		<div><small class="hilfe">platform</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оценить шутку</b></div>
+		<div><small class="hilfe">to appreciate a joke</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шутник </b></div>
+		<div><small class="hilfe">joker</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вагон</b></div>
+		<div><small class="hilfe">wagon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">паспорт</b></div>
+		<div><small class="hilfe">passport</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в другую сторону</b></div>
+		<div><small class="hilfe">other way</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нумерация </b></div>
+		<div><small class="hilfe">numbering</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перепутан</b></div>
+		<div><small class="hilfe">mixed up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Проходите</b></div>
+		<div><small class="hilfe">Take a place!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">туалет</b></div>
+		<div><small class="hilfe">toilet</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">современный </b></div>
+		<div><small class="hilfe">modern</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">экран</b></div>
+		<div><small class="hilfe">screen</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">самолёт</b></div>
+		<div><small class="hilfe">airplane</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вещи </b></div>
+		<div><small class="hilfe">stuff</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">верхняя полка</b></div>
+		<div><small class="hilfe">top shelf</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">провожающий</b></div>
+		<div><small class="hilfe">seer-off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вагон-ресторан</b></div>
+		<div><small class="hilfe">dining car</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">закуски </b></div>
+		<div><small class="hilfe">snacks</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">проводник</b></div>
+		<div><small class="hilfe">conductor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тележка</b></div>
+		<div><small class="hilfe">cart</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">предложить (perf)</b></div>
+		<div><small class="hilfe">to offer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">напитки</b></div>
+		<div><small class="hilfe">drinks</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">покурить (perf)</b></div>
+		<div><small class="hilfe">to smoke</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тамбур</b></div>
+		<div><small class="hilfe">tambour</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">курение </b></div>
+		<div><small class="hilfe">smoking</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">запрещено</b></div>
+		<div><small class="hilfe">forbidden</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">элитное купе</b></div>
+		<div><small class="hilfe">luxury coupe</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">спальный вагон</b></div>
+		<div><small class="hilfe">sleeping car</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поезд дальнего следования</b></div>
+		<div><small class="hilfe">long-distance train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">прибывать (imp)</b></div>
+		<div><small class="hilfe">to arrive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">конечная остановка</b></div>
+		<div><small class="hilfe">final stop</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">начало состава</b></div>
+		<div><small class="hilfe">beginning of the train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в обратную сторону</b></div>
+		<div><small class="hilfe">in reverse</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">переставлять </b></div>
+		<div><small class="hilfe">to rearrange </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тягач</b></div>
+		<div><small class="hilfe">tractor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">осторожный</b></div>
+		<div><small class="hilfe">cautious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">покурить (perf)</b></div>
+		<div><small class="hilfe">to smoke</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пространство </b></div>
+		<div><small class="hilfe">space</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">переход </b></div>
+		<div><small class="hilfe">passage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">соединительная ткань (f)</b></div>
+		<div><small class="hilfe">connective tissue</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">площадка </b></div>
+		<div><small class="hilfe">platform</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сцепка</b></div>
+		<div><small class="hilfe">hitching</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">писать (imp)</b></div>
+		<div><small class="hilfe">to piss</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">электричка</b></div>
+		<div><small class="hilfe">electric train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пригородный поезд</b></div>
+		<div><small class="hilfe">commuter train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">следовать (imp)</b></div>
+		<div><small class="hilfe">to follow</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">маршрут</b></div>
+		<div><small class="hilfe">route</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разделение </b></div>
+		<div><small class="hilfe">division</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вариант размещения</b></div>
+		<div><small class="hilfe">accommodation option</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сидячее место</b></div>
+		<div><small class="hilfe">seat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">купе</b></div>
+		<div><small class="hilfe">compartment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">элитный вариант</b></div>
+		<div><small class="hilfe">luxury option</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">находиться (imp)</b></div>
+		<div><small class="hilfe">to stay</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">купе </b></div>
+		<div><small class="hilfe">compartment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нижняя полка</b></div>
+		<div><small class="hilfe">lower shelf</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плацкартный вагон</b></div>
+		<div><small class="hilfe">open-plan carriage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лежачий</b></div>
+		<div><small class="hilfe">lying</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разделённый</b></div>
+		<div><small class="hilfe">divided</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дверь (f)</b></div>
+		<div><small class="hilfe">door</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перегородка</b></div>
+		<div><small class="hilfe">partition</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дешёвый </b></div>
+		<div><small class="hilfe">cheap</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">беситься (imp)</b></div>
+		<div><small class="hilfe">to freak out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">смеяться (imp)</b></div>
+		<div><small class="hilfe">to laugh</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">детский лагерь (m)</b></div>
+		<div><small class="hilfe">children's camp</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">упомянуть (perf)</b></div>
+		<div><small class="hilfe">to mention</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">любимейший</b></div>
+		<div><small class="hilfe">favorite</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отпускник</b></div>
+		<div><small class="hilfe">vacationer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">командировочный</b></div>
+		<div><small class="hilfe">traveling</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">устремляються (imp)</b></div>
+		<div><small class="hilfe">to rush</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">трогаться с места </b></div>
+		<div><small class="hilfe">to set off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в разговорном темпе</b></div>
+		<div><small class="hilfe">conversationally</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обычный</b></div>
+		<div><small class="hilfe">ordinary</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выбрать место</b></div>
+		<div><small class="hilfe">to select a seat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">у окна</b></div>
+		<div><small class="hilfe">at the window</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">со столиком</b></div>
+		<div><small class="hilfe">with a table</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">карта</b></div>
+		<div><small class="hilfe">card</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">наличные</b></div>
+		<div><small class="hilfe">cash</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">указан </b></div>
+		<div><small class="hilfe">specified</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">отправиться (perf)</b></div>
+		<div><small class="hilfe">to depart</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нумерация от конца состава</b></div>
+		<div><small class="hilfe">numbering from the end of the train</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Не забудьте чек!</b></div>
+		<div><small class="hilfe">Don't forget the check!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">девять и три четверти</b></div>
+		<div><small class="hilfe">nine and three quarters</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Поторопитесь!</b></div>
+		<div><small class="hilfe">Hurry up!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Проходите!</b></div>
+		<div><small class="hilfe">Take a place!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">положить (perf)</b></div>
+		<div><small class="hilfe">to put</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пройти мимо</b></div>
+		<div><small class="hilfe">to pass by</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стоить (imp)</b></div>
+		<div><small class="hilfe">to cost</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">курение запрещено</b></div>
+		<div><small class="hilfe">smoking is prohibited</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">не единственное</b></div>
+		<div><small class="hilfe">not the only</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">доступен</b></div>
+		<div><small class="hilfe">available</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дополнительная опция</b></div>
+		<div><small class="hilfe">additional option</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в режиме реального времени</b></div>
+		<div><small class="hilfe">in real time</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подсвечиваться </b></div>
+		<div><small class="hilfe">to be illuminated</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">произносить</b></div>
+		<div><small class="hilfe">to pronounce</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">удобно</b></div>
+		<div><small class="hilfe">conveniently</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сопоставлять</b></div>
+		<div><small class="hilfe">compare to [or with]</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">при нажатии</b></div>
+		<div><small class="hilfe">when pressing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">столбец</b></div>
+		<div><small class="hilfe">column</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перевод </b></div>
+		<div><small class="hilfe">translation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3"> таким образом</b></div>
+		<div><small class="hilfe">in that way</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разобрать (perf)</b></div>
+		<div><small class="hilfe">to disassemble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">понять (perf)</b></div>
+		<div><small class="hilfe">to comprehend</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">запомнить (perf)</b></div>
+		<div><small class="hilfe">to memorize</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">предлагать (imp)</b></div>
+		<div><small class="hilfe">to offer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">оставлять (imp)</b></div>
+		<div><small class="hilfe">to leave</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">аудиосообщение</b></div>
+		<div><small class="hilfe">audio message</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

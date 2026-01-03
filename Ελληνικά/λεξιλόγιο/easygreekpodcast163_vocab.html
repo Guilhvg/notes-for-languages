@@ -1,0 +1,973 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>163: Είδαμε το Poor Things</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #0101DD; }
+    a:visited { color: #0101DD; }
+    a:hover { color: #0101DD; }
+    a:active { color: #0101DD; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #0101DD; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">163: Είδαμε το Poor Things</h1>
+
+<p id="info">
+The Easy Greek Podcast<br>
+<a href="http://www.easygreek.fm" target="_blank">www.easygreek.fm</a>
+</p>
+
+	<h4>Βοήθεια με το λεξιλόγιο</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εν τάχει</b></div>
+		<div><small class="hilfe">briefly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">τονίζω</b></div>
+		<div><small class="hilfe">to highlight</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">τσακώνομαι</b></div>
+		<div><small class="hilfe">to quarrel</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">καλοπιάνω</b></div>
+		<div><small class="hilfe">to coax</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">από τα βάθη</b></div>
+		<div><small class="hilfe">from the depths</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η τιμωρία</b></div>
+		<div><small class="hilfe">punishment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο κώλος</b></div>
+		<div><small class="hilfe">ass</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">χεσμένος</b></div>
+		<div><small class="hilfe">shit-stained</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">σεινάμενος κουνάμενος</b></div>
+		<div><small class="hilfe">oblivious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">υπεροπτικός</b></div>
+		<div><small class="hilfe">arrogant</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το ύφος</b></div>
+		<div><small class="hilfe">look</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η άμμος</b></div>
+		<div><small class="hilfe">sand(box)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">παίρνω κάποιον σηκωτό</b></div>
+		<div><small class="hilfe">to drag someone</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">πηγμένος</b></div>
+		<div><small class="hilfe">overwhelmed</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">υιοθετώ</b></div>
+		<div><small class="hilfe">to adopt</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">βαριέμαι</b></div>
+		<div><small class="hilfe">to be bored</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">δυστυχισμένος</b></div>
+		<div><small class="hilfe">miserable</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">φουντωτός</b></div>
+		<div><small class="hilfe">furry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">μπαίνω «στο ψητό»</b></div>
+		<div><small class="hilfe">to get to the point</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ψαγμένος</b></div>
+		<div><small class="hilfe">well versed</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">διάσημος</b></div>
+		<div><small class="hilfe">famous</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το ρεύμα</b></div>
+		<div><small class="hilfe">trend</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">παράξενος</b></div>
+		<div><small class="hilfe">strange</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το σενάριο</b></div>
+		<div><small class="hilfe">script</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">άρρωστος</b></div>
+		<div><small class="hilfe">sick/twisted</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">συνδυαστικά</b></div>
+		<div><small class="hilfe">in a combined way</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">σουρεαλιστικός</b></div>
+		<div><small class="hilfe">surreal</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">καλλιτεχνικός</b></div>
+		<div><small class="hilfe">artistic</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η προσέγγιση</b></div>
+		<div><small class="hilfe">approach</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">βάζω στο επίκεντρο</b></div>
+		<div><small class="hilfe">to place at the forefront</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">καταξιώνω</b></div>
+		<div><small class="hilfe">to acclaim</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">διεθνούς εμβέλειας</b></div>
+		<div><small class="hilfe">internationally renowned</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο σκηνοθέτης</b></div>
+		<div><small class="hilfe">director</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">καθορίζω</b></div>
+		<div><small class="hilfe">to define</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η λεπτομέρεια</b></div>
+		<div><small class="hilfe">detail</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η υπερπροστασία</b></div>
+		<div><small class="hilfe">overprotection</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο έλεγχος</b></div>
+		<div><small class="hilfe">control</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το συναίσθημα</b></div>
+		<div><small class="hilfe">feeling/emotion</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ουδέτερος</b></div>
+		<div><small class="hilfe">neutral</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ατάκα</b></div>
+		<div><small class="hilfe">quip, line</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το κόλπο</b></div>
+		<div><small class="hilfe">trick</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το πληκτρολόγιο</b></div>
+		<div><small class="hilfe">keyboard</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο τρόπος εκτέλεσης</b></div>
+		<div><small class="hilfe">rendition</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το μήνυμα</b></div>
+		<div><small class="hilfe">message</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η σύλληψη</b></div>
+		<div><small class="hilfe">conception</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κλειστοφοβικός</b></div>
+		<div><small class="hilfe">claustrophobic</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">θανατώνω</b></div>
+		<div><small class="hilfe">to kill</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Ο Χριστός και η Παναγία!</b></div>
+		<div><small class="hilfe">Jesus Christ and Mother Mary!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">στρεσάρομαι</b></div>
+		<div><small class="hilfe">to get stressed out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η πινελιά</b></div>
+		<div><small class="hilfe">touch</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">στα καλύτερά μου </b></div>
+		<div><small class="hilfe">at my best </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η εισαγωγή</b></div>
+		<div><small class="hilfe">introduction</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">απογειώνω</b></div>
+		<div><small class="hilfe">to kill something (metaphorically, e.g. you killed it)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">υποψήφιος</b></div>
+		<div><small class="hilfe">nominee</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η κωμωδία</b></div>
+		<div><small class="hilfe">comedy</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η κριτική</b></div>
+		<div><small class="hilfe">review</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">παραδέχομαι</b></div>
+		<div><small class="hilfe">to admit</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ανοιχτά</b></div>
+		<div><small class="hilfe">openly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κράζω</b></div>
+		<div><small class="hilfe">to diss, to tell off</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">προσβλητικός</b></div>
+		<div><small class="hilfe">offensive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το γυναικείο φύλο</b></div>
+		<div><small class="hilfe">womankind</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">φεμινιστικός</b></div>
+		<div><small class="hilfe">feminist</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο όρος</b></div>
+		<div><small class="hilfe">term</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">άγριος</b></div>
+		<div><small class="hilfe">aggressive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">έντονος</b></div>
+		<div><small class="hilfe">intense</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κουραστικός</b></div>
+		<div><small class="hilfe">tiring</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το κλείσιμο του ματιού</b></div>
+		<div><small class="hilfe">wink</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η θέση</b></div>
+		<div><small class="hilfe">position</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κυρίαρχος</b></div>
+		<div><small class="hilfe">master</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">διαλύω</b></div>
+		<div><small class="hilfe">to crush</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η φαντασίωση</b></div>
+		<div><small class="hilfe">fantasy, dream</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">υπερβολικά</b></div>
+		<div><small class="hilfe">overly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">μισανδρικός</b></div>
+		<div><small class="hilfe">misandrous</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ακραίος</b></div>
+		<div><small class="hilfe">extreme</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αποσυντονίζομαι</b></div>
+		<div><small class="hilfe">to get distracted</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">λυπάμαι</b></div>
+		<div><small class="hilfe">to feel sorry for</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">χωρίζω</b></div>
+		<div><small class="hilfe">to separate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αγριεύομαι</b></div>
+		<div><small class="hilfe">to get spooked</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το φορτηγό</b></div>
+		<div><small class="hilfe">truck</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το πλάνο</b></div>
+		<div><small class="hilfe">shot (video/cinema)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο τρελογιατρός</b></div>
+		<div><small class="hilfe">crazy doctor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο τρελοεπιστήμονας</b></div>
+		<div><small class="hilfe">mad scientist</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το συκώτι</b></div>
+		<div><small class="hilfe">liver</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">βγάζω τα γυαλιά μου</b></div>
+		<div><small class="hilfe">to take off my glasses</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο εγκέφαλος</b></div>
+		<div><small class="hilfe">brain</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο πονοκέφαλος</b></div>
+		<div><small class="hilfe">headache</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αηδιάζω</b></div>
+		<div><small class="hilfe">to be disgusted</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εξελίσσομαι</b></div>
+		<div><small class="hilfe">to evolve</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο λόγος</b></div>
+		<div><small class="hilfe">reason</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η λαχτάρα</b></div>
+		<div><small class="hilfe">longing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κυοφορώ</b></div>
+		<div><small class="hilfe">to be pregnant (with)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">φυτεύω</b></div>
+		<div><small class="hilfe">to plant</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το πλάσμα</b></div>
+		<div><small class="hilfe">creature</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ανοίγω τα φτερά μου</b></div>
+		<div><small class="hilfe">to spread my wings</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ανακαλύπτω</b></div>
+		<div><small class="hilfe">to discover</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το παραμύθι</b></div>
+		<div><small class="hilfe">fairytale</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο μεγάλος</b></div>
+		<div><small class="hilfe">grown-up, adult</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">βασισμένος σε</b></div>
+		<div><small class="hilfe">based on</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εύστοχος</b></div>
+		<div><small class="hilfe">insightful</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η παρατήρηση</b></div>
+		<div><small class="hilfe">observation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η απόδοση</b></div>
+		<div><small class="hilfe">rendition</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">σύγχρονος</b></div>
+		<div><small class="hilfe">modern</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">νεκρός</b></div>
+		<div><small class="hilfe">dead</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο ηλεκτρισμός</b></div>
+		<div><small class="hilfe">electricity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αναγεννώ</b></div>
+		<div><small class="hilfe">to revive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το τέρας</b></div>
+		<div><small class="hilfe">monster</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η κοινωνία</b></div>
+		<div><small class="hilfe">society</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η έννοια</b></div>
+		<div><small class="hilfe">concept</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">χαμός γίνεται</b></div>
+		<div><small class="hilfe">it's chaos, a mess</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η σεξουαλικότητα</b></div>
+		<div><small class="hilfe">sexuality</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αυτοικανοποιούμαι</b></div>
+		<div><small class="hilfe">to self-satisfy, masturbate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το νήπιο</b></div>
+		<div><small class="hilfe">toddler</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η διάσταση</b></div>
+		<div><small class="hilfe">dimension</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η παιδεραστία</b></div>
+		<div><small class="hilfe">paedophilia</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η διαστροφή</b></div>
+		<div><small class="hilfe">perversion</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η αποστροφή</b></div>
+		<div><small class="hilfe">aversion</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το ταξίδι</b></div>
+		<div><small class="hilfe">journey</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κατακτώ</b></div>
+		<div><small class="hilfe">to conquer, to win</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ανεξαρτησία</b></div>
+		<div><small class="hilfe">independence</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η κρουαζιέρα</b></div>
+		<div><small class="hilfe">cruise</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο αρραβωνιαστικός</b></div>
+		<div><small class="hilfe">fiancé</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">πιάνω</b></div>
+		<div><small class="hilfe">to dock</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το κτίριο</b></div>
+		<div><small class="hilfe">building</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η πύλη</b></div>
+		<div><small class="hilfe">gate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ιπτάμενος</b></div>
+		<div><small class="hilfe">flying</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εναέριος</b></div>
+		<div><small class="hilfe">airborne, in the air</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">συγκλονιστικός</b></div>
+		<div><small class="hilfe">shocking</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">συγκινητικός</b></div>
+		<div><small class="hilfe">touching</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">γεμίζω</b></div>
+		<div><small class="hilfe">to fill</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το ερωτηματικό</b></div>
+		<div><small class="hilfe">question mark</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η οπτική</b></div>
+		<div><small class="hilfe">point of view</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">γρατζουνάω</b></div>
+		<div><small class="hilfe">to scratch</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">σε κάποια φάση</b></div>
+		<div><small class="hilfe">at some point</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο σταθμός</b></div>
+		<div><small class="hilfe">stop, station</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">συνειδητοποιώ</b></div>
+		<div><small class="hilfe">to realize</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">διευρύνω τους ορίζοντές μου</b></div>
+		<div><small class="hilfe">to broaden one's horizons</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">φιλοσοφικά</b></div>
+		<div><small class="hilfe">philosophically</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ωριμάζω</b></div>
+		<div><small class="hilfe">to mature</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">σωματικά</b></div>
+		<div><small class="hilfe">physically</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η εφηβεία</b></div>
+		<div><small class="hilfe">puberty</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ηδονή</b></div>
+		<div><small class="hilfe">lust</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η πνευματική αναζήτηση</b></div>
+		<div><small class="hilfe">spiritual quest</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ενηλικίωση</b></div>
+		<div><small class="hilfe">coming of age</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ικανοποίηση</b></div>
+		<div><small class="hilfe">satisfaction</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εγκεφαλικός</b></div>
+		<div><small class="hilfe">cerebral</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">πνευματικός</b></div>
+		<div><small class="hilfe">spiritual</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η φιλανθρωπία</b></div>
+		<div><small class="hilfe">charity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η αποτύπωση</b></div>
+		<div><small class="hilfe">portrayal</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ταξική διαφορά</b></div>
+		<div><small class="hilfe">class difference</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κλεισμένος</b></div>
+		<div><small class="hilfe">locked up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αγνοώ</b></div>
+		<div><small class="hilfe">to ignore, not know</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το παλάτι</b></div>
+		<div><small class="hilfe">palace</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η περιέργεια</b></div>
+		<div><small class="hilfe">curiosity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ξαναβουτάω</b></div>
+		<div><small class="hilfe">to dive again into</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η λαγνεία</b></div>
+		<div><small class="hilfe">lust</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εμμέσως πλην σαφώς</b></div>
+		<div><small class="hilfe">indirectly albeit clearly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">συστήνω</b></div>
+		<div><small class="hilfe">to recommend</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">έντονα</b></div>
+		<div><small class="hilfe">intensely</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το εξωτερικό</b></div>
+		<div><small class="hilfe">abroad</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ήμουνα σε φάση</b></div>
+		<div><small class="hilfe">I was, like...</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η σχέση αγάπης και μίσους</b></div>
+		<div><small class="hilfe">love and hate relationship</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η δεύτερη ευκαιρία</b></div>
+		<div><small class="hilfe">second chance</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ο χορηγός</b></div>
+		<div><small class="hilfe">sponsor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">έξω</b></div>
+		<div><small class="hilfe">outside (of Greece)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">λύνω</b></div>
+		<div><small class="hilfe">to solve</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">βιάζεται</b></div>
+		<div><small class="hilfe">to be in a hurry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">το μεροκάματο</b></div>
+		<div><small class="hilfe">hard-earned wage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η αναγνώριση</b></div>
+		<div><small class="hilfe">recognition</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αξίζω</b></div>
+		<div><small class="hilfe">to deserve</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η ποζεριά</b></div>
+		<div><small class="hilfe">posery</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η δηθενιά</b></div>
+		<div><small class="hilfe">pretentiousness</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">επιτηδευμένος</b></div>
+		<div><small class="hilfe">pretentious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">εν μέρει</b></div>
+		<div><small class="hilfe">in part</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">η περίπτωση</b></div>
+		<div><small class="hilfe">case</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">διακρίνομαι</b></div>
+		<div><small class="hilfe">to be distinguished</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">στο εξωτερικό</b></div>
+		<div><small class="hilfe">abroad</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">κινώ το ενδιαφέρον</b></div>
+		<div><small class="hilfe">to spark one's interest</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">αξίζει</b></div>
+		<div><small class="hilfe">it's worth it</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>152: Ο βασιλιάς της νοσταλγίας</title>
+
+    <style>
+    body { margin: 0; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #shownotes-headline {
+      cursor: pointer;
+      font-size: x-large;
+      font-weight: bold;
+    }
+    #summary { margin: 0 10%; }
+    .chapter { 
+      margin-top: 1em; 
+      scroll-margin-top: 50px;
+    }
+    #shownotes { 
+      margin-top: 2em;
+      padding: 1.5em;
+      background: #fafafa;
+    }
+
+    #edit-bar {
+        margin-top: 2em; display: flex; justify-content: space-between; flex-wrap: wrap;
+        position: -webkit-sticky; position: sticky; top: 0; left: 0;
+        background: white; z-index: 999;
+        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;
+    }
+    #edit-bar-spacer { flex-grow: 1; }
+    .button {
+        background-color: #f5f5f5; color: #363636;
+        border: 1px solid #dbdbdb; border-radius: 4px; box-shadow: none;
+        margin: 0.5em 1.5em; padding: 5px 12px;
+        cursor:pointer;font-size: 0.9em;
+        justify-content:center; text-align:center; white-space:nowrap;
+        display: inline-flex; position: relative; vertical-align: top;
+        user-select: none; text-decoration: none;
+    }
+    .button:hover{border-color:#b5b5b5;color:#363636;background-color:#eee;}
+    .button:active{border-color:#4a4a4a;color:#363636;background-color:#e8e8e8;}
+    .button.export-option { margin: 0.5em 0.2em 0.5em auto; }
+    .button.export-buttons-shown { margin-left: 0.2em; margin-left: auto; }
+
+    span.active { font-weight: bold; }
+    span.listened { font-weight: bold; font-style: italic; }
+    #transcript.edit-mode { border-style: dashed; padding: 10px; }
+    #transcript span { cursor: pointer; }
+    #transcript.edit-mode span { cursor: text; }
+    .transcript-base { margin: 1.5em; max-width: 1200px;}
+    .chapter-shownotes{
+        cursor:pointer;
+        color: black;
+        text-decoration: none;
+    }
+
+    @media all and (max-width: 900px) {
+      .button.export-buttons-shown { margin: 0.5em; margin-left: auto; }
+      .button.export-option { margin: 0.5em; margin-left: auto; }
+    }
+
+    @media all and (max-width: 340px) {
+      .button { margin: 0.2em; }
+    }
+
+    @media print {
+        #edit-bar { display: none; }
+        .button { display: none; }
+        span { background: white; }
+        #transcript { border-style: none !important; padding: 0px !important; }
+    }
+    </style>
+</head><body>
+
+
+<div id="metadata">
+<h1 id="title">152: Ο βασιλιάς της νοσταλγίας</h1>
+<h4 id="subtitle"></h4>
+
+<p id="info">
+Easy Greek<br>
+Easy Greek<br>
+<a href="" target="_blank"></a>
+</p>
+
+<p id="summary">
+
+</p>
+
+
+</div>
+
+<div id="edit-bar">
+    <a class="button" id="edit-transcript" onclick="enableEdit();" title="Enable/disable edit mode.">Edit Transcript</a>
+    <a class="button" id="toggle-rename-speaker" onclick="toggleRenameSpeaker();" title="Toggels between renaming speakers and editing speaker." style="display: none;">Edit Speaker</a>
+    
+    <a class="button" id="add-audio-file" onclick="addAudioFile();" title="Add audio file which should be played along the transcript." style="">Add Audio File</a>
+    <a class="button" id="toggle-play-on-click" title="Enable/disable click on word for audio playback." style="display: none;">Stop Play-on-click</a>
+
+    <div id="edit-bar-spacer"></div>
+
+    <a class="button export-option" id="save-changes" onclick="saveChanges();" style="display: none;" title="Save transcript editor with current changes for further editing or sharing.">Save Editor</a>
+    <a class="button export-option" id="export-html" onclick="exportHTML();" style="display: none;" title="Export transcript as HTML for Word, Wordpress, etc.">Export HTML</a>
+    <a class="button export-option" id="export-pdf" onclick="window.print(); hideExportButtons();" style="display: none;" title="Export transcript as PDF or to printer.">Export PDF</a>
+    <a class="button export-option" id="export-webvtt" onclick="exportWebVTT();" style="display: none;" title="Export transcript as WebVTT for web players.">Export WebVTT</a>
+    <a class="button" id="show-export-buttons" onclick="showExportButtons();" title="">Export...</a>
+    <a class="button" id="show-help" href="https://auphonic.com/help/algorithms/speech_recognition.html#auphonic-transcript-editor" target="_blank" title="Show transcript editor help." style="">?</a>
+
+    <audio id="audio-player" preload="auto" style="display: none;">
+        <source src="https://auphonic.com/engine/download/audio-result/rAdxqukotUwRdsNLU7rUFM/eg_POD_152_mixdown_Δημήτρης.mp3?ms=845709">
+    </audio>
+</div>
+
+<div id="transcript" class="transcript-base" contenteditable="false" spellcheck="false">
+
+<h2 id="chapterT" class="chapter">Απομαγνητοφώνηση</h2>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[0:17]</small> <span title="0:17 - 0:27" data-start="00:00:17.498" data-end="00:00:26.752" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Γεια σας και καλώς ήρθατε στο Easy Greek podcast, το podcast που σας μαθαίνει ελληνικά με καθημερινούς αυθεντικούς διαλόγους.&nbsp;</span><span title="0:27 - 0:36" data-start="00:00:27.221" data-end="00:00:36.102" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Είμαι ο Δημήτρης και σήμερα έχουμε έναν ιδιαίτερο καλεσμένο. Έχουμε μαζί μας τον φίλο μου, τον Γιώργο. Γεια σου, Γιώργο!</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[0:36]</small> <span title="0:36 - 0:40" data-start="00:00:36.006" data-end="00:00:40.128" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Γεια χαρά! Γεια χαρά σε όλους τους φανς του Easy Greek!</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[0:40]</small> <span title="0:40 - 0:45" data-start="00:00:40.327" data-end="00:00:44.803" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Εγώ και ο Γιώργος είμαστε φίλοι σχεδόν 20 χρόνια πλέον, ε, Γιώργο;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[0:45]</small> <span title="0:45 - 0:46" data-start="00:00:44.665" data-end="00:00:45.758" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Σωστά. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[0:46]</small> <span title="0:46 - 0:53" data-start="00:00:45.512" data-end="00:00:53.294" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Γι' αυτό σκέφτηκα... όχι μόνο μάλλον γι' αυτό, αλλά είσαι ο βασιλιάς της νοσταλγίας.&nbsp;</span><span title="0:54 - 1:03" data-start="00:00:53.811" data-end="00:01:03.407" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Είσαι ο άνθρωπος που θυμάται όλες τις άκυρες ατάκες που έχουμε πει ποτέ. Όλες τις άκυρες φάσεις. Όταν λέω «άκυρες» εννοώ που...&nbsp;</span><span title="1:04 - 1:14" data-start="00:01:03.858" data-end="00:01:13.749" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">εξηγώ για να καταλάβεις, Γιώργο, και το concept: η ιδέα είναι ότι άμα είναι κάποια, έτσι, λίγο πιο δύσκολη λέξη λέω στους φίλους μας τι σημαίνει, έτσι;&nbsp;</span><span title="1:14 - 1:27" data-start="00:01:14.080" data-end="00:01:27.029" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Άμα είναι «άκυρο» σημαίνει ότι είναι άσχετο, δηλαδή μπορεί να μην έχει κάποια σχέση με οτιδήποτε συζητιέται εκείνη τη στιγμή, οπότε θυμάται άσχετες, άκυρες ατάκες που έχουμε πει εμείς ή άλλοι φίλοι μας&nbsp;</span><span title="1:28 - 1:33" data-start="00:01:27.648" data-end="00:01:32.942" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και πολύ συχνά μου λες ότι νοσταλγείς το παρελθόν, έτσι δεν είναι;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[1:33]</small> <span title="1:33 - 1:36" data-start="00:01:32.858" data-end="00:01:36.403" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νοσταλγία θα έλεγα ότι είναι ίσως όλη μου η ζωή. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[1:36]</small> <span title="1:36 - 1:38" data-start="00:01:36.379" data-end="00:01:38.019" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[1:38]</small> <span title="1:38 - 1:52" data-start="00:01:37.839" data-end="00:01:51.660" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή... δηλαδή ότι συχνά πιάνω τον εαυτό μου να νοσταλγεί πράγματα, ανθρώπους, καταστάσεις, άκυρα πράγματα, όπως </span><span title="1:52 - 2:02" data-start="00:01:52.291" data-end="00:02:02.272" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">κάποια σειρά στην τηλεόραση, κάποιο τραγούδι που μπορεί να 'χω ακούσει, κάποιο στίχο από κάποιο τραγούδι και αυτομάτως αυτό με γυρνάει πίσω. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[2:02]</small> <span title="2:02 - 2:04" data-start="00:02:02.338" data-end="00:02:04.153" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Τι συναισθήματά σου προκαλεί;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[2:04]</small> <span title="2:04 - 2:07" data-start="00:02:04.075" data-end="00:02:06.881" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κατά κύριο λόγο θετικά θα έλεγα. (Θετικά.)&nbsp;</span><span title="2:08 - 2:23" data-start="00:02:08.185" data-end="00:02:22.570" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, δηλαδή νοσταλγώ πράγματα τα οποία κατά κύριο λόγο είναι κάτι ευχάριστο, κάτι θετικό, αλλά υπάρχει και μια, θα 'λεγα, μελαγχολία να το πω... κάπως πιο&nbsp;</span><span title="2:23 - 2:27" data-start="00:02:23.304" data-end="00:02:26.855" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">πικρόγλυκο συναίσθημα σε κάποιες αναμνήσεις. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[2:28]</small> <span title="2:28 - 2:35" data-start="00:02:27.667" data-end="00:02:35.382" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ουσιαστικά, ναι, αυτή είναι η νοσταλγία. Είναι ένα συναίσθημα γλυκόπικρο, όπως είπες, το οποίο&nbsp;</span><span title="2:36 - 2:46" data-start="00:02:36.091" data-end="00:02:45.549" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">όμως δεν είναι αποκλειστικά θετικό, γιατί ενώ αναγνωρίζεις ότι έχεις ζήσει αυτά τα πράγματα τα οποία θα ήθελες να ξαναζήσεις, υπάρχει&nbsp;</span><span title="2:46 - 2:53" data-start="00:02:46.096" data-end="00:02:52.892" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και η σκέψη κάπου εκεί μέσα ότι όλα αυτά πια είναι περασμένα, αλλά όχι ξεχασμένα.&nbsp;</span><span title="2:54 - 3:07" data-start="00:02:53.608" data-end="00:03:06.503" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">(Σίγουρα.) Εδώ διάβαζα τον ορισμό της νοσταλγίας, η οποία ακούγεται μια αρκετά ελληνική λέξη, όμως δεν είναι ελληνική. Προέρχεται από τις λέξεις «νόστος» και «άλγος».&nbsp;</span><span title="3:07 - 3:09" data-start="00:03:06.918" data-end="00:03:09.381" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">«Νόστος» είναι...</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[3:10]</small> <span title="3:10 - 3:12" data-start="00:03:09.598" data-end="00:03:11.803" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Επιστροφή στο σπίτι σημαίνει στην ουσία. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[3:12]</small> <span title="3:12 - 3:20" data-start="00:03:11.647" data-end="00:03:19.506" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, είναι επιστροφή στο σπίτι και αναφέρεται από τον Όμηρο, είναι μία αρχαία λέξη, όπως και το άλγος που σημαίνει πόνος, </span><span title="3:20 - 3:31" data-start="00:03:20.270" data-end="00:03:30.695" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και αυτή χρησιμοποιείται... το «άλγος» χρησιμοποιείται συνήθως στα νέα ελληνικά σαν ιατρικός όρος, ο πραγματικός πόνος. Μαζί αυτές οι δύο λέξεις&nbsp;</span><span title="3:32 - 3:35" data-start="00:03:31.861" data-end="00:03:34.721" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">τις έβαλε, στη Wikipedia λέει, </span><span title="3:36 - 3:48" data-start="00:03:35.701" data-end="00:03:48.272" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">ένας φοιτητής ιατρικής τον 17ο αιώνα για να περιγράψει, όπως μου είπες και εσύ πριν που το συζητάγαμε αυτό... (ναι) να περιγράψει τα συναισθήματα που εμφανίζουν... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[3:48]</small> <span title="3:48 - 3:54" data-start="00:03:48.056" data-end="00:03:53.524" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Των μισθοφόρων που στην ουσία πολεμούν... πολεμούσαν εκτός της πατρίδας τους. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[3:53]</small> <span title="3:53 - 4:04" data-start="00:03:53.230" data-end="00:04:03.919" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι. Άκου τώρα... Το αστείο που μου φαίνεται εμένα σ' αυτό είναι ότι αυτή η φοβερή λέξη «νοσταλγία» που μας έχει&nbsp;</span><span title="4:05 - 4:14" data-start="00:04:04.515" data-end="00:04:14.141" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">έρθει και είναι πάρα πολύ λέξη των ημερών και της δεκαετίας και είναι πάρα πολύ 21ος αιώνας... περιέχει... η κουλτούρα του τώρα εμπεριέχει πολύ νοσταλγία μέσα της...&nbsp;</span><span title="4:15 - 4:27" data-start="00:04:14.580" data-end="00:04:27.150" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">δεν ξέρουμε το όνομά του... είναι απλά ένας... «ένας» φοιτητής ιατρικής. Δε θα μάθουμε ποτέ το όνομά του ανθρώπου που δημιούργησε τη λέξη «νοσταλγία», το οποίο είναι ειρωνικό, </span><span title="4:28 - 4:42" data-start="00:04:27.866" data-end="00:04:41.909" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">αλλά ας επιστρέψουμε στο ίδιο το συναίσθημα της νοσταλγίας, το γλυκόπικρο αυτό συναίσθημα. Ποια είναι πράγματα τα οποία σου δημιουργούν νοσταλγία; Μας ανέφερες κάποια άλλα ας πάμε σε λίγο πιο συγκεκριμένα πράγματα.&nbsp;</span><span title="4:42 - 4:44" data-start="00:04:42.468" data-end="00:04:43.657" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Παραδείγματα. </span><br>
+<span title="4:45 - 4:50" data-start="00:04:45.250" data-end="00:04:50.412" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ας πούμε, τι σου δημιουργεί περισσότερη νοσταλγία; Μία φωτογραφία, </span><span title="4:51 - 4:57" data-start="00:04:50.935" data-end="00:04:57.040" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">μία μελωδία, ένας ήχος, μία μυρωδιά... από καθαρά αισθητηριακής άποψης;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[4:57]</small> <span title="4:57 - 5:10" data-start="00:04:57.202" data-end="00:05:10.133" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Θα σου πω... Θα μπορούσε να είναι όλα αυτά μαζί αλλά θα μπορούσε, ας πούμε, να είναι και... για παράδειγμα, βγαίνω έξω, πάω μία βόλτα, περπατάω και... για παράδειγμα,&nbsp;</span><span title="5:12 - 5:24" data-start="00:05:12.327" data-end="00:05:24.489" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">περνάω από ένα μέρος, μια τοποθεσία και για κάποιο περίεργο λόγο «βλέπω» τον εαυτό μου πως ήτανε πριν από κάποια χρόνια, αν καταλαβαίνεις τι εννοώ κι αν μπορεί να καταλάβει και ο κόσμος τι εννοώ. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[5:25]</small> <span title="5:25 - 5:30" data-start="00:05:24.742" data-end="00:05:30.192" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Μπαίνεις δηλαδή... είναι σαν να τηλεμεταφέρεσαι... μάλλον να χρονομεταφέρεσαι... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[5:30]</small> <span title="5:30 - 5:34" data-start="00:05:29.892" data-end="00:05:34.320" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ακριβώς, είναι λες και είναι μια χρονοκάψουλα. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[5:34]</small> <span title="5:34 - 5:39" data-start="00:05:34.410" data-end="00:05:38.809" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και βλέπεις τον εαυτό σου μέσα από τα μάτια σου ή είναι σαν να βλέπεις τον εαυτό σου απ' έξω;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[5:39]</small> <span title="5:39 - 5:50" data-start="00:05:39.086" data-end="00:05:49.667" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Μάλλον σαν να βλέπω τον εαυτό μου απ' έξω, δηλαδή λέω ότι σ' αυτό το σημείο καθόμουν εγώ, ξέρω 'γω, πριν... παράδειγμα 10 χρόνια. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[5:51]</small> <span title="5:51 - 6:04" data-start="00:05:51.146" data-end="00:06:03.927" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αυτό το νιώθεις μόνο με θετικά συναισθήματα, ας πούμε, δηλαδή με καταστάσεις με τις οποίες ένιωσες ωραία φαντάζομαι, γιατί αλλιώς δε θα σου δημιουργούσαν νοσταλγία... θα σου δημιουργούσανε κάτι... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[6:04]</small> <span title="6:04 - 6:08" data-start="00:06:03.957" data-end="00:06:08.427" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ξέρεις... δεν είναι... δεν μπορείς να πεις απαραίτητα ότι είναι&nbsp;</span><span title="6:09 - 6:19" data-start="00:06:09.131" data-end="00:06:19.178" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">ωραία. Μπορεί να 'ναι και ουδέτερα να στο πω έτσι. Μπορεί να 'ναι μια συγκεκριμένη στιγμή, ας πούμε, που να μην έχει, ας πούμε, κάποιο έντονο συναίσθημα, απλά να 'ναι ουδέτερο, ρε παιδί μου.&nbsp;</span><span title="6:20 - 6:34" data-start="00:06:20.332" data-end="00:06:34.332" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Να 'ναι βασικά... ξέρεις, εδώ είναι λίγο που είναι... γίνεται λίγο περίεργη η συζήτηση και προσπαθώ να βγάλω ό,τι έχω στο μυαλό μου προς τα έξω και αυτό είναι το πιο δύσκολο για μένα. Αυτό που προσπαθώ να πω είναι ότι&nbsp;</span><span title="6:35 - 6:42" data-start="00:06:35.198" data-end="00:06:42.252" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">βλέπεις ένα κομμάτι της δικής σου ιστορίας τουλάχιστον σε 'μένα «τρέχει» μπροστά στα μάτια μου&nbsp;</span><span title="6:43 - 6:52" data-start="00:06:43.202" data-end="00:06:51.771" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">και αυτομάτως αυτό κάνει μια αλυσιδωτή αντίδραση βλέποντας και άλλα πράγματα απ' το παρελθόν σου&nbsp;</span><span title="6:53 - 7:00" data-start="00:06:52.847" data-end="00:06:59.553" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">απ' αυτή την περίοδο, αν μου επιτραπεί, ας πούμε, η αγγλική λέξη από αυτό το era. (Ναι.)&nbsp;</span><span title="7:02 - 7:07" data-start="00:07:02.209" data-end="00:07:06.631" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Αυτό. Δηλαδή, μπορείς να πας μια βόλτα, </span><span title="7:07 - 7:21" data-start="00:07:07.401" data-end="00:07:21.227" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">να δεις ένα συγκεκριμένο σημείο, το οποίο κάτι σημαίνει για σένα. Παράδειγμα, είχες βγει με έναν φίλο σου, είχες βγει με τη φίλη σου τότε ή, ξέρω 'γω, μια παρέα ατόμων και πίνατε μπύρες ή δεν ξέρω και εγώ τι...&nbsp;</span><span title="7:23 - 7:24" data-start="00:07:22.700" data-end="00:07:23.841" data-spk="1" data-label="Γιώργος" style="background: rgba(255, 255, 255, 0);">και το ζεις πάλι. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[7:24]</small> <span title="7:24 - 7:37" data-start="00:07:24.052" data-end="00:07:37.031" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Σου συμβαίνει ποτέ όταν ζεις κάτι τέτοιο, όταν έχεις μια οποιαδήποτε εμπειρία τη στιγμή που τη ζεις, να σκέφτεσαι «στο μέλλον θα το νοσταλγώ αυτό που ζω αυτή τη στιγμή»;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[7:37]</small> <span title="7:37 - 7:48" data-start="00:07:37.182" data-end="00:07:48.394" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κάποιες φορές το σκέφτομαι, ναι, ότι αυτό τώρα που κάνω, που σκέφτομαι το παρελθόν μου, κάποια στιγμή στο μέλλον θα σκέφτομαι το παρόν που τότε θα 'ναι παρελθόν.&nbsp;</span><span title="7:49 - 8:00" data-start="00:07:49.488" data-end="00:08:00.232" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κάποιες φορές, ναι, αλλά γενικά για να γυρίσω πίσω στο ερώτημά σου είναι... είναι πολλά πράγματα μαζί. Μπορεί, ας πούμε, να 'ναι και μια μυρωδιά σίγουρα.&nbsp;</span><span title="8:01 - 8:07" data-start="00:08:00.683" data-end="00:08:06.884" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Μπορεί και να 'ναι σίγουρα μια μελωδία. Για παράδειγμα, </span><span title="8:08 - 8:16" data-start="00:08:07.612" data-end="00:08:16.066" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">πόσα viral videos χρησιμοποιούν, ας πούμε, μια μελωδία από κάποιο video game πλέον, π.χ. το νόμισμα του Mario. (Ναι.) Έτσι;&nbsp;</span><span title="8:17 - 8:27" data-start="00:08:16.553" data-end="00:08:27.045" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Θα μπορούσε αυτό... όχι απαραίτητα πάντα, αλλά αρκετές φορές να σε γυρίσει πίσω, ας πούμε, στο παρελθόν όταν έπαιζες εσύ Mario και άκουγες τον ήχο του νομίσματος που μάζευες. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[8:27]</small> <span title="8:27 - 8:36" data-start="00:08:27.117" data-end="00:08:35.896" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι. Ειδικά με τα βιντεοπαιχνίδια εγώ έχω να πω ότι για κάποιο λόγο&nbsp;</span><span title="8:36 - 8:46" data-start="00:08:36.413" data-end="00:08:46.280" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">αυτό το οποίο μου φαίνεται πιο νοσταλγικό στα βιντεοπαιχνίδια δεν είναι ούτε τα γραφικά, δεν είναι ούτε καν ο χειρισμός, δηλαδή να παίξω ένα βιντεοπαιχνίδι παλιό, μπορεί και...&nbsp;</span><span title="8:47 - 8:52" data-start="00:08:46.809" data-end="00:08:51.574" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">αν παίξω ένα βιντεοπαιχνίδι που μου άρεσε παλιά, να το παίξω και να μη μ' αρέσει πια καν, </span><span title="8:52 - 9:02" data-start="00:08:52.031" data-end="00:09:02.312" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">δηλαδή μου συμβαίνει αυτό κάποιες φορές ειδικά άμα έχουν περάσει πολλά χρόνια που δεν το 'χω παίξει. Αυτό το οποίο όμως μου φέρνει τη μεγαλύτερη νοσταλγία πάντα με διαφορά είναι η μουσική&nbsp;</span><span title="9:03 - 9:09" data-start="00:09:03.352" data-end="00:09:08.784" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και πάντα ήτανε αυτό το έναυσμα που με ταξιδεύει στο χρόνο. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[9:09]</small> <span title="9:09 - 9:12" data-start="00:09:08.946" data-end="00:09:11.758" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Στίχοι ή κάποιο κομμάτι;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[9:12]</small> <span title="9:12 - 9:18" data-start="00:09:11.680" data-end="00:09:18.314" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Μιλώντας για βιντεοπαιχνίδια, γιατί τα βιντεοπαιχνίδια για μένα έχουνε έντονη αυτή την αίσθηση της νοσταλγίας, </span><span title="9:19 - 9:23" data-start="00:09:19.234" data-end="00:09:22.640" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">είναι συνήθως μουσική χωρίς στίχους, έτσι;&nbsp;</span><span title="9:23 - 9:38" data-start="00:09:23.476" data-end="00:09:37.789" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και μιλώντας για μουσική, ευχαριστώ για το πάτημα, υπάρχουν κάποια είδη μουσικής τα οποία είναι πιο έντονα συνυφασμένα με τη νοσταλγία. Σκέφτομαι τώρα ένα συγκεκριμένο είδος μουσικής που λέγεται «City Pop».&nbsp;</span><span title="9:39 - 9:40" data-start="00:09:38.890" data-end="00:09:40.223" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Δεν ξέρω αν το έχεις ακουστά, το ξέρεις;&nbsp;</span><span title="9:42 - 9:51" data-start="00:09:41.684" data-end="00:09:50.949" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Εγώ το έμαθα μέσα απ' το YouTube. Μια μέρα απλά άρχισε να με... να... να μου προτείνει City Pop δίσκους. Είναι&nbsp;</span><span title="9:52 - 9:56" data-start="00:09:51.821" data-end="00:09:56.442" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">μουσική ποπ της δεκαετίας του '80 από την Ιαπωνία. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[9:57]</small> <span title="9:57 - 10:00" data-start="00:09:56.929" data-end="00:10:00.378" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νομίζω κάτι μου είχες αναφέρει. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[10:00]</small> <span title="10:00 - 10:09" data-start="00:10:00.276" data-end="00:10:08.958" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ναι, και άμα ακούσετε μουσική City Pop αυτό το οποίο πολλοί αναφέρουνε που την ακούνε είναι ότι τους δημιουργεί έντονα&nbsp;</span><span title="10:09 - 10:14" data-start="00:10:09.361" data-end="00:10:14.385" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">συναισθήματα νοσταλγίας για κάτι όμως που δεν έχουνε ζήσει.&nbsp;</span><span title="10:15 - 10:21" data-start="00:10:14.782" data-end="00:10:20.832" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή, προφανώς κανείς από 'μας δε μεγάλωσε ή έζησε στην Ιαπωνία της δεκαετίας του '80, </span><span title="10:22 - 10:30" data-start="00:10:21.566" data-end="00:10:30.291" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">όμως τι μπορεί να είναι αυτό το οποίο σε κάνει να νοσταλγείς μια εποχή που δεν έχεις ζήσει; Για μένα, για παράδειγμα, νοσταλγώ πολύ συχνά τη δεκαετία του '</span><span title="10:31 - 10:38" data-start="00:10:30.958" data-end="00:10:38.253" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">60, παρ' όλο που δεν έζησα εκείνη την εποχή, γιατί ήτανε μεγαλειώδεις&nbsp;</span><span title="10:39 - 10:44" data-start="00:10:38.860" data-end="00:10:44.075" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">οι κοινωνικές αλλαγές, οι πολιτικές αλλαγές, οι χίπηδες που με λες και εσύ χίπη...&nbsp;</span><span title="10:46 - 10:50" data-start="00:10:45.891" data-end="00:10:49.748" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">(Είσαι.) Έχω μία έχω μια πολύ έντονη...&nbsp;</span><span title="10:50 - 11:01" data-start="00:10:50.235" data-end="00:11:00.823" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">βλέπω πολύ ρομαντικά εκείνη την περίοδο και τη νοσταλγώ ακόμα και άμα δεν την έζησα, δηλαδή ξέρω πολλά για εκείνη την περίοδο και έχω ανθρώπους γύρω μου, </span><span title="11:01 - 11:06" data-start="00:11:01.358" data-end="00:11:06.129" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">τους γονείς μου, τον πατέρα μου, βέβαια, γιατί η μάνα μου ήταν πιο μικρή τότε που την έζησε&nbsp;</span><span title="11:06 - 11:20" data-start="00:11:06.358" data-end="00:11:19.553" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και μου λένε ιστορίες και όταν ακούω αυτές τις ιστορίες νιώθω σαν να την έζησα. Είναι περίεργο, ίσως να μην είναι νοσταλγία αυτό ακριβώς... να είναι κάτι διαφορετικό, να είναι νοσταλγία μαζί με&nbsp;</span><span title="11:21 - 11:23" data-start="00:11:20.701" data-end="00:11:22.594" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">φαντασία, αλλά πες μου εσύ!</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[11:23]</small> <span title="11:23 - 11:27" data-start="00:11:22.618" data-end="00:11:27.371" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νοσταλγία δηλαδή μιας εποχής (στην οποία) δεν έζησες και δεν ήσουν εκεί. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[11:27]</small> <span title="11:27 - 11:33" data-start="00:11:27.389" data-end="00:11:32.761" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, γιατί τώρα γενικότερα, όπως είπαμε και πριν, η νοσταλγία είναι...&nbsp;</span><span title="11:34 - 11:46" data-start="00:11:34.131" data-end="00:11:46.035" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">παίζει πάρα πολύ σαν συναίσθημα ανάμεσα στους... το βλέπεις και με σειρές στο Netflix, παίζει πολύ... και όχι μόνο το Netflix, το Hollywood...&nbsp;</span><span title="11:47 - 11:51" data-start="00:11:46.666" data-end="00:11:50.824" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">πολλή δεκαετία '80, σιγά-σιγά και δεκαετία '90.&nbsp;</span><span title="11:52 - 11:58" data-start="00:11:51.900" data-end="00:11:58.287" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Παρουσιάζουν το παρελθόν μ' ένα πολύ συγκεκριμένο τρόπο που μπορεί να μην ήταν έτσι ακριβώς. Σκέφτομαι το «Stranger Things» συγκεκριμένα&nbsp;</span><span title="11:59 - 12:10" data-start="00:11:59.015" data-end="00:12:10.089" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">που δείχνει μια εξιδανικευμένη εικόνα της δεκαετίας του '80 που όμως έτσι τη θυμόμαστε ή έτσι τη θυμούνται. Εγώ ήμουνα... δεν την έζησα τη δεκαετία του '80, γεννήθηκα το '89, οπότε&nbsp;</span><span title="12:11 - 12:16" data-start="00:12:10.787" data-end="00:12:16.411" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">όσοι τη θυμούνται εκείνη τη δεκαετία, τη θυμούνται κάπως έτσι, χωρίς τα άσχημα, </span><span title="12:17 - 12:31" data-start="00:12:16.952" data-end="00:12:30.748" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">μόνο με τα θετικά και κυρίως αυτά τα... αυτές οι ταινίες, οι σειρές που παίζουνε με τη νοσταλγία, δε μιλάνε για τα πράγματα τα οποία ο κόσμος τότε θέλει να ξεχάσει από τις δεκαετίες αυτές.&nbsp;</span><span title="12:32 - 12:34" data-start="00:12:31.927" data-end="00:12:34.486" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Όποια και να 'ναι αυτά, εντάξει, δε θέλω να μπω σε λεπτομέρειες. </span><span title="12:35 - 12:43" data-start="00:12:35.406" data-end="00:12:43.398" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αλλά, ναι, εσύ πώς το βλέπεις αυτό, ότι υπάρχει νοσταλγία έντονα στην... στο pop culture, τώρα, στην ποπ κουλτούρα;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[12:43]</small> <span title="12:43 - 12:54" data-start="00:12:43.440" data-end="00:12:54.148" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, αλλά φαντάζομαι θα είναι πραγματική νοσταλγία για ανθρώπους που ζήσαν όντως, ας πούμε, την οποιαδήποτε περίοδο που δείχνει, ας πούμε, π.χ. το «Stranger Things», τα '80s.&nbsp;</span><span title="12:55 - 12:59" data-start="00:12:54.707" data-end="00:12:59.075" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Γιατί τώρα εγώ και εσύ δε ζούσαμε τότε για να θυμόμαστε κάτι. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[12:59]</small> <span title="12:59 - 13:05" data-start="00:12:59.082" data-end="00:13:05.114" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, και ζούσαμε και στην Ελλάδα που ήτανε διαφορετική η δεκαετία του '80 στην Ελλάδα απ' ότι ήταν στην Αμερική. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[13:05]</small> <span title="13:05 - 13:13" data-start="00:13:05.055" data-end="00:13:13.431" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Σίγουρα, αλλά νομίζω είναι... αυτό που 'πες προηγουμένως, είπες τη λέξη «ψευδαίσθηση» αν δεν κάνω λάθος. (Πιθανόν.)&nbsp;</span><span title="13:14 - 13:24" data-start="00:13:14.291" data-end="00:13:24.464" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ότι ίσως δεν είναι ακριβώς τόσο ψευδαίσθηση και νοσταλγία, αλλά ίσως είναι, ας πούμε... βλέποντας μία σειρά ίσως παίρνεις ένα ερέθισμα και&nbsp;</span><span title="13:25 - 13:30" data-start="00:13:24.903" data-end="00:13:29.914" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">παίρνεις, ας πούμε, νιώθεις κάτι και αυτό αυτό που νιώθεις, ας πούμε, το 'χεις συνδυάσει με μία ανάμνηση, κάτι τέτοιο. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[13:30]</small> <span title="13:30 - 13:36" data-start="00:13:30.004" data-end="00:13:36.137" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και μετά, όπως είπες και εσύ, σε... σου δημιουργεί... η μία σκέψη φέρνει την άλλη. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[13:36]</small> <span title="13:36 - 13:38" data-start="00:13:36.043" data-end="00:13:38.146" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κάπως έτσι. Γίνεται ένα ντόμινο στην ουσία. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[13:38]</small> <span title="13:38 - 13:40" data-start="00:13:37.896" data-end="00:13:39.967" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ένα ντόμινο σκέψεων. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[13:40]</small> <span title="13:40 - 13:52" data-start="00:13:39.667" data-end="00:13:51.552" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, σκέψεων και αυτομάτως θεωρείς ότι νοσταλγείς κάτι, ενώ δεν ήσουν εκεί, δεν το 'χες ζήσει, αλλά ίσως δεν νοσταλγείς τόσο αυτό που βλέπεις, όσο το συναίσθημα που σου δημιούργησε μία σκηνή&nbsp;</span><span title="13:52 - 13:55" data-start="00:13:52.358" data-end="00:13:55.392" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">ή... ξέρω 'γω, ένα κομμάτι ή κάποιος στίχος&nbsp;</span><span title="13:56 - 14:10" data-start="00:13:56.360" data-end="00:14:10.379" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">σου δημιουργεί, δηλαδή, ένα συναίσθημα, το οποίο αυτό κάνει μια ντόμινο αντίδραση, μια οτιδήποτε, πες το όπως θες, και αμέσως σε γυρνάει σε κάποια δική σου ανάμνηση που υπάρχει ή είναι πραγματική, δηλαδή έχει γίνει. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[14:10]</small> <span title="14:10 - 14:22" data-start="00:14:10.349" data-end="00:14:22.361" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Το «Stranger Things» εσένα τώρα το... το αναφέρουμε το «Stranger Things» γιατί το συζητάμε, αλλά τι είδους νοσταλγία σου βγάζει; Αναγνωρίζεις κάτι απ' το «Stranger Things»;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[14:24]</small> <span title="14:24 - 14:38" data-start="00:14:24.344" data-end="00:14:38.297" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Λοιπόν, πώς να το θέσω; Δεν είναι τόσο ότι μου δημιουργεί νοσταλγία για τα '80s. Είναι νομίζω αυτό που εξήγησα μόλις τώρα, δηλαδή θα ακούσεις κάποιο κομμάτι, για παράδειγμα, θα ακούσεις...&nbsp;</span><span title="14:42 - 14:47" data-start="00:14:41.831" data-end="00:14:47.058" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ας πούμε, ήταν απ' τους Clash, το «Should I Stay or Should I Go» (ναι)&nbsp;</span><span title="14:49 - 14:57" data-start="00:14:48.747" data-end="00:14:57.244" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">και αυτομάτως τουλάχιστον σε 'μένα θα μου ξυπνήσει μια ανάμνηση που είχα ακούγοντας αυτό το κομμάτι... (Ναι.)&nbsp;</span><span title="14:58 - 15:02" data-start="00:14:58.482" data-end="00:15:02.147" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">στη ζωή μου, σε κάποια στιγμή της ζωής μου, όχι απαραίτητα για τα '80s. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[15:02]</small> <span title="15:02 - 15:07" data-start="00:15:02.490" data-end="00:15:07.309" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, τα '80s, δεν έχουν σχέση, είπαμε, μ' αυτό. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[15:05]</small> <span title="15:05 - 15:18" data-start="00:15:05.302" data-end="00:15:17.897" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, αυτό θέλω να σου πω, ότι δεν είναι τόσο ότι σου δημιουργεί... για μένα τουλάχιστον, έτσι, το συναίσθημα ότι νοσταλγώ τα '80s ακριβώς. Είναι λίγο γενικευμένο, αλλά μια ανάμνηση γενικευμένη. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[15:18]</small> <span title="15:18 - 15:20" data-start="00:15:17.645" data-end="00:15:20.030" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, είναι αυτό που λέμε, ότι... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[15:20]</small> <span title="15:20 - 15:30" data-start="00:15:19.730" data-end="00:15:29.705" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Λόγω ίσως του κομματιού που άκουσα, οκέι, το 'χω ακούσει ξανά αυτό το κομμάτι και το 'χα ακούσει τότε στη ζωή μου αυτό το κομμάτι, οπότε αυτομάτως, ξέρω 'γω, μου δημιουργεί μια ανάμνηση και νοσταλγώ μια άλλη κατάσταση. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[15:30]</small> <span title="15:30 - 15:38" data-start="00:15:30.438" data-end="00:15:38.147" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αλήθεια, τώρα που συζητάμε για το τι νοσταλγείς, ποια περίοδος στη ζωή σου είναι αυτή που σου δημιουργεί τη μεγαλύτερη νοσταλγία;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[15:38]</small> <span title="15:38 - 15:45" data-start="00:15:38.430" data-end="00:15:44.847" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νομίζω στο 'χω πει και το ξέρεις, νομίζω είναι η περίοδος 2007, 2008, 2009. Εκεί. (Ναι.) Και με λίγο '10.</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[15:46]</small> <span title="15:46 - 15:50" data-start="00:15:46.296" data-end="00:15:49.619" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Με λίγο '10. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[15:50]</small> <span title="15:50 - 15:58" data-start="00:15:49.805" data-end="00:15:58.302" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Αλλά γενικά, ναι, είναι για μένα, ας πούμε, η επιτομή της νοσταλγίας μου. '07, '08, '09 και λίγο '10. Εκεί.&nbsp;</span><span title="16:00 - 16:01" data-start="00:16:00.213" data-end="00:16:01.324" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κυρίως το '08 το peak. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[16:02]</small> <span title="16:02 - 16:16" data-start="00:16:02.094" data-end="00:16:16.449" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, τότε κάναμε και περισσότερη παρέα. Ερχόσουνα στη Μυτιλήνη. (Πολύ σωστά.) Ερχόμουνα και 'γω στην Αθήνα πιο συχνά, γιατί είχα και μία εξ αποστάσεως σχέση, οπότε ερχόμουνα τακτικά. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[16:16]</small> <span title="16:16 - 16:18" data-start="00:16:16.263" data-end="00:16:18.000" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Οπότε με καταλαβαίνεις. (Ναι.)&nbsp;</span><span title="16:19 - 16:29" data-start="00:16:18.841" data-end="00:16:29.381" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή είναι... και μιας και κάνουμε και αυτό το podcast, είναι και τα πράγματα που κάναμε μαζί, έτσι; Δηλαδή, σκέψου την περίοδο των Χριστουγέννων το 2008. ('07)&nbsp;</span><span title="16:31 - 16:41" data-start="00:16:30.835" data-end="00:16:40.594" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">2007. Ναι, ακριβώς, 2007 που βρεθήκαμε απ' το πουθενά στο κατάστημα... ένα ηλεκτρονικό κατάστημα, δεν ξέρω αν επιτρέπεται να πούμε όνομα. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[16:40]</small> <span title="16:40 - 16:43" data-start="00:16:40.498" data-end="00:16:42.955" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Νομίζω δεν υπάρχει καν αυτό το κατάστημα πια, οπότε...</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[16:43]</small> <span title="16:43 - 16:51" data-start="00:16:42.655" data-end="00:16:51.284" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ωραία, άρα λοιπόν βρεθήκαμε στο «Electro World» και απ' το πουθενά βρεθήκαμε και οι δύο με δύο κονσόλες Xbox 360.&nbsp;</span><span title="16:53 - 17:02" data-start="00:16:52.768" data-end="00:17:01.607" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κατάλαβες; Δηλαδή, αυτομάτως αυτό για μένα έχει σημαδέψει και τις γιορτές των Χριστουγέννων. Καταλαβαίνεις που πάει τώρα η κουβέντα;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[17:02]</small> <span title="17:02 - 17:03" data-start="00:17:01.686" data-end="00:17:03.031" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, το καταλαβαίνω. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[17:03]</small> <span title="17:03 - 17:09" data-start="00:17:02.984" data-end="00:17:09.191" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Όπως, και πως γίνεται ντόμινο η μία σκέψη μετά την άλλη και συνδέεται καπάκι πάνω η νοσταλγία.&nbsp;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[17:09]</small> <span title="17:09 - 17:23" data-start="00:17:09.281" data-end="00:17:22.867" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Το καταλαβαίνω και τα Χριστούγεννα από τότε δεν μπορούν να είναι τα ίδια. (Όχι.) Κάθε φορά μου λες για κάποια post που είχα γράψει τότε στο blog που είχα, όταν ήμουνα, τότε, 19 χρονών. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[17:23]</small>&nbsp;«<span title="17:23 - 17:27" data-start="00:17:22.585" data-end="00:17:26.893" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Cubimension», το οποίο είναι απ' τα αγαπημένα μου blog. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[17:25]</small> <span title="17:25 - 17:31" data-start="00:17:25.013" data-end="00:17:30.541" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Στο «Cubimension» και έγραφα για τα Χριστούγεννα και έγραφα για το τι κάναμε εκείνη τη μέρα. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[17:30]</small> <span title="17:30 - 17:44" data-start="00:17:30.457" data-end="00:17:44.188" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Πολύ σωστά. Το οποίο λειτουργεί σα μια χρονομηχανή, έτσι; Το οποίο παρεμπιπτόντως ήθελες... νομίζω σ' ένα post τότε ότι το... είχες ζητήσει «Το μόνο που θέλω για τα Χριστούγεννα είναι μία μηχανή του χρόνου». </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[17:44]</small> <span title="17:44 - 17:49" data-start="00:17:44.236" data-end="00:17:48.584" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, τότε έγραφα αυτό. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[17:46]</small> <span title="17:46 - 17:49" data-start="00:17:46.447" data-end="00:17:49.247" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Τότε. Τότε. (Τώρα...) Κατάλαβες;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[17:49]</small> <span title="17:49 - 17:59" data-start="00:17:49.322" data-end="00:17:58.880" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι,&nbsp; και... αλλά δε θυμάμαι σε ποια εποχή ήθελα τότε να μεταφερθώ. Ήθελα να μεταφερθώ, που; Το θυμάσαι αυτό;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[17:59]</small> <span title="17:59 - 18:12" data-start="00:17:58.826" data-end="00:18:12.070" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Εάν δεν με απατά η μνήμη μου, νομίζω ήταν γενικευμένο, γιατί μετά νομίζω ήρθε καπάκι ή ήταν προηγουμένως; Που 'χες κάνει νομίζω κάτι σαν&nbsp;</span><span title="18:12 - 18:17" data-start="00:18:12.287" data-end="00:18:17.496" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">τοπ... τοπ παιχνίδια του Nintendo 64 τότε; (Ναι.) Ήταν μετά ή πριν;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[18:17]</small> <span title="18:17 - 18:23" data-start="00:18:17.196" data-end="00:18:23.168" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Για μένα τα Χριστούγεννα τότε όχι τόσο πολύ τώρα γιατί έχουν περάσει πολύ περισσότερα χρόνια από τότε, </span><span title="18:24 - 18:31" data-start="00:18:23.632" data-end="00:18:30.890" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">αλλά τότε ήτανε συνυφασμένα τα Χριστούγεννα με βιντεοπαιχνίδια και μ</span><span title="18:31 - 18:39" data-start="00:18:31.197" data-end="00:18:39.237" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">άλιστα με το Nintendo 64 είμαι σαν αυτό το παιδάκι, μπορεί να έχετε δει το meme: «Nintendo 64! Οh</span><span title="18:40 - 18:50" data-start="00:18:39.532" data-end="00:18:49.861" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">&nbsp;my God», το παιδάκι που του παίρνουνε το Nintendo 64 για Χριστούγεννα που το ανοίγει και τρελαίνεται. Κάπως έτσι. Oπότε, </span><span title="18:50 - 18:59" data-start="00:18:50.186" data-end="00:18:59.024" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">για πολύ καιρό ήμουνα... τα Χριστούγεννα σκεφτόμουνα πως εκείνα τα Χριστούγεννα του 1997</span><span title="19:00 - 19:09" data-start="00:18:59.794" data-end="00:19:09.474" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">&nbsp;μου πήρανε το Nintendo 64 και έπαιζα το Mario 64 και είναι ένα νοσταλγικό συναίσθημα για μένα είναι αυτό, εκείνα τα Χριστούγεννα και μάλλον&nbsp;</span><span title="19:10 - 19:22" data-start="00:19:10.220" data-end="00:19:21.691" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">σ' αυτό το post το οποίο μπορώ και τώρα να το διαβάσω αν θέλω για να το εξακριβώσω, αλλά δεν χρειάζεται, μάλλον μίλαγα για εκείνα τα Χριστούγεννα που τότε είχαν περάσει 10 χρόνια από τότε, ναι, φαντάζομαι, </span><span title="19:22 - 19:29" data-start="00:19:22.490" data-end="00:19:28.625" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">εκείνο θα συζήταγα, αλλά νομίζω ότι για εμάς, </span><span title="19:29 - 19:39" data-start="00:19:29.269" data-end="00:19:38.780" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">η νοσταλγία και τα βιντεοπαιχνίδια πάνε πολύ κοντά, δηλαδή οι gamers, οι απανταχού gamers&nbsp;</span><span title="19:40 - 19:48" data-start="00:19:40.367" data-end="00:19:48.215" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">πολύ συχνά έχουν ιδιαίτερα αισθήματα νοσταλγίας για τα βιντεοπαιχνίδια επειδή μπορεί να&nbsp;</span><span title="19:50 - 20:01" data-start="00:19:50.042" data-end="00:20:01.140" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">παίζανε βιντεοπαιχνίδια από τότε που ήτανε μικροί και αυτά τα παιχνίδια και τα βιντεοπαιχνίδια γενικά να τους θυμίζουν την παιδική τους ηλικία. Πως είναι άλλοι που θυμούνται&nbsp;</span><span title="20:02 - 20:10" data-start="00:20:01.916" data-end="00:20:10.382" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">παλιότερες γενιές που, ξέρω 'γω... Τι δημιουργεί νοσταλγία σε παλιότερες γενιές, ρε; Δε μου 'ρχεται καν!</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[20:10]</small> <span title="20:10 - 20:13" data-start="00:20:10.269" data-end="00:20:13.026" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Τι δημιουργεί νοσταλγία σε προηγούμενες γενιές;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[20:13]</small> <span title="20:13 - 20:15" data-start="00:20:12.810" data-end="00:20:15.160" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, σε... στους πατεράδες μας, για παράδειγμα. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[20:15]</small> <span title="20:15 - 20:24" data-start="00:20:15.208" data-end="00:20:23.777" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Κοίτα, αν το πάμε με τη λογική ότι εμείς είμαστε συνδεδεμένοι με τα βιντεοπαιχνίδια, </span><span title="20:25 - 20:30" data-start="00:20:24.612" data-end="00:20:29.659" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">μάλλον είμαστε συνδεδεμένοι με τα βιντεοπαιχνίδια, γιατί ήτανε κομμάτι της ζωής μας και&nbsp;</span><span title="20:30 - 20:41" data-start="00:20:30.273" data-end="00:20:40.602" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">κατά κάποιον τρόπο ήμασταν εμείς οι ήρωες αυτής της ιστορίας γιατί εμείς ελέγχαμε τον ήρωα. Καταλαβαίνεις τι εννοώ; Οπότε ήτανε... </span><span title="20:41 - 20:46" data-start="00:20:40.873" data-end="00:20:45.782" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">αρκετός χρόνος απ' τη ζωή μας πάνω σ' αυτό το βιντεοπαιχνίδι, οπότε θεωρώ για τις προηγούμενες γενιές&nbsp;</span><span title="20:47 - 20:55" data-start="00:20:46.587" data-end="00:20:54.537" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">θα 'ταν κάτι το οποίο οι προηγούμενες γενιές θα 'χαν αφιερώσει χρόνο απ' τη ζωή τους πάνω σε αυτό. Μπορεί να ήτανε τα παιχνίδια στις αλάνες;&nbsp;</span><span title="20:56 - 20:58" data-start="00:20:55.637" data-end="00:20:58.407" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Στις τότε αλάνες, ίσως...;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[20:58]</small> <span title="20:58 - 21:00" data-start="00:20:58.143" data-end="00:20:59.951" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Μουσική θα έλεγα σίγουρα. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[21:00]</small> <span title="21:00 - 21:04" data-start="00:20:59.807" data-end="00:21:03.725" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Μουσική. Μουσική, σίγουρα. Σίγουρα μουσική. Σίγουρα.&nbsp;</span><span title="21:04 - 21:13" data-start="00:21:04.446" data-end="00:21:12.672" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Το... αυτό που έχει επιστρέψει, αν και δε νομίζω ότι έχει επιστρέψει λόγω νοσταλγίας, το... έχει πάρτι π.χ. ο</span><br>
+<span title="21:13 - 21:23" data-start="00:21:13.075" data-end="00:21:22.719" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Δημήτρης σήμερα, πολύ ωραία, θα πάω να φορτώσω μαζί με τους φίλους μου τα βινύλια μου για να ακούσουμε μουσική, ξέρω 'γω, στο πάρτι του ή στη συγκέντρωση που θα κάνει.&nbsp;</span><span title="21:23 - 21:29" data-start="00:21:23.339" data-end="00:21:29.426" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Είναι νομίζω, είναι... Όλο αυτό το ταξίδι, να πάω σπίτι, να μαζέψω τα βινύλια με τους φίλους μου και να πάω.</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[21:29]</small> <span title="21:29 - 21:31" data-start="00:21:29.498" data-end="00:21:30.826" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και το ραδιόφωνο. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[21:31]</small> <span title="21:31 - 21:38" data-start="00:21:30.580" data-end="00:21:38.253" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, το... τα ηχεία, τους ενισχυτές τότε, (ναι) οι προηγούμενες γενιές...&nbsp;</span><span title="21:38 - 21:53" data-start="00:21:38.434" data-end="00:21:53.077" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Αλλά ίσως άμα συνεχίσει και πας προς τα πίσω, ίσως και της... και αυτό ίσως ακουστεί λίγο άσχημο, ίσως ήταν, ας πούμε, πράγματα τα οποία εμείς τα 'χουμε δεδομένα σήμερα. Ίσως, ας πούμε, για πολύ παλαιότερους, να νοσταλγούσαν ειρήνη, π.χ., </span><span title="21:54 - 21:55" data-start="00:21:53.516" data-end="00:21:54.682" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">το αίσθημα της ειρήνης.&nbsp;</span><span title="21:57 - 22:05" data-start="00:21:56.551" data-end="00:22:04.981" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">(Ναι.) Κατάλαβες; Το... νοσταλγούσαν, ας πούμε, το ότι δεν έχουν... να νοσταλγούσαν, ας πούμε, ένα πιάτο φαγητό. Καταλαβαίνεις τι εννοώ;&nbsp;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[22:06]</small> <span title="22:06 - 22:20" data-start="00:22:05.925" data-end="00:22:19.992" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αυτό έτσι, όπως το συζητάμε τώρα, θα ήταν ωραίο επεισόδιο δρόμου. (Οκέι.) Τώρα μου γέννησε την περιέργεια. Να πάμε να ρωτήσουμε τον κόσμο τι τους δημιουργεί νοσταλγία; Νεότερες γενιές και παλαιότερες. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[22:20]</small> <span title="22:20 - 22:35" data-start="00:22:19.692" data-end="00:22:34.636" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, δηλαδή, θεωρώ... Ντάξει τώρα, δε νομίζω ότι θα υπάρχει αυτή τη στιγμή κάποια γενιά που θα ρωτήσεις και θα σου πει ότι «νοσταλγώ», ξέρω 'γω, «ένα πιάτο φαγητό», γιατί όλοι έχουνε. Κατάλαβες;&nbsp;&nbsp;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[22:32]</small> <span title="22:32 - 22:41" data-start="00:22:31.824" data-end="00:22:41.258" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ποτέ δεν ξέρεις. (Ναι, αλλά, ναι, οκέι.) Μπορεί κάποιος να νοσταλγήσει την εποχή στη ζωή του που δεν είχαν ένα πιάτο φαγητό αλλά... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[22:41]</small> <span title="22:41 - 22:55" data-start="00:22:41.000" data-end="00:22:55.211" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Και αυτό αυτομάτως δεν είναι παράδοξο; Δηλαδή, με βάση αυτό που είπαμε για τη λέξη νοσταλγία, ότι κατά κύριο λόγο είναι κάτι το οποίο είναι γλυκόπικρο ή, ας πούμε, σχετικά μια θετική ανάμνηση. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[22:55]</small> <span title="22:55 - 23:05" data-start="00:22:54.989" data-end="00:23:04.621" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, μπορεί μερικές αναμνήσεις, ξέρεις, έτσι όπως λειτουργεί η μνήμη όταν τις ζούμε δεν είναι θετικές αλλά με την πορεία του χρόνου γίνονται θετικές, </span><span title="23:05 - 23:07" data-start="00:23:05.469" data-end="00:23:07.097" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">επειδή ξεχνάμε&nbsp;</span><span title="23:08 - 23:21" data-start="00:23:07.921" data-end="00:23:20.708" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">τις δυσκολίες και μας μένουνε τα καλά, τα οποία καλά αυτά μπορεί και να τα... να τα θυμόμαστε εκ των υστέρων, να μην τα... να μην τα σκεφτόμαστε εκείνη τη στιγμή, γιατί όπως σου λέω όταν ζούμε κάτι&nbsp;</span><span title="23:21 - 23:30" data-start="00:23:20.738" data-end="00:23:29.595" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">δεν το νοσταλγούμε εκείνη τη στιγμή. Πρέπει να περάσει πρώτα ο χρόνος, (σίγουρα) και ο χρόνος να μας κάνει σοφότερους πριν να μπορέσει η νοσταλγία να λειτουργήσει. (Οκέι.)&nbsp;</span><span title="23:31 - 23:41" data-start="00:23:31.362" data-end="00:23:41.108" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Για μένα η νοσταλγία γενικότερα έχει πάντα να κάνει με την ξεγνοιασιά, δηλαδή σου έλεγα και πριν που... που τρώγαμε στο «Kitschen»&nbsp;</span><span title="23:42 - 23:54" data-start="00:23:42.208" data-end="00:23:54.394" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">ότι νοσταλγώ τις εποχές στη ζωή μου που δεν είχα να κάνω τόσα πολλά πράγματα, που δεν είχα δουλειά, που δεν είχα οικογένεια, που μπορεί να μην είχα καμία υποχρέωση, δηλαδή&nbsp;</span><span title="23:55 - 24:03" data-start="00:23:54.707" data-end="00:24:03.372" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">αυτό το ότι ξύπναγα μια μέρα και τίποτα δε με απασχολούσε. Τότε, βέβαια, είχα άλλα προβλήματα φυσικά, τα οποία όμως&nbsp;</span><span title="24:04 - 24:07" data-start="00:24:03.955" data-end="00:24:07.103" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">έχουν χαθεί στο χρόνο. Αν με ρώταγες τι προβλήματα είχα&nbsp;</span><span title="24:08 - 24:20" data-start="00:24:07.519" data-end="00:24:19.596" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">τότε, το 2007, όταν έγραψα εκείνο το post, δε θυμάμαι. Eίχα προβλήματα; Τώρα αυτή η εποχή μου φαίνεται μία μαγική εποχή όπου δεν είχα προβλήματα, αλλά προφανώς και είχα προβλήματα. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[24:20]</small> <span title="24:20 - 24:28" data-start="00:24:19.573" data-end="00:24:27.919" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Παρεμπιπτόντως, διάβασα το post. (Τώρα;) Λοιπόν... Ναι, και αυτό που τελικά&nbsp;</span><span title="24:28 - 24:41" data-start="00:24:28.280" data-end="00:24:41.343" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">γράφεις είναι ότι... την ιστορία που είπαμε προ ολίγου για το Xbox, οκέι, ότι είσαι έξω με τους φίλους σου ψωνίζεις και ψάχνεις εξαρτήματα για τον καινούριο σου υπολογιστή.&nbsp;</span><span title="24:43 - 24:54" data-start="00:24:43.345" data-end="00:24:53.614" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Τι άλλο; Ότι είχαμε πάει... αν το θυμάσαι, εγώ το θυμάμαι γιατί κάπου υπάρχει και μία φωτογραφία, ότι είχαμε πάει στο «Furin Kazan»,&nbsp;</span><span title="24:56 - 25:03" data-start="00:24:55.687" data-end="00:25:03.148" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">είχαμε φάει και μετά πήγαμε για ice cream with soda που 'χα πάρει εγώ, δηλαδή παγωτό με σόδα. (Ω, ρε!) Το θυμάσαι;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[25:02]</small> <span title="25:02 - 25:05" data-start="00:25:01.943" data-end="00:25:04.899" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, και ήμασταν με τον Μόρντρεντ. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[25:05]</small> <span title="25:05 - 25:09" data-start="00:25:04.649" data-end="00:25:08.757" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ακριβώς, και ήτανε και η Μαρία και ήταν και η Εύη αν θυμάσαι. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[25:08]</small> <span title="25:08 - 25:13" data-start="00:25:08.475" data-end="00:25:13.149" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ναι, ναι. Είχε έρθει... ήτανε εκείνα τα Χριστούγεννα που είχε έρθει και ο Μόρντρεντ στην Αθήνα. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[25:13]</small> <span title="25:13 - 25:16" data-start="00:25:13.204" data-end="00:25:16.286" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ναι, ναι, οπότε... (Ναι.)&nbsp;</span><span title="25:18 - 25:31" data-start="00:25:17.566" data-end="00:25:30.972" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Το πως τελειώνει, ας πούμε, με τα... με τα παιχνίδια του 64 και γενικά με το... όλο το.... όλο το συναίσθημα που έχεις τα Χριστούγεννα π.χ. με τα μαγαζιά τα γεμάτα, ξέρεις και... ότι ψωνίζω, κάνω, βγαίνω. Αυτό.&nbsp;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[25:36]</small> <span title="25:36 - 25:45" data-start="00:25:36.140" data-end="00:25:44.973" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, είναι ωραίο το συναίσθημα της νοσταλγίας και θέλω να το επισκέπτομαι πιο συχνά γιατί είναι αυτό που σου είχα πει: μερικές φορές&nbsp;</span><span title="25:46 - 25:49" data-start="00:25:45.773" data-end="00:25:49.468" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">εγώ είμαι το αντίθετο από σένα, ότι είμαι...&nbsp;</span><span title="25:50 - 26:04" data-start="00:25:50.088" data-end="00:26:04.497" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">μερικές φορές παραείμαι εστιασμένος στο μέλλον και έτσι ξεχνάω να κοιτάξω λίγο προς τα πίσω και όταν το κάνω μ' αρέσει και χαίρομαι. Βλέπω, δηλαδή τι... πόσα έχω καταφέρει, πώς έχω αλλάξει, πώς δεν έχω αλλάξει&nbsp;</span><span title="26:06 - 26:15" data-start="00:26:05.507" data-end="00:26:15.121" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και πρόσφατα μου είχες προτείνει να διαβάσω το blog μου μάλιστα, το οποίο θυμάμαι ότι σκεφτόμουνα μάλιστα να διαγράψω. Το θυμάσαι;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[26:15]</small> <span title="26:15 - 26:16" data-start="00:26:14.833" data-end="00:26:16.461" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Όχι, μην το κάνεις αυτό!</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[26:16]</small> <span title="26:16 - 26:26" data-start="00:26:16.401" data-end="00:26:25.649" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και ήσουνα ένας από τους ανθρώπους που με πείσατε να μην το κάνω αυτό και ευχαριστώ που δεν το κάνατε... που δεν το έκανα. Σ' ευχαριστώ που με έπεισες να μην το κάνω&nbsp;</span><span title="26:26 - 26:34" data-start="00:26:25.823" data-end="00:26:33.557" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και με είχες παροτρύνει να διαβάσω και το blog μου και όντως το διάβασα και ένιωσα&nbsp;</span><span title="26:34 - 26:38" data-start="00:26:33.924" data-end="00:26:37.529" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">πολύ όμορφα διαβάζοντας και (ερχόμενος) σε επαφή με τον εαυτό μου, </span><span title="26:38 - 26:51" data-start="00:26:38.214" data-end="00:26:50.586" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">όχι και τόσο παλιά δηλαδή κυρίως έγραφα... διάβασα post που είχα γράψει πριν πέντε, έξι, εφτά, οκτώ χρόνια όχι τόσο παλιά... όχι πριν σχεδόν 20 χρόνια που ήταν αυτό που λέμε τώρα,&nbsp;</span><span title="26:51 - 26:57" data-start="00:26:50.995" data-end="00:26:56.638" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">15 χρόνια συν... και ήτανε κάτι πολύ ωραίο και ναι, ευχαριστώ. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[26:57]</small> <span title="26:57 - 27:04" data-start="00:26:56.620" data-end="00:27:03.915" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Λοιπόν, πάνω σ' αυτό που λες.... που διάβασες, ας πούμε, κάποια post, ας πούμε, που ήταν πριν από 5-6 χρόνια. (Ναι.)&nbsp;</span><span title="27:06 - 27:14" data-start="00:27:05.850" data-end="00:27:13.811" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Έχει... αυτό που θα πω τώρα έχει ίσως ελάχιστη σχέση μ' αυτό που 'πες ότι... ή μάλλον που είπαμε ότι... νοσταλγοί μιας εποχής η οποία δεν ήμασταν εκεί πέρα, </span><span title="27:15 - 27:23" data-start="00:27:14.539" data-end="00:27:22.573" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">αλλά υπάρχουν, ας πούμε, πολλές φορές το συναίσθημα της νοσταλγίας βγαίνει, ας πούμε, διαβάζοντας, για παράδειγμα, κάποιο δικό σου post, οκέι; (Ναι.)&nbsp;</span><span title="27:23 - 27:30" data-start="00:27:23.132" data-end="00:27:30.198" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Το διαβάζω εγώ... νομίζω στο 'χω πει αυτό, διαβάζω εγώ το δικό σου το post, διαβάζω, ας πούμε, την ημερομηνία που το 'χες γράψει. (Ναι.) Αυτομάτως, </span><span title="27:31 - 27:34" data-start="00:27:30.980" data-end="00:27:33.527" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">σκέφτομαι: πού ήμουνα εγώ;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[27:34]</small> <span title="27:34 - 27:35" data-start="00:27:33.984" data-end="00:27:35.126" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Τι έκανα τότε;</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[27:35]</small> <span title="27:35 - 27:42" data-start="00:27:35.000" data-end="00:27:42.306" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Τι έκανα τότε; Ακριβώς! Και επανερχόμαστε σ' αυτό που λέω, ότι είναι ντόμινο μετά και μένεις εκεί και κολλάς. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[27:43]</small> <span title="27:43 - 27:48" data-start="00:27:42.782" data-end="00:27:47.606" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, είναι ένα έναυσμα. (Ναι.) Ένα prompt. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[27:48]</small> <span title="27:48 - 27:52" data-start="00:27:47.697" data-end="00:27:51.572" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Πού ήσουνα εσύ στη ζωή του τότε; Ναι. Τι έκανες; Οτιδήποτε. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[27:51]</small> <span title="27:51 - 27:52" data-start="00:27:51.278" data-end="00:27:52.353" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, ναι.&nbsp;</span><span title="27:53 - 28:01" data-start="00:27:53.165" data-end="00:28:01.469" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και γι' αυτό η μουσική για μένα είναι τόσο δυνατό... τόσο δυνατός παράγοντας νοσταλγίας γιατί&nbsp;</span><span title="28:02 - 28:10" data-start="00:28:02.059" data-end="00:28:10.242" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">δεν είναι μία φωτογραφία μόνο, δεν είναι ένα στιγμιότυπο. Η μουσική μπορεί να είναι ό,τι θέλεις να είναι και είναι πολύ ισχυρή γι' αυτόν τον λόγο, </span><span title="28:11 - 28:20" data-start="00:28:10.874" data-end="00:28:19.725" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">γιατί επιτρέπει και (στη) φαντασία να λειτουργήσει πάρα πολύ δυνατά γιατί πολύ μεγάλο μέρος, όπως είπαμε, της νοσταλγίας είναι και η φαντασία&nbsp;</span><span title="28:21 - 28:26" data-start="00:28:20.657" data-end="00:28:26.046" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">που σιγά-σιγά εδραιώνεται, δηλαδή κάθε φορά που φαντάζεσαι και... συγγνώμη, κάθε φορά που&nbsp;</span><span title="28:28 - 28:35" data-start="00:28:27.591" data-end="00:28:35.198" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">θυμάσαι μία εποχή, φαντάζεσαι και κάτι διαφορετικό και μετά αυτό το διαφορετικό που φαντάστηκες, γίνεται μέρος της ανάμνησης σιγά-σιγά, </span><span title="28:36 - 28:43" data-start="00:28:35.866" data-end="00:28:42.734" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">γιατί έτσι λειτουργεί η μνήμη, γιατί και μεγαλώνεις και ερμηνεύεις τις αναμνήσεις σου και διαφορετικά.&nbsp;</span><span title="28:43 - 28:54" data-start="00:28:43.329" data-end="00:28:53.580" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Παίζει και αυτό, γιατί όσο περνάνε τα χρόνια γίνεται και πιο πολύτιμη αυτή η ανάμνηση. Τότε... πριν... το 2008, '09 δεν ήτανε τόσο πολύτιμη όσο είναι τώρα που έχουν περάσει όλα αυτά τα χρόνια. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[28:54]</small> <span title="28:54 - 28:57" data-start="00:28:53.562" data-end="00:28:57.216" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι. Ναι. Καταλαβαίνω πως το λες. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[28:58]</small> <span title="28:58 - 29:05" data-start="00:28:58.382" data-end="00:29:05.160" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, γιατί είναι όλο... Αυτό που κάνει τη νοσταλγία πάρα πολύ δυνατή είναι αυτό, το ότι είναι τόσο μακριά, δηλαδή&nbsp;</span><span title="29:07 - 29:18" data-start="00:29:06.710" data-end="00:29:17.863" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">όπως σου έλεγα, πρέπει να περάσει χρόνος για να γίνει μια ανάμνηση να αποκτήσει αυτόν τον παράγοντα της νοσταλγίας. Πρέπει να έχεις μπει σε μια καινούργια φάση ζωής.&nbsp;</span><span title="29:20 - 29:34" data-start="00:29:19.768" data-end="00:29:33.534" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Εγώ τώρα που έχω οικογένεια, έχω παιδί, νοσταλγώ την εποχή που δεν είχα όλα αυτά και ήμουνα ελεύθερος και χωρίς ευθύνες και χωρίς κανέναν πάνω απ' το κεφάλι μου και μπορούσα να κάνω ό,τι ήθελα&nbsp;</span><span title="29:34 - 29:38" data-start="00:29:34.274" data-end="00:29:37.849" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και όλα αυτά. Κάποια στιγμή στο μέλλον... </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[29:38]</small> <span title="29:38 - 29:39" data-start="00:29:37.743" data-end="00:29:39.217" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ίσως νοσταλγείς...ναι.</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[29:39]</small> <span title="29:39 - 29:41" data-start="00:29:38.973" data-end="00:29:40.679" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Θα νοσταλγώ αυτήν την περίοδο. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[29:40]</small> <span title="29:40 - 29:42" data-start="00:29:40.429" data-end="00:29:41.929" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Αυτό που έχεις τώρα. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[29:42]</small> <span title="29:42 - 29:55" data-start="00:29:41.629" data-end="00:29:55.383" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, κάτι θα 'χει αλλάξει στη ζωή μου. Ίσως θα νοσταλγώ όταν ο... με το καλό ο Σταύρος θα 'χει μεγαλώσει και θα 'χει φύγει από το σπίτι, θα νοσταλγώ την περίοδο που ήμουνα κοντά στον Σταύρο και μπορούσα να τον απολαμβάνω και να τον βλέπω να μεγαλώνει.&nbsp;</span><span title="29:56 - 29:58" data-start="00:29:56.099" data-end="00:29:58.087" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αυτό τώρα δεν μπορώ να το καταλάβω φυσικά.&nbsp;</span><span title="29:59 - 30:09" data-start="00:29:58.959" data-end="00:30:08.543" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Τώρα ξυπνάει 7:00 η ώρα το πρωί και φωνάζει και είμαι «Θέε μου, γιατί; Τι πληρώνω; Τι αμαρτίες πληρώνω;». </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[30:09]</small> <span title="30:09 - 30:12" data-start="00:30:08.700" data-end="00:30:12.371" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, αλλά σε λίγα χρόνια θα σου λείπουν αυτά. (Ναι, φυσικά.)&nbsp;</span><span title="30:13 - 30:25" data-start="00:30:13.369" data-end="00:30:25.411" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νομίζω είναι η φυσική ροή των πραγμάτων σε τέτοιες καταστάσεις, δηλαδή κάτι πάρα πολύ απλό, το σχολείο, για παράδειγμα. Μισούσες να ξυπνάς το πρωί για να πας στο σχολείο. (Απόλυτα!).&nbsp;</span><span title="30:26 - 30:29" data-start="00:30:26.210" data-end="00:30:28.848" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ωραία, αλλά θεωρώ ότι&nbsp;</span><span title="30:29 - 30:42" data-start="00:30:29.389" data-end="00:30:41.581" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">τώρα υπάρχουν στιγμές που ίσως σου λείπει όχι τόσο το ξύπνημα σαν ξύπνημα, αλλά η διαδικασία. Ξυπνάω, πλένομαι, ξέρω 'γω, τρώω το πρωινό μου αν τρώω πρωινό και πάω, ξερω 'γω, να βρω τα παιδιά, τους φίλους μου για να πούμε, ξέρω ΄γω, αυτό. (Ναι, ναι, ναι.)&nbsp;</span><span title="30:42 - 30:44" data-start="00:30:42.441" data-end="00:30:44.189" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Νομίζω είναι...</span><span title="30:46 - 30:53" data-start="00:30:45.571" data-end="00:30:52.638" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">&nbsp;πώς να το θέσω; Πώς να το θέσω; Η ιεροτελεστία όλης της...&nbsp;</span><span title="30:54 - 31:01" data-start="00:30:54.363" data-end="00:31:01.273" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή, το ξυπνάω, τρώω, πλένομαι, πάω με τους φίλους μου εκεί πέρα, δηλαδή όλο αυτό το κομμάτι&nbsp;</span><span title="31:03 - 31:06" data-start="00:31:02.986" data-end="00:31:05.768" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">που δημιουργεί τη νοσταλγία, π.χ., στην παρούσα φάση. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[31:06]</small> <span title="31:06 - 31:15" data-start="00:31:05.594" data-end="00:31:15.166" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι. Κάτι το οποίο πλέον δεν έχει καμία σχέση με τη ζωή σου. (Όχι, απολύτως.) Αλλά το ζούσες και τότε ήτανε όλη σου η ζωή. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[31:15]</small> <span title="31:15 - 31:23" data-start="00:31:15.094" data-end="00:31:23.032" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ήταν όλη σου η ζωή και πολλές φορές το μισούσες αυτό το πράγμα, δηλαδή δεν το γουστάρεις καθόλου, δεν ήθελες να σηκωθείς, βαριόσουνα.&nbsp;</span><span title="31:23 - 31:31" data-start="00:31:23.465" data-end="00:31:30.729" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ή βαριόσουνα, π.χ., το μάθημα. Τώρα ίσως νοσταλγείς, ας πούμε, το... το...&nbsp;</span><span title="31:32 - 31:40" data-start="00:31:31.577" data-end="00:31:39.875" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">αυτό που ήμουνα μέσα σε μία τάξη με άλλα παιδιά, με άλλους συμφοιτητές αναλόγως και που ήσουνα και το τι έκανες.&nbsp;</span><span title="31:41 - 31:43" data-start="00:31:40.669" data-end="00:31:42.940" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Δηλαδή, δε νοσταλγείς, ας πούμε, το πανεπιστήμιο;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[31:43]</small> <span title="31:43 - 31:56" data-start="00:31:43.204" data-end="00:31:56.118" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Φυσικά, και σκέφτομαι ότι είναι πολύ κοινό ανάμεσα στους άντρες στην Ελλάδα και όχι μόνο να νοσταλγούνε τον στρατό. (Συμφωνώ.) Και εγώ τον νοσταλγώ. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[31:56]</small> <span title="31:56 - 32:09" data-start="00:31:56.430" data-end="00:32:09.121" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι, γιατί και όταν ήσουνα μέσα δεν είχες και τις καλύτερες εμπειρίες. Ο καθένας, ας πούμε, το ζει βέβαια διαφορετικά, πραγματικά το ζει διαφορετικά ο καθένας μας, αλλά κοιτώντας πίσω τώρα κάποια πράγματα&nbsp;</span><span title="32:10 - 32:20" data-start="00:32:10.480" data-end="00:32:20.292" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">σου λείπουνε, σου λείπουνε, όχι το ίδιο αυτό... σ' αυτό το πράγμα που σου λείπει, αλλά είναι αυτό που είπα... η ιεροτελεστία, δηλαδή το όλο.</span><br><span title="32:22 - 32:36" data-start="00:32:22.341" data-end="00:32:35.561" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">(Το πακετάκι.) Το πακέτο, ακριβώς, όπως το 'πες. Και το πως περνούσες γενικότερα όχι μόνο σαν το στρατό, αλλά, για παράδειγμα, ο Δημήτρης της τότε εποχής, ο Γιώργος της τότε εποχής. Κατάλαβες τι εννοώ;</span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[32:36]</small> <span title="32:36 - 32:43" data-start="00:32:35.610" data-end="00:32:43.277" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, και άνθρωποι που έβλεπες τότε και δε βλέπεις πια και ίσως το τι σε απασχολούσε τότε που δε σε απασχολεί πια&nbsp;</span><span title="32:44 - 32:57" data-start="00:32:43.884" data-end="00:32:57.200" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">ή μπορεί να σ' απασχολεί ακόμα. Εμένα αυτό που μου κάνει πάντα εντύπωση και το οποίο είναι πολύ συγκλονιστικό μερικές φορές όταν το συνειδητοποιώ... αυτό το παθαίνω κυρίως διαβάζοντας παλιά μου γραπτά, mail, post είναι&nbsp;</span><span title="32:58 - 33:07" data-start="00:32:58.071" data-end="00:33:07.277" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">το πόσο κάποια πράγματα θα μπορούσα να τα 'χω γράψει και σήμερα. Ότι όσο και να αλλάζω, κάποια πράγματα δεν αλλάζουνε. Δηλαδή, </span><span title="33:07 - 33:18" data-start="00:33:07.350" data-end="00:33:18.346" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">οι ανησυχίες μου δεν αλλάζουνε και έχει ενδιαφέρον γιατί αν διάβαζα κάτι το οποίο είχα γράψει την ηλικία που σε γνώρισα περίπου εκεί στα 15, 16 και το διάβαζα τώρα, θα έλεγα «όχι, καμία σχέση».&nbsp;</span><span title="33:18 - 33:21" data-start="00:33:18.340" data-end="00:33:21.044" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αλλά είναι κάποια στιγμή στη ζωή </span><span title="33:21 - 33:31" data-start="00:33:21.008" data-end="00:33:30.917" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">που γίνεσαι αυτό που είσαι σήμερα και δεν αλλάζεις πάρα πολύ στην πορεία των χρόνων, δηλαδή αποκτάει μία υπόσταση ο πυρήνας σου. Σαν να παγιώνεται το εγώ σου.&nbsp;</span><span title="33:31 - 33:41" data-start="00:33:31.163" data-end="00:33:40.717" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Αλλάζει μεν αλλά όχι τόσο πολύ πια. Δηλαδή το ποιος είσαι σαν άνθρωπος δεν αλλάζει τόσο πολύ με την πορεία του χρόνου και </span><span title="33:41 - 33:52" data-start="00:33:41.115" data-end="00:33:52.195" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">μ' αυτό... συγγνώμη, έχει... τα επεισόδια μας συνήθως κρατάνε γύρω στα 30 λεπτά και ήδη μιλάμε 38 λεπτά, δεν ξέρω πόσο θα μείνει στο μοντάζ... (Οκέι.) Ο</span><span title="33:53 - 34:03" data-start="00:33:53.241" data-end="00:34:02.885" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">πότε κάπου εδώ πρέπει να το κλείσουμε (φυσικά) αυτό το επεισόδιο της νοσταλγίας.&nbsp;</span><span title="34:03 - 34:06" data-start="00:34:03.258" data-end="00:34:05.589" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Πες μας ένα τελευταίο σχόλιο αν θέλεις. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[34:05]</small> <span title="34:05 - 34:12" data-start="00:34:05.361" data-end="00:34:12.001" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Τελευταίο σχόλιο είναι ότι αυτό το podcast θα γίνει κάποια στιγμή μια νοσταλγία και για τους δύο μας. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[34:12]</small> <span title="34:12 - 34:21" data-start="00:34:11.839" data-end="00:34:21.128" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, που πήγαμε στο πολύ ωραίο «Kitschen» και φάγαμε και γυρίσαμε και ηχογραφήσαμε παρέα με δύο ουισκάκια. </span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[34:21]</small> <span title="34:21 - 34:23" data-start="00:34:21.273" data-end="00:34:23.460" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Ναι. Πολύ νόστιμο παρεμπιπτόντως. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[34:24]</small> <span title="34:24 - 34:29" data-start="00:34:23.592" data-end="00:34:29.325" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Ναι, όντως. Ωραία. Οπότε, μελλοντικοί μας εαυτοί, ακούστε και απολαύστε!&nbsp;</span><br><br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[34:31]</small> <span title="34:31 - 34:44" data-start="00:34:31.032" data-end="00:34:44.401" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Και με αυτό το τελευταίο σχόλιο θέλω να ευχαριστήσω και εσάς που μας ακούσατε και να σας προσκαλέσω να νιώσετε νοσταλγία, αυτό το μελαγχολικό γλυκόπικρο συναίσθημα&nbsp;</span><span title="34:45 - 34:47" data-start="00:34:45.484" data-end="00:34:46.847" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">που έρχεται από το παρελθόν&nbsp;</span><span title="34:48 - 34:57" data-start="00:34:48.182" data-end="00:34:57.363" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και να μας μιλήσετε γι' αυτό. Αν θέλετε να μας στείλετε ένα ηχογραφημένο μήνυμα στο podcast@easy-greek.org ή&nbsp;</span><span title="34:58 - 35:05" data-start="00:34:58.391" data-end="00:35:04.574" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">να μας στείλετε απλά ένα email ή να μας γράψετε ένα σχόλιο στο easygreek.fm&nbsp;</span><span title="35:06 - 35:15" data-start="00:35:05.578" data-end="00:35:14.891" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">και μ' αυτό σας χαιρετώ και θα τα πούμε στο επόμενο επεισόδιο του Easy Greek podcast. Γεια χαρά σε όλους και όλες!</span><br>
+<br>
+<b data-spk="1" title="">Γιώργος:</b><br>
+<small style="opacity: 0.5;">[35:15]</small> <span title="35:15 - 35:19" data-start="00:35:15.048" data-end="00:35:19.230" data-spk="1" data-label="Γιώργος" class="" style="background: rgba(255, 255, 255, 0);">Γεια χαρά σε όλους! Eυχαριστούμε που μας ακούσατε! Ελπίζω να μη γίναμε κουραστικοί. </span><br>
+<br>
+<b data-spk="0" title="">Δημήτρης:</b><br>
+<small style="opacity: 0.5;">[35:17]</small> <span title="35:17 - 35:21" data-start="00:35:17.266" data-end="00:35:21.183" data-spk="0" data-label="Δημήτρης" class="" style="background: rgba(255, 255, 255, 0);">Γεια σας. </span>
+<br>
+</div>
+
+
+<script type="text/javascript">
+
+function getBgAlpha(element) {
+    var currentColor = getComputedStyle(element).getPropertyValue('background-color');
+    var parts = currentColor.match(/[\d.]+/g);
+    var alpha = "0"
+
+    try {
+        alpha = parts[3];
+    }
+    catch(err) {
+        // on edge we don't get a color if RGBA is completely 0
+    }
+
+    return alpha;
+}
+
+function removeStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(255, 255, 255, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Add Highlighting';
+        button.onclick = function() { addStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function addStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(209, 72, 54, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Remove Highlighting';
+        button.onclick = function() { removeStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function enableEdit() {
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = true;
+    transcript.classList.add("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Close Edit Mode';
+    button.onclick = function() { disableEdit(); } ;
+
+    RENAME_SPEAKERS = true;
+    activateRenameSpeaker();
+}
+
+function addSpeakerChangeTooltip() {
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = 'Change speaker name to edit all speakers at once!';
+    }
+}
+
+function removeSpeakerChangeTooltip() {
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = '';
+    }
+}
+
+function disableEdit() {
+    document.getElementById('toggle-rename-speaker').style = 'display: none;';
+
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = false;
+    transcript.classList.remove("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Edit Transcript';
+    button.onclick = function() { enableEdit(); } ;
+
+    removeSpeakerChangeTooltip();
+}
+
+function removeSpans(transcript) {
+    var removeSpans = new RegExp('</?span[^>]*>','gm');
+    transcript = transcript.replace(removeSpans, '');
+    transcript = transcript.replace(/&nbsp;/g, ' ');
+    return transcript;
+}
+
+function showExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = '>';
+    button.title = 'Close export buttons.';
+    button.classList.add("export-buttons-shown");
+    button.onclick = function() { hideExportButtons(); } ;
+
+    document.getElementById('export-html').style = '';
+    document.getElementById('export-pdf').style = '';
+    document.getElementById('export-webvtt').style = '';
+    document.getElementById('save-changes').style = '';
+    document.getElementById('show-help').style = 'display: none;';
+}
+
+function hideExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = 'Export...';
+    button.title = '';
+    button.classList.remove("export-buttons-shown");
+    button.onclick = function() { showExportButtons(); } ;
+
+    document.getElementById('export-html').style = 'display: none;';
+    document.getElementById('export-pdf').style = 'display: none;';
+    document.getElementById('export-webvtt').style = 'display: none;';
+    document.getElementById('save-changes').style = 'display: none;';
+    document.getElementById('show-help').style = '';
+}
+
+function saveChanges() {
+    disableEdit();
+    hideExportButtons();
+
+    var head = document.head.innerHTML;
+    var body = document.body.innerHTML;
+
+    var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+function exportHTML() {
+    disableEdit();
+    removeStyling();
+
+    var head = document.head.innerHTML;
+    var metadata = document.getElementById('metadata').innerHTML;
+    var transcript = document.getElementById('transcript').innerHTML;
+
+    transcript = removeSpans(transcript);
+
+
+    var shownotesElement = document.getElementById('shownotes');
+    if (shownotesElement === null) {
+        var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + metadata + '<div class="transcript-base">' + transcript + '</div></body></html>';
+    } else {
+        shownotes = shownotesElement.innerHTML;
+        var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + metadata + '<div id="shownotes">' + shownotes + '</div>' + '<div class="transcript-base">' + transcript + '</div></body></html>';
+    }
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function exportWebVTT() {
+    disableEdit();
+
+    var pageSource = 'WEBVTT\n\n';
+
+    var segments = document.querySelectorAll('span[data-start]');
+    for (var i=0; i<segments.length; i++) {
+        pageSource += segments[i].getAttribute('data-start') + ' --> ';
+        pageSource += segments[i].getAttribute('data-end') + '\n';
+        if (segments[i].getAttribute('data-spk') !== null) {
+            pageSource += '<v ' + segments[i].getAttribute('data-label') + '>';
+        }
+        pageSource += removeSpans(segments[i].innerHTML);
+        pageSource += '\n\n';
+    }
+
+    var filename = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+    filename = filename.substring(0, filename.lastIndexOf('.')) + '.vtt';
+
+    var bl = new Blob([pageSource], {type: 'text/vtt'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function getSecondsFromString(timeString) {
+    var splitStrg = timeString.split(":");
+    var seconds = 0;
+    for (var i=0; i<splitStrg.length; i++) {
+        if (i == 0) { seconds += parseInt(splitStrg[splitStrg.length - 1]); }
+        if (i == 1) { seconds += parseInt(splitStrg[splitStrg.length - 2]) * 60; }
+        if (i == 2) { seconds += parseInt(splitStrg[splitStrg.length - 3]) * 3600; }
+    }
+    return seconds;
+}
+
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function secToTimeString(seconds) {
+    var ss = Math.round(seconds);
+    var cmin = Math.floor(ss / 60);
+    var csec = ss % 60;
+
+    if (cmin < 60) {
+        return cmin + ":" + pad(csec, 2);
+    } else {
+        var ch = Math.floor(cmin / 60);
+        var cm = cmin % 60;
+        return ch + ":" + pad(cm, 2) + ":" + pad(csec, 2);
+    }
+}
+
+function removeActiveClass() {
+    var elements = document.querySelectorAll('span.active');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].classList.remove("active");
+        // elements[i].classList.add("listened");
+    }
+}
+
+function addAudioFile() {
+    var txt;
+    var url = prompt(
+        'Please enter complete URL for the audio file, which should be played along the transcript\n(a local path should start with "file:///"):',
+        'https://auphonic.com/media/audio-examples/03.auphonic-demo-denoise-100.m4a'
+    );
+    if (url == null || url == "") { return; }
+
+    var audio = document.getElementById('audio-player');
+    var oldSources = document.querySelectorAll('source');
+    for (var i=0; i<oldSources.length; i++) {
+        oldSources[i].remove();
+    }
+
+    var source = document.createElement('source');
+    source.src = url;
+    audio.appendChild(source);
+
+    addAudioPlayer();
+}
+
+function addAudioPlayer() {
+    var audio = document.getElementById('audio-player');
+
+    document.getElementById('add-audio-file').style = '';
+    document.getElementById('toggle-play-on-click').style = 'display: none;';
+
+    audio.oncanplay = function() {
+        AUDIO_PLAYER = audio;
+
+        // highlight current audio segment
+        if (HAVE_TIMESTAMPS) {
+            AUDIO_PLAYER.ontimeupdate = function() {
+                if (ARE_PLAYING) {
+                    var curTime = secToTimeString(AUDIO_PLAYER.currentTime);
+                    elements = document.querySelectorAll('span[title="' + curTime + '"]');
+                    if (elements.length > 0) {
+                        removeActiveClass();
+                        for (var i=0; i<elements.length; i++) {
+                            elements[i].classList.add("active");
+                        }
+                    }
+                }
+            };
+        }
+
+        // setup click handlers to play audio on mouse click
+        if (HAVE_TIMESTAMPS) {
+            var elements = document.getElementsByTagName('span');
+            for (var i=0; i<elements.length; i++) {
+                if (elements[i].getAttribute('data-start') === null) {  // no data-start attribute
+                    try {
+                        elements[i].removeEventListener("click", clickHandlerTimestamp);
+                    } catch(err) { }
+                    elements[i].addEventListener("click", clickHandlerTimestamp);
+                }
+            }
+        } else {
+            var elements = document.querySelectorAll('span[data-start]');
+            for (var i=0; i<elements.length; i++) {
+                try {
+                    elements[i].removeEventListener("click", clickHandlerSegment);
+                } catch(err) { }
+                elements[i].addEventListener("click", clickHandlerSegment);
+            }
+        }
+
+        enableAudioClickPlayback();
+
+        var button = document.getElementById('add-audio-file');
+        button.style = "display: none;";
+    }
+
+    audio.load();
+}
+
+function clickHandlerTimestamp(e) {
+    var target = (e.target) ? e.target : e.srcElement;
+    if (PLAY_WHOLE_SEGMENT) {
+        startSeconds = getSecondsFromString(target.getAttribute("title")) - 0.4
+        playWholeSegment(target.parentElement, startSeconds);
+    } else {
+        var timeString = target.title;
+        var timeSec = getSecondsFromString(timeString);
+        playAudioSegment(timeSec -0.6, timeSec + 3.4);
+    }
+}
+
+function playWholeSegment(e, startSeconds = null) {
+    var startTimeStrg = e.getAttribute("data-start").split(".")[0];
+    var endTimeStrg = e.getAttribute("data-end").split(".")[0];
+    var startSec = (startSeconds) ? startSeconds : getSecondsFromString(startTimeStrg);
+    var endSec = getSecondsFromString(endTimeStrg) + 1;
+    playAudioSegment(startSec, endSec);
+}
+
+function clickHandlerSegment(e) {
+    if (PLAYBACK_ON_CLICK) {
+        var target = (e.target) ? e.target : e.srcElement;
+        removeActiveClass();
+        target.classList.add("active");
+        playWholeSegment(target)
+    }
+}
+
+function enableAudioClickPlayback() {
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Stop Play-on-click';
+    button.style = "";
+    button.onclick = function() { disableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = true;
+}
+
+function disableAudioClickPlayback() {
+    AUDIO_PLAYER.pause();
+    ARE_PLAYING = false;
+    removeActiveClass();
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Activate Play-on-click';
+    button.style = "";
+    button.onclick = function() { enableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = false;
+}
+
+function playAudioSegment(start_sec, end_sec) {
+    if (AUDIO_PLAYER !== null && PLAYBACK_ON_CLICK) {
+        if (PAUSE_TIMEOUT !== null) { clearTimeout(PAUSE_TIMEOUT); }
+
+        AUDIO_PLAYER.currentTime = start_sec;
+        AUDIO_PLAYER.play();
+        ARE_PLAYING = true;
+
+        var length_ms = (end_sec - start_sec) * 1000;
+        PAUSE_TIMEOUT= setTimeout(function(){
+            AUDIO_PLAYER.pause();
+            PAUSE_TIMEOUT = null;
+            ARE_PLAYING = false;
+            removeActiveClass();
+        }, length_ms);
+    }
+}
+
+function activateRenameSpeaker() {
+    var button = document.getElementById('toggle-rename-speaker');
+    button.style = '';
+    button.innerText = 'Edit Speaker';
+    addSpeakerChangeTooltip();
+}
+
+function toggleRenameSpeaker() {
+    RENAME_SPEAKERS = !RENAME_SPEAKERS;
+    if (RENAME_SPEAKERS) {
+        activateRenameSpeaker();
+    } else {
+        var button = document.getElementById('toggle-rename-speaker');
+        button.innerText = 'Rename Speaker';
+        removeSpeakerChangeTooltip();
+    }
+}
+
+function setupTranscriptChangeListeners() {
+    var trans = document.getElementById('transcript');
+    trans.addEventListener("keyup", function(e){
+        var editedNode = window.getSelection().anchorNode.parentNode;
+
+        // set background of already edited spans back to white
+        if (HAVE_TIMESTAMPS && HAVE_CONFIDENCE) {
+            var clearNode = editedNode;
+            if (clearNode.tagName == "SPAN") {
+                if (clearNode.getAttribute("data-start") !== null) {
+                    // if we click into the parent span, we have to get the next node!
+                    clearNode = window.getSelection().anchorNode.nextSibling;
+                }
+                if (clearNode.tagName == "SPAN" && clearNode.getAttribute("title") !== null) {
+                    clearNode.style = 'background: white;';
+                }
+            }
+        }
+
+        if (RENAME_SPEAKERS) {
+            // change all speaker names if we change one speaker
+            if (editedNode.tagName == "B" && editedNode.getAttribute("data-spk") !== null) {
+                var curSpeaker = editedNode.getAttribute("data-spk");
+
+                var elements = document.querySelectorAll('b[data-spk="' + curSpeaker + '"]');
+                for (var i=0; i<elements.length; i++) {
+                    if (elements[i] !== editedNode) {
+                        elements[i].innerText = editedNode.innerText;
+                    }
+                }
+
+                // for WebVTT export
+                var elements = document.querySelectorAll('span[data-spk="' + curSpeaker + '"]');
+                var label = editedNode.innerText;
+                if (label[label.length -1] == ":") {
+                    label = label.substring(0, label.length - 1);
+                }
+                for (var i=0; i<elements.length; i++) {
+                    elements[i].setAttribute("data-label", label);
+                }
+            }
+        } else {
+            // set data-spk of this speaker so it is not renamed if RENAME_SPEAKERS is True
+            editedNode.setAttribute("data-spk", editedNode.innerText);
+
+            // set data-spk and data-label for all texts of this speaker
+            speakerNodeName = editedNode.nodeName;
+            nextNode = editedNode.nextElementSibling;
+            while (nextNode && nextNode.nodeName != speakerNodeName) {
+                if (nextNode.hasAttribute("data-label") && nextNode.hasAttribute("data-spk")) {
+                    nextNode.setAttribute("data-spk", editedNode.innerText);
+                    nextNode.setAttribute("data-label", editedNode.innerText);
+                }
+                nextNode = nextNode.nextElementSibling;
+            }
+        }
+    });
+}
+
+HAVE_CONFIDENCE = false;
+HAVE_TIMESTAMPS = HAVE_CONFIDENCE;  // for now ...
+PLAY_WHOLE_SEGMENT = false;
+RENAME_SPEAKERS = true;
+
+AUDIO_PLAYER = null;
+PAUSE_TIMEOUT = null;
+PLAYBACK_ON_CLICK = false;
+ARE_PLAYING = false;
+
+window.addEventListener("load", function(){
+    if(!HAVE_CONFIDENCE) {
+        var button = document.getElementById('toggle-styling');
+        if (button !== null) { button.remove(); }
+    }
+
+    addAudioPlayer();
+    setupTranscriptChangeListeners();
+});
+</script>
+
+
+
+
+</body></html>

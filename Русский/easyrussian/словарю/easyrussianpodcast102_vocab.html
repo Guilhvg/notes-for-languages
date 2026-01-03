@@ -1,0 +1,853 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>"Listen to your Krug!" (talking about music taste)</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #DD0101; }
+    a:visited { color: #DD0101; }
+    a:hover { color: #DD0101; }
+    a:active { color: #DD0101; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #DD0101; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">"Listen to your Krug!" (talking about music taste)</h1>
+
+<p id="info">
+The Easy Russian Podcast<br>
+<a href="http://www.easyrussian.fm" target="_blank">www.easyrussian.fm</a>
+</p>
+
+	<h4>Помощь по словарю</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">музыка</b></div>
+		<div><small class="hilfe">music</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">короткий</b></div>
+		<div><small class="hilfe">short</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">забавный</b></div>
+		<div><small class="hilfe">amusing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">авторство </b></div>
+		<div><small class="hilfe">authorship</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">уготовить (perf)</b></div>
+		<div><small class="hilfe">to prepare</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">соответствующий</b></div>
+		<div><small class="hilfe">appropriate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">судьба актёра</b></div>
+		<div><small class="hilfe">actor's fate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подходить (imp)</b></div>
+		<div><small class="hilfe">to match</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">давать советы (imp)</b></div>
+		<div><small class="hilfe">to advise</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">доступен </b></div>
+		<div><small class="hilfe">available</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">с гордостью</b></div>
+		<div><small class="hilfe">proudly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">с радостью </b></div>
+		<div><small class="hilfe">gladly </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">прослушивание</b></div>
+		<div><small class="hilfe">listening</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">в прямом эфире</b></div>
+		<div><small class="hilfe">live</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подсвечиваться </b></div>
+		<div><small class="hilfe">to be illuminated</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">произносить (imp)</b></div>
+		<div><small class="hilfe">to pronounce</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сопоставлять</b></div>
+		<div><small class="hilfe">to compare</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перевод </b></div>
+		<div><small class="hilfe">translation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">искренне </b></div>
+		<div><small class="hilfe">sincerely</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">призывать (imp)</b></div>
+		<div><small class="hilfe">to call for</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обретать доступ </b></div>
+		<div><small class="hilfe">to gain access</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поддержать (perf)</b></div>
+		<div><small class="hilfe">to support</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">позволить (perf)</b></div>
+		<div><small class="hilfe">to allow</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">классный</b></div>
+		<div><small class="hilfe">cool</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сделать потише</b></div>
+		<div><small class="hilfe">to turn it down</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">орать (imp)</b></div>
+		<div><small class="hilfe">to yell</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">наушники</b></div>
+		<div><small class="hilfe">headphones</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">слышно</b></div>
+		<div><small class="hilfe">heard</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">слушать (imp)</b></div>
+		<div><small class="hilfe">to listen to</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">группа</b></div>
+		<div><small class="hilfe">group</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">культурный человек</b></div>
+		<div><small class="hilfe">cultured person</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">"Король и Шут"</b></div>
+		<div><small class="hilfe">"King and Jester"</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">придираться (imp)</b></div>
+		<div><small class="hilfe">to find fault</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плейлист</b></div>
+		<div><small class="hilfe">playlist</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">музыкальные вкусы</b></div>
+		<div><small class="hilfe">musical tastes</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скрывать (imp)</b></div>
+		<div><small class="hilfe">to hide</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шансон</b></div>
+		<div><small class="hilfe">chanson</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">быть в топе (imp)</b></div>
+		<div><small class="hilfe">to be in the top </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">издеваться (imp)</b></div>
+		<div><small class="hilfe">to mock</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Бог миловал</b></div>
+		<div><small class="hilfe">God had mercy</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тюрьма</b></div>
+		<div><small class="hilfe">prison</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">очарователен</b></div>
+		<div><small class="hilfe">charming</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">строчка</b></div>
+		<div><small class="hilfe">line</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лучики тепла</b></div>
+		<div><small class="hilfe">rays of warmth</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">доверчиво глядеть</b></div>
+		<div><small class="hilfe">to look trustingly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">защемить грудь </b></div>
+		<div><small class="hilfe">to pinch the chest</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">влезть в душу</b></div>
+		<div><small class="hilfe">to get into the soul</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грусть (f)</b></div>
+		<div><small class="hilfe">sadness</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бессмертный </b></div>
+		<div><small class="hilfe">immortals</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мусорок (dim)</b></div>
+		<div><small class="hilfe">cozzer (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шить срок (colloq)</b></div>
+		<div><small class="hilfe">to prosecute the case </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">иголочка (f)</b></div>
+		<div><small class="hilfe">needle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сломать (perf)</b></div>
+		<div><small class="hilfe">to broke</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пронзительный</b></div>
+		<div><small class="hilfe">piercing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хрип </b></div>
+		<div><small class="hilfe">wheeze</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">освобождающий</b></div>
+		<div><small class="hilfe">liberating</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ярость юности (f)</b></div>
+		<div><small class="hilfe">youthful rage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">саркастический</b></div>
+		<div><small class="hilfe">sarcastic</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">равнодушие</b></div>
+		<div><small class="hilfe">indifference</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бытовые проблемы</b></div>
+		<div><small class="hilfe">domestic problems</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разодран в клочья</b></div>
+		<div><small class="hilfe">torn to shreds</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">эстет</b></div>
+		<div><small class="hilfe">aesthete</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фраер</b></div>
+		<div><small class="hilfe">thrasher (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сдать назад (perf)</b></div>
+		<div><small class="hilfe">back-pedal (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">быть по масти (imp)</b></div>
+		<div><small class="hilfe">to suit (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сущность  (f)</b></div>
+		<div><small class="hilfe">essence</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">удержаться (perf)</b></div>
+		<div><small class="hilfe">help but</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">беда </b></div>
+		<div><small class="hilfe">trouble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обойти (perf)</b></div>
+		<div><small class="hilfe">to bypass</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">устаревшее выражение</b></div>
+		<div><small class="hilfe">outdated expression</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Бога ради</b></div>
+		<div><small class="hilfe">For God's sake</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обратная последовательность</b></div>
+		<div><small class="hilfe">reverse sequence</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">придирчивый</b></div>
+		<div><small class="hilfe">picky</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">знаток</b></div>
+		<div><small class="hilfe">connoisseur</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Помилуй меня...</b></div>
+		<div><small class="hilfe">Have mercy on me...</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">обвинение</b></div>
+		<div><small class="hilfe">charge</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нелюбовь (f)</b></div>
+		<div><small class="hilfe">dislike</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">присутствовать </b></div>
+		<div><small class="hilfe">to be present</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фундаментально</b></div>
+		<div><small class="hilfe">fundamentally</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сравнение</b></div>
+		<div><small class="hilfe">comparison</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">близок к истине </b></div>
+		<div><small class="hilfe">close to the truth </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">цитата</b></div>
+		<div><small class="hilfe">citation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">культурный слой</b></div>
+		<div><small class="hilfe">cultural layer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лукавить (imp)</b></div>
+		<div><small class="hilfe">to stretch the truth</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скрывать (imp)</b></div>
+		<div><small class="hilfe">to hide</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Владимирский централ</b></div>
+		<div><small class="hilfe">Vladimir Central Prison</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стоит объяснить</b></div>
+		<div><small class="hilfe">it's worth explaining</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мем </b></div>
+		<div><small class="hilfe">meme</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">такого масштаба</b></div>
+		<div><small class="hilfe">this scale</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тюремная группа</b></div>
+		<div><small class="hilfe">prison group</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">романтика</b></div>
+		<div><small class="hilfe">romance</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">блатная музыка</b></div>
+		<div><small class="hilfe">thieves' cant</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">специфика</b></div>
+		<div><small class="hilfe">specificity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ремикс</b></div>
+		<div><small class="hilfe">remix</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">миксовать  (imp)</b></div>
+		<div><small class="hilfe">to mix</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жаргонный</b></div>
+		<div><small class="hilfe">argotic</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мусор</b></div>
+		<div><small class="hilfe">cozzer (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">доказательство</b></div>
+		<div><small class="hilfe">proof</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">виноват</b></div>
+		<div><small class="hilfe">fault</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">приписать (perf)</b></div>
+		<div><small class="hilfe">to attribute</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">посадить в тюрьму</b></div>
+		<div><small class="hilfe">to put in prison</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сфабриковать дело</b></div>
+		<div><small class="hilfe">frame up a case</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фальсифицировать</b></div>
+		<div><small class="hilfe">to falsify</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">срок</b></div>
+		<div><small class="hilfe">term</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">провести за решёткой (perf)</b></div>
+		<div><small class="hilfe">to spend in prison (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">швейная машинка</b></div>
+		<div><small class="hilfe">sewing machine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">иголка </b></div>
+		<div><small class="hilfe">needle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сломаться (perf)</b></div>
+		<div><small class="hilfe">to break down</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перестараться (perf)</b></div>
+		<div><small class="hilfe">to overdo</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нереалистично </b></div>
+		<div><small class="hilfe">unrealistically</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">воравайка</b></div>
+		<div><small class="hilfe">thief (colloq)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">воровка</b></div>
+		<div><small class="hilfe">thief</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">устойчивый</b></div>
+		<div><small class="hilfe">stable</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">«Ночной дозор»</b></div>
+		<div><small class="hilfe">"Nightwatch" (movie)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пожилой</b></div>
+		<div><small class="hilfe">elderly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Не волнуйся!</b></div>
+		<div><small class="hilfe">Don't worry!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">волноваться (imp)</b></div>
+		<div><small class="hilfe">to worry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сочетание </b></div>
+		<div><small class="hilfe">combination</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">блатной</b></div>
+		<div><small class="hilfe">criminal</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">устаревший</b></div>
+		<div><small class="hilfe">obsolete</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">орать из наушников</b></div>
+		<div><small class="hilfe">to yell through the headphones</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грустнее </b></div>
+		<div><small class="hilfe">sadder</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">придираться (imp)</b></div>
+		<div><small class="hilfe">to nag</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Дай посмотреть!</b></div>
+		<div><small class="hilfe">Let me see!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скрывать  (imp)</b></div>
+		<div><small class="hilfe">to hide</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плейлист шансона</b></div>
+		<div><small class="hilfe">chanson playlist</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">всерьёз </b></div>
+		<div><small class="hilfe">seriously</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тюремная музыка</b></div>
+		<div><small class="hilfe">prison music</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сидеть в тюрьме</b></div>
+		<div><small class="hilfe">to be in jail</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ты не перестаёшь меня удивлять</b></div>
+		<div><small class="hilfe">you never cease to amaze me</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бессмертные строчки</b></div>
+		<div><small class="hilfe">immortal lines</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">машина Зингера</b></div>
+		<div><small class="hilfe">Zinger's machine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Узнаёшь?</b></div>
+		<div><small class="hilfe">Do you recognize it?</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фальцет </b></div>
+		<div><small class="hilfe">falsetto</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">навевать (imp)</b></div>
+		<div><small class="hilfe">to evoke </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">фатализм</b></div>
+		<div><small class="hilfe">fatalism</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ярость (f)</b></div>
+		<div><small class="hilfe">rage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сердце </b></div>
+		<div><small class="hilfe">heart</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разодрано в клочья</b></div>
+		<div><small class="hilfe">torn to shreds</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">на поэтичной ноте</b></div>
+		<div><small class="hilfe">on a poetic note</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">от всего сердца</b></div>
+		<div><small class="hilfe">wholeheartedly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">петь в голос (imp)</b></div>
+		<div><small class="hilfe">to sing out loud</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">договор с дьяволом</b></div>
+		<div><small class="hilfe">pact with the devil</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подписать (perf)</b></div>
+		<div><small class="hilfe">to sign</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ангел</b></div>
+		<div><small class="hilfe">angel</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подписчик</b></div>
+		<div><small class="hilfe">subscriber</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">До новых встреч!</b></div>
+		<div><small class="hilfe">See you again!</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">Всем пока!</b></div>
+		<div><small class="hilfe">Bye, everybody!</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>

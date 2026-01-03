@@ -1,0 +1,1017 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>    6: Чей борщ?</title>
+
+    <style>
+    body { margin: 40px 20px 20px 20px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; line-height: 1.2em; }
+    h1 { line-height: 1em; }
+    h2 { line-height: 1em; }
+    h3 { line-height: 1em; }
+    h4 { line-height: 1em; display: flex; align-items: center; justify-content: center; font: 1.2em sans-serif; font-weight: bold;}
+    a:link { color: #DD0101; }
+    a:visited { color: #DD0101; }
+    a:hover { color: #DD0101; }
+    a:active { color: #DD0101; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+    .hidden {
+	    display: none !important;
+    }
+    .vokabeln { 
+	    font-weight: bold;
+	    color: #DD0101; 
+	    text-align: right;
+    }
+    .hilfe { 
+	    font-weight: normal; 
+	    opacity: 0.5; 
+    }
+    .container {
+	  border: 0em solid rgb(35 30 34);
+	  border-radius: 0.5em;
+	  font: 1.2em sans-serif;
+	
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+    .row { 
+	    display: flex;
+    }
+    .row-headers div {
+	    background-color: lightgrey;
+    }
+    .row div {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+    #bot-button {
+   	    position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+	    .row {
+		    flex-wrap:wrap;
+	    }
+	    .row div { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 2.5em;
+		    padding-bottom: 0em;
+	    }
+    	    .vokabeln { 
+		    padding-left: 2.5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+		    text-align: left
+   	    }
+    	    .hilfe { 
+		    padding-left: 5em;
+		    padding-top: 0em;
+		    padding-right: 0em;
+		    padding-bottom: 0em;
+            }
+    	    #bot-button {
+		    flex-wrap: nowrap;
+		    width: 25%;
+	            display: flex;
+	            align-items: center;
+	            justify-content: space-between;
+    	    }
+    }
+    form {
+	    width: 100%;
+	    justify-content: center;
+	    align-items: center;
+	    padding: 0.5em;
+    }
+   button {
+	    width: 100%;
+	    border: 0;
+	    padding: 0.5em;
+	    text-align: center;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: transparent;
+    }
+
+    </style>
+
+</head><body>
+<h1 id="title">    6: Чей борщ?</h1>
+
+<p id="info">
+The Easy Russian Podcast<br>
+<a href="http://www.easyrussian.fm" target="_blank">www.easyrussian.fm</a>
+</p>
+
+	<h4>Помощь по словарю</h4>
+<div class="container">
+<div id="vokabhilfe" class="transcript-base">
+
+	<div id="chapter" class="row hidden">
+	</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">еда</b></div>
+		<div><small class="hilfe">food</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">капуста</b></div>
+		<div><small class="hilfe">cabbage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пожалуй</b></div>
+		<div><small class="hilfe">perhaps</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">небольшой</b></div>
+		<div><small class="hilfe">small</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">озеро</b></div>
+		<div><small class="hilfe">lake</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">готовить</b></div>
+		<div><small class="hilfe">to cook</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вкусный</b></div>
+		<div><small class="hilfe">delicious</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вареники</b></div>
+		<div><small class="hilfe">dumplings</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">курица</b></div>
+		<div><small class="hilfe">chicken</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сало</b></div>
+		<div><small class="hilfe">lard</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">гриб</b></div>
+		<div><small class="hilfe">mushroom</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хворост</b></div>
+		<div><small class="hilfe">cookies made of thin sheets of pastry fried in butter</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пограничный</b></div>
+		<div><small class="hilfe">frontier</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">спор</b></div>
+		<div><small class="hilfe">argument</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тесто</b></div>
+		<div><small class="hilfe">dough</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">начинка</b></div>
+		<div><small class="hilfe">stuffing</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">творог</b></div>
+		<div><small class="hilfe">cottage cheese</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вишня</b></div>
+		<div><small class="hilfe">cherry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">слой</b></div>
+		<div><small class="hilfe">layer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скреплять</b></div>
+		<div><small class="hilfe">to staple</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">некоторый</b></div>
+		<div><small class="hilfe">some</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">кулинарный</b></div>
+		<div><small class="hilfe">cooking</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">поединок</b></div>
+		<div><small class="hilfe">duel</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">всё сходится</b></div>
+		<div><small class="hilfe">everything fits</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">на излёте</b></div>
+		<div><small class="hilfe">on the wane</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пятидесятилетний</b></div>
+		<div><small class="hilfe">fifty years old</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перерыв</b></div>
+		<div><small class="hilfe">break</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">записывать</b></div>
+		<div><small class="hilfe">to write down</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">повторять</b></div>
+		<div><small class="hilfe">to repeat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">рецепт</b></div>
+		<div><small class="hilfe">recipe</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">с твоего позволения</b></div>
+		<div><small class="hilfe">with your permission</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">перемещаться</b></div>
+		<div><small class="hilfe">to move</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">неподалеку</b></div>
+		<div><small class="hilfe">nearby</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тесно связан</b></div>
+		<div><small class="hilfe">closely linked</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">полгода</b></div>
+		<div><small class="hilfe">six months</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шелковица</b></div>
+		<div><small class="hilfe">mulberry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тутовое дерево</b></div>
+		<div><small class="hilfe">mulberry tree</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ежевика</b></div>
+		<div><small class="hilfe">blackberry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">взрыв вкуса</b></div>
+		<div><small class="hilfe">burst of flavor</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">корни</b></div>
+		<div><small class="hilfe">roots</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">исключительно</b></div>
+		<div><small class="hilfe">exclusively</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вобла</b></div>
+		<div><small class="hilfe">Caspian roach</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пресноводный</b></div>
+		<div><small class="hilfe">freshwater</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">солить</b></div>
+		<div><small class="hilfe">to salt</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сушить</b></div>
+		<div><small class="hilfe">to dry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чешуя</b></div>
+		<div><small class="hilfe">scale</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">закуска</b></div>
+		<div><small class="hilfe">snack</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">соль земли</b></div>
+		<div><small class="hilfe">salt of the earth</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сени</b></div>
+		<div><small class="hilfe">inner porch</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жбан</b></div>
+		<div><small class="hilfe">jug</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разносить</b></div>
+		<div><small class="hilfe">to smash</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дубовый</b></div>
+		<div><small class="hilfe">oak</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">намертво</b></div>
+		<div><small class="hilfe">tightly</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">солонина</b></div>
+		<div><small class="hilfe">corned beef</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выговорить</b></div>
+		<div><small class="hilfe">to spell it out</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">грызть</b></div>
+		<div><small class="hilfe">to nibble</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сосать</b></div>
+		<div><small class="hilfe">to suck</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">описание</b></div>
+		<div><small class="hilfe">description</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">безвозвратно</b></div>
+		<div><small class="hilfe">irretrievably</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сырой</b></div>
+		<div><small class="hilfe">raw</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вяленый</b></div>
+		<div><small class="hilfe">jerky</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жирный</b></div>
+		<div><small class="hilfe">fat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мокрый</b></div>
+		<div><small class="hilfe">wet</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чай</b></div>
+		<div><small class="hilfe">tea</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">арбуз</b></div>
+		<div><small class="hilfe">watermelon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чёрный хлеб</b></div>
+		<div><small class="hilfe">brown bread</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">окрошка</b></div>
+		<div><small class="hilfe">okroshka</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">квас</b></div>
+		<div><small class="hilfe">kvass</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">кефир</b></div>
+		<div><small class="hilfe">yoghurt drink</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">печь</b></div>
+		<div><small class="hilfe">stove</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дрова</b></div>
+		<div><small class="hilfe">firewood</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">паровоз</b></div>
+		<div><small class="hilfe">steam locomotive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">топить</b></div>
+		<div><small class="hilfe">to stoke up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">жилище</b></div>
+		<div><small class="hilfe">dwelling</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лепить</b></div>
+		<div><small class="hilfe">to sculpt</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">старание</b></div>
+		<div><small class="hilfe">effort</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хвастать</b></div>
+		<div><small class="hilfe">to brag</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">скот</b></div>
+		<div><small class="hilfe">cattle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сметана</b></div>
+		<div><small class="hilfe">sour cream</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">крёстный</b></div>
+		<div><small class="hilfe">godfather</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">баня</b></div>
+		<div><small class="hilfe">bathhouse</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">париться</b></div>
+		<div><small class="hilfe">to have a sauna</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">тарелка</b></div>
+		<div><small class="hilfe">plate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">мягкий</b></div>
+		<div><small class="hilfe">soft</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">борщ</b></div>
+		<div><small class="hilfe">red-beet soup</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пампушка</b></div>
+		<div><small class="hilfe">pampushka</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подача</b></div>
+		<div><small class="hilfe">serving up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ничего себе</b></div>
+		<div><small class="hilfe">wow</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">погружаться</b></div>
+		<div><small class="hilfe">to dive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">настраиваться</b></div>
+		<div><small class="hilfe">to make up one's mind (to do sth)</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">лад</b></div>
+		<div><small class="hilfe">mood</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разделение</b></div>
+		<div><small class="hilfe">separation</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">затрудняться</b></div>
+		<div><small class="hilfe">to hesitate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">драться</b></div>
+		<div><small class="hilfe">to fight</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">принадлежать</b></div>
+		<div><small class="hilfe">to belong to</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">судить</b></div>
+		<div><small class="hilfe">to judge</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">зарабатывать</b></div>
+		<div><small class="hilfe">to make money</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пробовать</b></div>
+		<div><small class="hilfe">to taste</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">признавать</b></div>
+		<div><small class="hilfe">to acknowledge</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">провалиться</b></div>
+		<div><small class="hilfe">to fail</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">спутниковая тарелка</b></div>
+		<div><small class="hilfe">satellite dish</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">застолбить</b></div>
+		<div><small class="hilfe">to secure</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">ещё не вечер</b></div>
+		<div><small class="hilfe">it's not over yet</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">переживать</b></div>
+		<div><small class="hilfe">to worry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выбросить</b></div>
+		<div><small class="hilfe">to throw out [or away]</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">куча</b></div>
+		<div><small class="hilfe">a bunch of</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вечеринка</b></div>
+		<div><small class="hilfe">party</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">извращение</b></div>
+		<div><small class="hilfe">perversion</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">голословный</b></div>
+		<div><small class="hilfe">unsubstantiated</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">добавлять</b></div>
+		<div><small class="hilfe">to add</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">копчёная колбаса</b></div>
+		<div><small class="hilfe">smoked sausage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вареная колбаса</b></div>
+		<div><small class="hilfe">cooked sausage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чувствовать</b></div>
+		<div><small class="hilfe">to feel</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">по умолчанию</b></div>
+		<div><small class="hilfe">by default</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">варёный</b></div>
+		<div><small class="hilfe">boiled</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">печёный</b></div>
+		<div><small class="hilfe">baked</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">собственноручно</b></div>
+		<div><small class="hilfe">by hand</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пойти на пользу</b></div>
+		<div><small class="hilfe">to benefit</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">пиво</b></div>
+		<div><small class="hilfe">beer</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бродить</b></div>
+		<div><small class="hilfe">to ferment</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">рассеянный</b></div>
+		<div><small class="hilfe">absent-minded</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">взаимодействовать</b></div>
+		<div><small class="hilfe">to interact</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чужестранец</b></div>
+		<div><small class="hilfe">stranger</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3"> дружелюбие</b></div>
+		<div><small class="hilfe"> friendliness</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">порог</b></div>
+		<div><small class="hilfe">threshold</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">преломить</b></div>
+		<div><small class="hilfe">to break</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">произвести впечатление</b></div>
+		<div><small class="hilfe">to make an impression</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">налаживать</b></div>
+		<div><small class="hilfe">to set up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выдумывать</b></div>
+		<div><small class="hilfe">to make it up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">кимчи</b></div>
+		<div><small class="hilfe">kimchi</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">претендовать</b></div>
+		<div><small class="hilfe">to claim</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">разрулить</b></div>
+		<div><small class="hilfe">to settle a conflict </small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вбросить</b></div>
+		<div><small class="hilfe">to throw in</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">квашеная капуста</b></div>
+		<div><small class="hilfe">sauerkraut</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">битва</b></div>
+		<div><small class="hilfe">battle</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">утка</b></div>
+		<div><small class="hilfe">duck</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">стараться</b></div>
+		<div><small class="hilfe">to try</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">заказывать</b></div>
+		<div><small class="hilfe">to order from</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">проникать</b></div>
+		<div><small class="hilfe">to penetrate</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">привязка</b></div>
+		<div><small class="hilfe">linking</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">консервированный</b></div>
+		<div><small class="hilfe">canned</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">горбуша</b></div>
+		<div><small class="hilfe">pink salmon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">маринованные огурцы</b></div>
+		<div><small class="hilfe">pickles</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">зелень</b></div>
+		<div><small class="hilfe">greens</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">терять голову</b></div>
+		<div><small class="hilfe">to lose heart</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">божественно</b></div>
+		<div><small class="hilfe">divine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">список</b></div>
+		<div><small class="hilfe">list</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">хитрый трюк</b></div>
+		<div><small class="hilfe">lifehack</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">вкусно</b></div>
+		<div><small class="hilfe">tasty</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дорого</b></div>
+		<div><small class="hilfe">expensive</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бочка</b></div>
+		<div><small class="hilfe">cask</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">очередь</b></div>
+		<div><small class="hilfe">queue</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">котёл</b></div>
+		<div><small class="hilfe">boiler</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">особое блюдо</b></div>
+		<div><small class="hilfe">special dish</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">приберегать</b></div>
+		<div><small class="hilfe">to save</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">гордиться</b></div>
+		<div><small class="hilfe">to be proud of</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">половинка</b></div>
+		<div><small class="hilfe">half</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">картошка в мундире</b></div>
+		<div><small class="hilfe">jacket potatoes</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">гороховый суп</b></div>
+		<div><small class="hilfe">pea soup</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">походный</b></div>
+		<div><small class="hilfe">camping</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">охотник</b></div>
+		<div><small class="hilfe">hunter</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">рыболов</b></div>
+		<div><small class="hilfe">fisherman</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шедевр</b></div>
+		<div><small class="hilfe">masterpiece</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">подразумевать</b></div>
+		<div><small class="hilfe">to imply</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">копчености</b></div>
+		<div><small class="hilfe">smoked meat</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">сыр-косичка</b></div>
+		<div><small class="hilfe">pigtail cheese</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нарезать</b></div>
+		<div><small class="hilfe">to slice</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">блеск</b></div>
+		<div><small class="hilfe">shine</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">нищета</b></div>
+		<div><small class="hilfe">poverty</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шарлотка</b></div>
+		<div><small class="hilfe">charlotte</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">бесконечность</b></div>
+		<div><small class="hilfe">infinity</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">идти в гости</b></div>
+		<div><small class="hilfe">to pay a visit</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">безысходность</b></div>
+		<div><small class="hilfe">hopelessness</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">противопоставлять</b></div>
+		<div><small class="hilfe">to contrast</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">умудриться</b></div>
+		<div><small class="hilfe">to manage</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">косплеить</b></div>
+		<div><small class="hilfe">to cosplay</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">чёрная икра</b></div>
+		<div><small class="hilfe">black caviar</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">столовая ложка</b></div>
+		<div><small class="hilfe">tablespoon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">дофига (разг.)</b></div>
+		<div><small class="hilfe">a bunch of</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">осетрина</b></div>
+		<div><small class="hilfe">sturgeon</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">шашлык</b></div>
+		<div><small class="hilfe">shish kebab</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">плакать</b></div>
+		<div><small class="hilfe">to cry</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">радовать</b></div>
+		<div><small class="hilfe">to please</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">воспоминание</b></div>
+		<div><small class="hilfe">memory</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">делиться</b></div>
+		<div><small class="hilfe">to share</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">не терять надежды</b></div>
+		<div><small class="hilfe">to keep your hopes up</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">выпуск</b></div>
+		<div><small class="hilfe">episode</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">расшифровка</b></div>
+		<div><small class="hilfe">transcript</small></div>
+</div>
+<div class="row hidden">
+		<div class="vokabeln"><b data-spk="3">приложение</b></div>
+		<div><small class="hilfe">application</small></div>
+</div>
+</div>
+</div>
+	<div id="bot-button" class="row">
+		<button id="pageBack" type="button"><b data-spk="3">◀</b></button>
+		<div id="pageView"></div>
+		<b><div id="pageTotal"></div></b>
+		<button id="pageForward" type="button"><b data-spk="3">▶</b></button>
+	</div>
+<script>
+	const pageSize = 8;
+	const vokabelTotal = document.getElementById("vokabhilfe").children.length;
+	const pageDivisor = Math.floor(vokabelTotal / pageSize); 
+	const lastPage = vokabelTotal % pageSize;
+	var pageIndex = 1;
+	if (lastPage > 0) {
+		var additionalPages = 1;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	} else {
+		var additionalPages = 0;
+		document.getElementById("pageView").innerHTML = pageIndex;
+	}
+	const pageTotal = pageDivisor + additionalPages; 
+
+document.addEventListener('DOMContentLoaded', function() {
+	let contentBox = document.getElementById("vokabhilfe");
+	let rows = contentBox.children;
+	for (let i = 0; i < pageSize; i++){
+	    contentBox.children[i].classList.toggle("hidden");
+    	}
+	document.getElementById("pageTotal").innerHTML = pageTotal;
+});
+
+
+document.getElementById("pageForward").onclick = function() {
+    pageIndex += 1;
+    if (pageIndex == pageTotal) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    if (pageIndex > pageTotal) {
+	        pageIndex = 1;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let firstRows = 0;
+    		for (let i = firstRows; i < pageSize; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let nextPage = i + pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[nextPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+document.getElementById("pageBack").onclick = function() {
+    pageIndex -= 1;
+    let secondtoLastRows = pageTotal - 1;
+    if (pageIndex == secondtoLastRows) {
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+    		let secondtoLastPage = rows.length - lastPage - pageSize;
+		let j = 0;
+		for (let i = secondtoLastPage; j < pageSize; i++){
+    			if (contentBox.children[i].classList.contains("hidden")) {
+				contentBox.children[i].classList.toggle("hidden");
+				j += 1;
+			}
+		}
+		return;
+    }
+    if (pageIndex < 1) {
+	        pageIndex = pageTotal;
+    		document.getElementById("pageView").innerHTML = pageIndex;
+		let contentBox = document.getElementById("vokabhilfe");
+		let rows = contentBox.children;
+    		for (let i = 0; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden") == false) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		let lastRows = rows.length - lastPage;
+    		for (let i = lastRows; i < rows.length; i++) {
+			if (contentBox.children[i].classList.contains("hidden")) {
+		 		contentBox.children[i].classList.toggle("hidden");
+			}
+    		}
+		return;
+    }
+    let contentBox = document.getElementById("vokabhilfe");
+    let rows = contentBox.children;
+    let j = 0;
+    for (let i = 0; i < rows.length && j < pageSize; i++){
+    		if (contentBox.children[i].classList.contains("hidden") == false) {
+			let previousPage = i - pageSize;
+			contentBox.children[i].classList.toggle("hidden");
+			contentBox.children[previousPage].classList.toggle("hidden");
+			j += 1;
+		}
+    }
+    document.getElementById("pageView").innerHTML = pageIndex;
+};
+
+</script>
+</body></html>
